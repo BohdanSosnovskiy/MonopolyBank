@@ -220,7 +220,7 @@ public partial class GameMainPage : ContentPage
                 IsNoEmty = false,
             }
         };
-
+        CurrentUser.Companys.Add(PresetGame.Companys[0]);
         Carusel_Company.ItemsSource = CurrentUser.Companys;
             
 

@@ -79,9 +79,12 @@ namespace HelloApp.Classes
             SelectCompany = new Command(async p =>
             {
                 Company company = PresetGame.link_GameMainPage.getCurrentCompany();
-                await PresetGame.link_GameMainPage.Navigation.PushModalAsync(new PopUpCompanyInfo(company), false);
-                
-                CompanyBuldVisible.CollectionChanged += CompanyBuldVisible_CollectionChanged;
+                if (company.Name != "")
+                {
+                    await PresetGame.link_GameMainPage.Navigation.PushModalAsync(new PopUpCompanyInfo(company), false);
+
+                    CompanyBuldVisible.CollectionChanged += CompanyBuldVisible_CollectionChanged;
+                }
             });
         }
 

@@ -257,7 +257,6 @@ C:\Users\Админ\MonopolyBank\HelloApp\bin\Debug\net8.0-ios\ios-arm64\libxama
 C:\Users\Админ\MonopolyBank\HelloApp\bin\Debug\net8.0-ios\ios-arm64\libxamarin-dotnet-nativeaot.a
 C:\Users\Админ\MonopolyBank\HelloApp\bin\Debug\net8.0-ios\ios-arm64\libxamarin-dotnet.a
 C:\Users\Админ\MonopolyBank\HelloApp\bin\Debug\net8.0-ios\ios-arm64\libxamarin-dotnet.dylib
-C:\Users\Админ\MonopolyBank\HelloApp\obj\Debug\net8.0-ios\ios-arm64\build-signature\signature
 C:\Users\Админ\MonopolyBank\HelloApp\obj\Debug\net8.0-ios\ios-arm64\mauiimage.inputs
 C:\Users\Админ\MonopolyBank\HelloApp\obj\Debug\net8.0-ios\ios-arm64\mauifont.inputs
 C:\Users\Админ\MonopolyBank\HelloApp\obj\Debug\net8.0-ios\ios-arm64\mauisplash.inputs

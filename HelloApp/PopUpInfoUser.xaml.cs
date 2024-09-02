@@ -11,6 +11,7 @@ public partial class PopUpInfoUser : ContentPage
 		User = user;
         Loaded += Page_Loaded;
         BaseInfo.BindingContext = User;
+        Carusel_CompanyUser.BindingContext = User.Companys;
     }
 
     protected override bool OnBackButtonPressed()
@@ -23,14 +24,14 @@ public partial class PopUpInfoUser : ContentPage
     {
         // We only need this to fire once, so clean things up!
         this.Loaded -= Page_Loaded;
-
+        Carusel_CompanyUser.ItemsSource = User.Companys;
         // Call the animation
         PoppingIn();
     }
 
     public void PoppingIn()
     {
-        var contentHeight = 400;
+        var contentHeight = 600;
 
         // Начните с перевода контента под экраном или за его пределами.
         this.Content.TranslationY = contentHeight;

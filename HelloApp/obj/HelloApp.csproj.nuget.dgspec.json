@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Админ\\MonopolyBank\\HelloApp\\HelloApp.csproj": {}
+    "C:\\GitProject\\MonopolyBank\\HelloApp\\HelloApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Админ\\MonopolyBank\\HelloApp\\HelloApp.csproj": {
+    "C:\\GitProject\\MonopolyBank\\HelloApp\\HelloApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Админ\\MonopolyBank\\HelloApp\\HelloApp.csproj",
+        "projectUniqueName": "C:\\GitProject\\MonopolyBank\\HelloApp\\HelloApp.csproj",
         "projectName": "HelloApp",
-        "projectPath": "C:\\Users\\Админ\\MonopolyBank\\HelloApp\\HelloApp.csproj",
+        "projectPath": "C:\\GitProject\\MonopolyBank\\HelloApp\\HelloApp.csproj",
         "packagesPath": "C:\\Users\\Админ\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Админ\\MonopolyBank\\HelloApp\\obj\\",
+        "outputPath": "C:\\GitProject\\MonopolyBank\\HelloApp\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "fallbackFolders": [

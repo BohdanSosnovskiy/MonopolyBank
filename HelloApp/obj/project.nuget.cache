@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "l2Wq1UiKZnk=",
+  "dgSpecHash": "Z7VfeHiRDq4=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Админ\\MonopolyBank\\HelloApp\\HelloApp.csproj",
+  "projectFilePath": "C:\\GitProject\\MonopolyBank\\HelloApp\\HelloApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Админ\\.nuget\\packages\\communitytoolkit.maui.mediaelement\\4.0.1\\communitytoolkit.maui.mediaelement.4.0.1.nupkg.sha512",
     "C:\\Users\\Админ\\.nuget\\packages\\googlegson\\2.10.1.4\\googlegson.2.10.1.4.nupkg.sha512",
