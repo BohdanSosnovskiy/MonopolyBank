@@ -63,7 +63,7 @@
                             HorizontalOptions="Start" />
                         <Label 
                             
-                            Text="{Binding Cash, StringFormat={}{0} $}"
+                            Text="{Binding Cash}"
                             Margin="30, 160, 0, 0"
                             TextColor="White"
                             FontSize="35"

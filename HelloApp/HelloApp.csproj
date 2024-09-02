@@ -75,6 +75,18 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <AtlasTexture Remove="CustomElements\**" />
+	  <Compile Remove="CustomElements\**" />
+	  <CoreMLModel Remove="CustomElements\**" />
+	  <EmbeddedResource Remove="CustomElements\**" />
+	  <ImageAsset Remove="CustomElements\**" />
+	  <InterfaceDefinition Remove="CustomElements\**" />
+	  <Metal Remove="CustomElements\**" />
+	  <None Remove="CustomElements\**" />
+	  <SceneKitAsset Remove="CustomElements\**" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <None Remove="Resources\Images\ban.png" />
 	  <None Remove="Resources\Images\city.png" />
 	  <None Remove="Resources\Images\company_1.png" />
@@ -137,7 +149,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="CustomElements\" />
 	  <Folder Include="Platforms\Android\Resources\Raw\" />
 	</ItemGroup>
 
