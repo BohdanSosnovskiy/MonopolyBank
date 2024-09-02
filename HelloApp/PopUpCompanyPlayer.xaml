@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HelloApp.PopUpCompanyPlayer"
+             xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
+             ios:Page.ModalPresentationStyle="OverFullScreen"
+             BackgroundColor="Transparent"
+             Title="PopUpCompanyPlayer">
+    <Grid>
+        <Grid.GestureRecognizers>
+            <TapGestureRecognizer Tapped="TapGestureRecognizer_OnTapped" />
+        </Grid.GestureRecognizers>
+    
+        <Border
+        VerticalOptions="End"
+        HorizontalOptions="Fill"
+        Background="White"
+        StrokeShape="{RoundRectangle CornerRadius=20}"
+    
+        Padding="30">
+            <ScrollView MaximumHeightRequest="400">
+                <VerticalStackLayout Padding="10">
+                    <Button Text="Оплатить аренду 100$" HorizontalOptions="Fill" Margin="0, 20, 0, 20">
+                        <Button.Background>
+                            <LinearGradientBrush>
+                                <GradientStop Color="#fd6244" Offset="0.1" />
+                                <GradientStop Color="#e73d60" Offset="1.0" />
+                            </LinearGradientBrush>
+                        </Button.Background>
+                        <Button.Shadow>
+                            <Shadow Brush="Black" Offset="5,10" Radius="20" Opacity="0.5" />
+                        </Button.Shadow>
+                    </Button>
+                    <Grid Margin="0,10,0,0" VerticalOptions="Start" HorizontalOptions="Fill">
+                        <BoxView  VerticalOptions="Fill" HorizontalOptions="Fill" CornerRadius="10">
+                            <BoxView.Background>
+                                <LinearGradientBrush>
+                                    <GradientStop Color="#55b155" Offset="0.1" />
+                                    <GradientStop Color="#3b7d3b" Offset="1.0" />
+                                </LinearGradientBrush>
+                            </BoxView.Background>
+                        </BoxView>
+                        <Grid VerticalOptions="Fill" HorizontalOptions="Fill">
+                            <BoxView WidthRequest="80" HeightRequest="80"  Margin="5"  VerticalOptions="Start" BackgroundColor="White" HorizontalOptions="Start" CornerRadius="5"/>
+                            <Image Source="user.png" HeightRequest="70" Margin="10,10,0,0"  HorizontalOptions="Start" VerticalOptions="Start" Aspect="Fill" SemanticProperties.Description="dot net bot in a race car number eight" />
+                            <Label 
+                    Text="Собственность игрока Kolian007"
+                    TextColor="White"
+                    Margin="90, 0, 0, 0"
+                    FontSize="18"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Start" />
+                        </Grid>
+                    </Grid>
+                    <Label Text="Доставка" FontSize="20" HorizontalOptions="Center"/>
+                    <Grid>
+                        <Grid HeightRequest="200" WidthRequest="125" Margin="0, 10, 0, 0" VerticalOptions="Start" HorizontalOptions="Start">
+                            <BoxView HorizontalOptions="Fill" VerticalOptions="Fill" CornerRadius="20" >
+                                <BoxView.Shadow>
+                                    <Shadow Brush="Black" Offset="5,10" Radius="30" Opacity="0.6" />
+                                </BoxView.Shadow>
+                            </BoxView>
+                            <Grid VerticalOptions="Fill" HorizontalOptions="Fill">
+                                <Image Source="company_1.png"  HorizontalOptions="Fill" VerticalOptions="Fill" Aspect="Fill" />
+                            </Grid>
+                        </Grid>
+                        <Image Source="monopolyhouse_green.png" WidthRequest="60" Margin="140, 20, 0, 0"  HorizontalOptions="Start" VerticalOptions="Start" Aspect="Fill" />
+                        <Label 
+                            Text="="
+                            TextColor="Black"
+                            Margin="200, 30, 0, 0"
+                            FontSize="30"
+                            VerticalOptions="Start" 
+                            HorizontalOptions="Start" />
+                        <Label 
+                            Text="4"
+                            TextColor="Black"
+                            Margin="220, 30, 0, 0"
+                            FontSize="30"
+                            VerticalOptions="Start" 
+                            HorizontalOptions="Start" />
+                        <Image Source="monopolyhouse_red.png" WidthRequest="60" Margin="140, 90, 0, 0"  HorizontalOptions="Start" VerticalOptions="Start" Aspect="Fill" />
+                        <Label 
+                            Text="="
+                            TextColor="Black"
+                            Margin="200, 100, 0, 0"
+                            FontSize="30"
+                            VerticalOptions="Start" 
+                            HorizontalOptions="Start" />
+                        <Label 
+                            Text="1"
+                            TextColor="Black"
+                            Margin="220, 100, 0, 0"
+                            FontSize="30"
+                            VerticalOptions="Start" 
+                            HorizontalOptions="Start" />
+                    </Grid>
+                
+                    <Label 
+                        Text="Цена: 100$"
+                        TextColor="Black"
+                        Margin="0, 20, 0, 0"
+                        FontSize="22"
+                        VerticalOptions="Start" 
+                        HorizontalOptions="Center" />
+                
+                </VerticalStackLayout>
+            </ScrollView>
+        </Border>
+    </Grid>
+</ContentPage>

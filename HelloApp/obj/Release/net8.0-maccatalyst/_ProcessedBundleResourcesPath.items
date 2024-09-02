@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <BundleResource Include="C:\Users\Alex_\source\repos\HelloApp\HelloApp\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\ban.png" />
+    <BundleResource Include="C:\Users\Alex_\source\repos\HelloApp\HelloApp\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\plus.png" />
+    <BundleResource Include="C:\Users\Alex_\source\repos\HelloApp\HelloApp\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\city.png" />
+    <BundleResource Include="C:\Users\Alex_\source\repos\HelloApp\HelloApp\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\monopolyhouse_green.png" />
+    <BundleResource Include="C:\Users\Alex_\source\repos\HelloApp\HelloApp\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\logo_monopoly.png" />
+    <BundleResource Include="C:\Users\Alex_\source\repos\HelloApp\HelloApp\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\company_1.png" />
+    <BundleResource Include="C:\Users\Alex_\source\repos\HelloApp\HelloApp\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\nfc_logo.png" />
+    <BundleResource Include="C:\Users\Alex_\source\repos\HelloApp\HelloApp\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\company_2.png" />
+    <BundleResource Include="C:\Users\Alex_\source\repos\HelloApp\HelloApp\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\monopolyhouse_red.png" />
+    <BundleResource Include="C:\Users\Alex_\source\repos\HelloApp\HelloApp\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\company_3.png" />
+    <BundleResource Include="C:\Users\Alex_\source\repos\HelloApp\HelloApp\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\user.png" />
+    <BundleResource Include="C:\Users\Alex_\source\repos\HelloApp\HelloApp\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\mastercard_logo.png" />
+    <BundleResource Include="C:\Users\Alex_\source\repos\HelloApp\HelloApp\obj\Release\net8.0-maccatalyst\resizetizer\r\dotnet_bot@3x.png" />
+    <BundleResource Include="C:\Users\Alex_\source\repos\HelloApp\HelloApp\obj\Release\net8.0-maccatalyst\resizetizer\r\dotnet_bot@2x.png" />
+    <BundleResource Include="C:\Users\Alex_\source\repos\HelloApp\HelloApp\obj\Release\net8.0-maccatalyst\resizetizer\r\dotnet_bot.png" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,89 @@
+is_global = true
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.TargetFramework = net8.0-ios
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = HelloApp
+build_property.ProjectDir = C:\Users\Alex_\source\repos\HelloApp\HelloApp\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+
+[C:/Users/Alex_/source/repos/HelloApp/HelloApp/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HelloApp.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[C:/Users/Alex_/source/repos/HelloApp/HelloApp/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HelloApp.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[C:/Users/Alex_/source/repos/HelloApp/HelloApp/GameMainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HelloApp.GameMainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = GameMainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = GameMainPage.xaml
+
+[C:/Users/Alex_/source/repos/HelloApp/HelloApp/JoinGamePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HelloApp.JoinGamePage.xaml
+build_metadata.AdditionalFiles.TargetPath = JoinGamePage.xaml
+build_metadata.AdditionalFiles.RelativePath = JoinGamePage.xaml
+
+[C:/Users/Alex_/source/repos/HelloApp/HelloApp/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HelloApp.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
+
+[C:/Users/Alex_/source/repos/HelloApp/HelloApp/NewGamePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HelloApp.NewGamePage.xaml
+build_metadata.AdditionalFiles.TargetPath = NewGamePage.xaml
+build_metadata.AdditionalFiles.RelativePath = NewGamePage.xaml
+
+[C:/Users/Alex_/source/repos/HelloApp/HelloApp/PopUpCompany.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HelloApp.PopUpCompany.xaml
+build_metadata.AdditionalFiles.TargetPath = PopUpCompany.xaml
+build_metadata.AdditionalFiles.RelativePath = PopUpCompany.xaml
+
+[C:/Users/Alex_/source/repos/HelloApp/HelloApp/PopUpCompanyBAN.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HelloApp.PopUpCompanyBAN.xaml
+build_metadata.AdditionalFiles.TargetPath = PopUpCompanyBAN.xaml
+build_metadata.AdditionalFiles.RelativePath = PopUpCompanyBAN.xaml
+
+[C:/Users/Alex_/source/repos/HelloApp/HelloApp/PopUpCompanyInfo.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HelloApp.PopUpCompanyInfo.xaml
+build_metadata.AdditionalFiles.TargetPath = PopUpCompanyInfo.xaml
+build_metadata.AdditionalFiles.RelativePath = PopUpCompanyInfo.xaml
+
+[C:/Users/Alex_/source/repos/HelloApp/HelloApp/PopUpCompanyPlayer.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HelloApp.PopUpCompanyPlayer.xaml
+build_metadata.AdditionalFiles.TargetPath = PopUpCompanyPlayer.xaml
+build_metadata.AdditionalFiles.RelativePath = PopUpCompanyPlayer.xaml
+
+[C:/Users/Alex_/source/repos/HelloApp/HelloApp/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HelloApp.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[C:/Users/Alex_/source/repos/HelloApp/HelloApp/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HelloApp.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml

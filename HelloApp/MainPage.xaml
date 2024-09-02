@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="HelloApp.MainPage"
+    BackgroundColor="#fbfbfd"
+    NavigationPage.HasNavigationBar="False"
+    >
+    <ScrollView>
+        <FlexLayout
+            Direction="Column"
+            AlignItems="Center"
+            JustifyContent="SpaceEvenly">
+            <VerticalStackLayout Padding="30,0" Spacing="25" FlexLayout.Grow="1">
+                <Image Source="logo_monopoly.png" HeightRequest="185" Aspect="AspectFit" SemanticProperties.Description="dot net bot in a race car number eight" />
+
+                <Label Text="Добро пожаловать" Style="{StaticResource Headline}" FontSize="25" SemanticProperties.HeadingLevel="Level1" />
+
+                <Button 
+                    x:Name="But_new_game" 
+                    Text="Новая игра" 
+                    SemanticProperties.Hint="Counts the number of times you click" 
+                    Clicked="OnStartNewGame" 
+                    HorizontalOptions="Fill">
+                    <Button.Background>
+                        <LinearGradientBrush>
+                            <GradientStop Color="#fd6244" Offset="0.1" />
+                            <GradientStop Color="#e73d60" Offset="1.0" />
+                        </LinearGradientBrush>
+                    </Button.Background>
+                    <Button.Shadow>
+                        <Shadow Brush="Black" Offset="5,10" Radius="20" Opacity="0.5" />
+                    </Button.Shadow>
+                </Button>
+
+                <Button
+                    x:Name="But_join_game"
+                    Text="Присоеденится к игре" 
+                    SemanticProperties.Hint="Counts the number of times you click"
+    
+                    Clicked="OnJoinNewGame"
+                    HorizontalOptions="Fill">   
+                    <Button.Background>
+                        <LinearGradientBrush>
+                            <GradientStop Color="#019dce" Offset="0.1" />
+                            <GradientStop Color="#0daaa3" Offset="1.0" />
+                        </LinearGradientBrush>
+                    </Button.Background>
+                    <Button.Shadow>
+                        <Shadow Brush="Black" Offset="5,10" Radius="20" Opacity="0.5" />
+                    </Button.Shadow>
+                </Button>
+
+                
+
+            </VerticalStackLayout>
+            <Image
+                HorizontalOptions="End"
+                Source="city.png"
+                Aspect="AspectFill"
+                SemanticProperties.Description="dot net bot in a race car number eight" />
+        </FlexLayout>
+        
+    </ScrollView>
+
+</ContentPage>

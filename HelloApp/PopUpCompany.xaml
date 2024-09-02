@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HelloApp.PopUpCompany"
+             xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
+             ios:Page.ModalPresentationStyle="OverFullScreen"
+             BackgroundColor="Transparent"
+             Title="PopUpCompany">
+    <!--#00010130-->
+    <Grid>
+        <Grid.GestureRecognizers>
+            <TapGestureRecognizer Tapped="TapGestureRecognizer_OnTapped" />
+        </Grid.GestureRecognizers>
+        <Border
+            VerticalOptions="End"
+            HorizontalOptions="Fill"
+            Background="White"
+            StrokeShape="{RoundRectangle CornerRadius=20}"
+            
+            Padding="15">
+            <ScrollView MaximumHeightRequest="400">
+                <VerticalStackLayout>
+                    <Grid x:Name="Grid_company" BindingContext="Company"  HeightRequest="270" WidthRequest="190">
+                        
+                        <BoxView HorizontalOptions="Fill" VerticalOptions="Fill" CornerRadius="20" >
+                            <BoxView.Background>
+                                <LinearGradientBrush>
+                                    <GradientStop Color="#27283d" Offset="0.1" />
+                                    <GradientStop Color="#575a89" Offset="1.0" />
+                                </LinearGradientBrush>
+                            </BoxView.Background>
+                            <BoxView.Shadow>
+                                <Shadow Brush="Black" Offset="5,10" Radius="30" Opacity="0.6" />
+                            </BoxView.Shadow>
+                        </BoxView>
+                        <Grid VerticalOptions="Fill" HorizontalOptions="Fill">
+                            <BoxView HorizontalOptions="Fill" VerticalOptions="Start" BackgroundColor="{Binding color}"  HeightRequest="25" CornerRadius="20, 20, 0, 0" />
+                            <Label 
+                            Text="Документ собственности"
+                            TextColor="White"
+                            Margin="0, 5, 0, 0"
+                            FontSize="9"
+                            VerticalOptions="Start" 
+                            HorizontalOptions="Center" />
+                            <BoxView BackgroundColor="White" VerticalOptions="Start" HorizontalOptions="Fill" HeightRequest="1" Margin="0, 25, 0, 0"/>
+                            <Label 
+                            Text="{Binding Name}"
+                            TextColor="White"
+                            Margin="0, 25, 0, 0"
+                            FontSize="12"
+                            FontFamily="Times New Roman"
+                            FontAttributes="Bold"
+                            VerticalOptions="Start" 
+                            HorizontalOptions="Center" />
+                            <BoxView BackgroundColor="White" VerticalOptions="Start" HorizontalOptions="Fill" HeightRequest="1" Margin="0, 45, 0, 0"/>
+                            <Label 
+                            Text="Арендная плата:"
+                            TextColor="White"
+                            FontAttributes="Bold"
+                            Margin="10, 60, 0, 0"
+                            FontSize="9"
+                            VerticalOptions="Start" 
+                            HorizontalOptions="Start" />
+                            <Label 
+                            IsVisible="{Binding IsCompany}"
+                            Text="Только фирма"
+                            TextColor="White"
+                            Margin="10, 73, 0, 0"
+                            FontSize="9"
+                            VerticalOptions="Start" 
+                            HorizontalOptions="Start" />
+                            <Label
+                            IsVisible="{Binding IsCorp}"
+                            Text="Одно предприятие"
+                            TextColor="White"
+                            Margin="10, 73, 0, 0"
+                            FontSize="9"
+                            VerticalOptions="Start" 
+                            HorizontalOptions="Start" />
+                            <Label 
+                            Text="{Binding Orend[0]}"
+                            TextColor="White"
+                            Margin="0, 73, 20, 0"
+                            FontSize="9"
+                            VerticalOptions="Start" 
+                            HorizontalOptions="End" />
+                            <Label 
+                            IsVisible="{Binding IsCompany}"
+                            Text="Один филиал"
+                            TextColor="White"
+                            Margin="10, 86, 0, 0"
+                            FontSize="9"
+                            VerticalOptions="Start" 
+                            HorizontalOptions="Start" />
+                            <Label 
+                            IsVisible="{Binding IsCorp}"
+                            Text="Два предприятия"
+                            TextColor="White"
+                            Margin="10, 86, 0, 0"
+                            FontSize="9"
+                            VerticalOptions="Start" 
+                            HorizontalOptions="Start" />
+                            <Label 
+                            Text="{Binding Orend[1]}"
+                            TextColor="White"
+                            Margin="0, 86, 20, 0"
+                            FontSize="9"
+                            VerticalOptions="Start" 
+                            HorizontalOptions="End" />
+                            <Label 
+                            IsVisible="{Binding IsCompany}"
+                            Text="Второй филиал"
+                            TextColor="White"
+                            Margin="10, 99, 0, 0"
+                            FontSize="9"
+                            VerticalOptions="Start" 
+                            HorizontalOptions="Start" />
+                            <Label 
+                            IsVisible="{Binding IsCorp}"
+                            Text="Три предприятия"
+                            TextColor="White"
+                            Margin="10, 99, 0, 0"
+                            FontSize="9"
+                            VerticalOptions="Start" 
+                            HorizontalOptions="Start" />
+                            <Label 
+                            Text="{Binding Orend[2]}"
+                            TextColor="White"
+                            Margin="0, 99, 20, 0"
+                            FontSize="9"
+                            VerticalOptions="Start" 
+                            HorizontalOptions="End" />
+                            <Label 
+                            IsVisible="{Binding IsCompany}"
+                            Text="Третий филиал"
+                            TextColor="White"
+                            Margin="10, 112, 0, 0"
+                            FontSize="9"
+                            VerticalOptions="Start" 
+                            HorizontalOptions="Start" />
+                            <Label 
+                            IsVisible="{Binding IsCorp}"
+                            Text="Четыре предприятия"
+                            TextColor="White"
+                            Margin="10, 112, 0, 0"
+                            FontSize="9"
+                            VerticalOptions="Start" 
+                            HorizontalOptions="Start" />
+                            <Label 
+                            Text="{Binding Orend[3]}"
+                            TextColor="White"
+                            Margin="0, 112, 20, 0"
+                            FontSize="9"
+                            VerticalOptions="Start" 
+                            HorizontalOptions="End" />
+                            <Label 
+                            IsVisible="{Binding IsCompany}"
+                            Text="Корпорация"
+                            TextColor="White"
+                            Margin="10, 125, 0, 0"
+                            FontSize="9"
+                            VerticalOptions="Start" 
+                            HorizontalOptions="Start" />
+                            <Label 
+                            IsVisible="{Binding IsCorp}"
+                            Text="Пять придприятий"
+                            TextColor="White"
+                            Margin="10, 125, 0, 0"
+                            FontSize="9"
+                            VerticalOptions="Start" 
+                            HorizontalOptions="Start" />
+                            <Label 
+                            Text="{Binding Orend[4]}"
+                            TextColor="White"
+                            Margin="0, 125, 20, 0"
+                            FontSize="9"
+                            VerticalOptions="Start" 
+                            HorizontalOptions="End" />
+                            <Label 
+                            IsVisible="{Binding IsCorp}"
+                            Text="Шесть придприятий"
+                            TextColor="White"
+                            Margin="10, 138, 0, 0"
+                            FontSize="9"
+                            VerticalOptions="Start" 
+                            HorizontalOptions="Start" />
+                            <Label 
+                            IsVisible="{Binding IsCorp}"
+                            Text="{Binding Orend[5]}"
+                            TextColor="White"
+                            Margin="0, 138, 20, 0"
+                            FontSize="9"
+                            VerticalOptions="Start" 
+                            HorizontalOptions="End" />
+                            <Label 
+                            IsVisible="{Binding IsCompany}"
+                            Text="Стоимость:"
+                            TextColor="White"
+                            FontAttributes="Bold"
+                            Margin="10, 150, 0, 0"
+                            FontSize="9"
+                            VerticalOptions="Start" 
+                            HorizontalOptions="Start" />
+                            <Label 
+                            IsVisible="{Binding IsCompany}"
+                            Text="Филиалов"
+                            TextColor="White"
+                            Margin="10, 163, 0, 0"
+                            FontSize="9"
+                            VerticalOptions="Start" 
+                            HorizontalOptions="Start" />
+                            <Label 
+                            IsVisible="{Binding IsCompany}"
+                            Text="100"
+                            TextColor="White"
+                            Margin="0, 163, 20, 0"
+                            FontSize="9"
+                            VerticalOptions="Start" 
+                            HorizontalOptions="End" />
+                            <Label 
+                            IsVisible="{Binding IsCompany}"
+                            Text="Корпорации"
+                            TextColor="White"
+                            Margin="10, 176, 0, 0"
+                            FontSize="9"
+                            VerticalOptions="Start" 
+                            HorizontalOptions="Start" />
+                            <Label 
+                            IsVisible="{Binding IsCompany}"
+                            Text="100"
+                            TextColor="White"
+                            Margin="0, 176, 20, 0"
+                            FontSize="9"
+                            VerticalOptions="Start" 
+                            HorizontalOptions="End" />
+                            <BoxView BackgroundColor="White" VerticalOptions="Start" HorizontalOptions="Fill" HeightRequest="1" Margin="0, 200, 0, 0"/>
+                            <BoxView BackgroundColor="White" VerticalOptions="Start" HorizontalOptions="Fill" HeightRequest="1" Margin="0, 205, 0, 0"/>
+                            <Label 
+                            IsVisible="{Binding IsCompany}"
+                            Text="Залоговая стоимость                          одной фирмы:"
+                            TextColor="White"
+                            FontAttributes="Bold"
+                            Margin="10, 210, 0, 0"
+                            FontSize="9"
+                            VerticalOptions="Start" 
+                            HorizontalOptions="Start" />
+                            <Label 
+                            IsVisible="{Binding IsCorp}"
+                            Text="Залоговая стоимость                          одного предприятия:"
+                            TextColor="White"
+                            FontAttributes="Bold"
+                            Margin="10, 210, 0, 0"
+                            FontSize="9"
+                            VerticalOptions="Start" 
+                            HorizontalOptions="Start" />
+                            <Label 
+                            Text="{Binding Deposit}"
+                            TextColor="White"
+                            Margin="0, 210, 20, 0"
+                            FontSize="9"
+                            VerticalOptions="Start" 
+                            HorizontalOptions="End" />
+                        </Grid>
+                    </Grid>
+                    <Grid>
+                        <Label
+                            x:Name="Label_price"
+                            Text="Цена: 100$"
+                            TextColor="Black"
+                            Margin="0, 20, 0, 0"
+                            FontSize="22"
+                            VerticalOptions="Start" 
+                            HorizontalOptions="Center" />
+                        <HorizontalStackLayout Margin="0, 40, 0, 0" HorizontalOptions="Center">
+                            <Button
+                                Text="Купить"
+                                Clicked="Buy_Click"
+                                SemanticProperties.Hint="Counts the number of times you click"
+                                HorizontalOptions="Fill"
+                                Padding="50,0,50,0"
+                                Margin="0, 20, 0, 0">
+                                <Button.Background>
+                                    <LinearGradientBrush>
+                                        <GradientStop Color="#55b155" Offset="0.1" />
+                                        <GradientStop Color="#3b7d3b" Offset="1.0" />
+                                    </LinearGradientBrush>
+                                </Button.Background>
+                            </Button>
+
+                            <Button
+                                Text="Аукцион" 
+                                SemanticProperties.Hint="Counts the number of times you click"
+                                HorizontalOptions="Fill"
+                                Padding="50,0,50,0"
+                                Margin="20, 20, 0, 0">
+                                <Button.Background>
+                                    <LinearGradientBrush>
+                                        <GradientStop Color="#fd6244" Offset="0.1" />
+                                        <GradientStop Color="#e73d60" Offset="1.0" />
+                                    </LinearGradientBrush>
+                                </Button.Background>
+                            </Button>
+                        </HorizontalStackLayout>
+                    </Grid>
+                </VerticalStackLayout>
+            </ScrollView>
+        </Border>
+    </Grid>
+</ContentPage>

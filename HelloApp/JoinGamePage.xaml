@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HelloApp.JoinGamePage"
+             Title="JoinGamePage">
+    <ScrollView>
+        <FlexLayout
+        Direction="Column"
+        AlignItems="Stretch"
+        JustifyContent="SpaceAround">
+            <VerticalStackLayout Margin="20, 20, 20, 0" FlexLayout.Grow="1" HorizontalOptions="Fill">
+                <Label Text="IP адрес подключения" Margin="10, 0, 0, 0"/>
+                <Frame HorizontalOptions="Fill" BackgroundColor="#cfd9e5" HeightRequest="50" Padding="5" Margin="0" BorderColor="Transparent">
+                    <Entry x:Name="Ipserver" HorizontalOptions="Fill" Placeholder="192.168.31.0" PlaceholderColor="#44474b"/>
+                </Frame>
+                <Label Text="Имя в игре" Margin="10, 0, 0, 0"/>
+                <Frame HorizontalOptions="Fill" BackgroundColor="#cfd9e5" HeightRequest="50" Padding="5" Margin="0" BorderColor="Transparent">
+                    <Entry x:Name="username" HorizontalOptions="Fill" Placeholder="Введите свой ник" PlaceholderColor="#44474b"/>
+                </Frame>
+                <Button 
+                 x:Name="But_new_game" 
+                 Text="Присоедениться к игре" 
+                 SemanticProperties.Hint="Counts the number of times you click" 
+                 Clicked="OnStartJoinGame"
+                
+                 HorizontalOptions="Fill"
+                 Margin="0, 20, 0, 0">
+                    <Button.Background>
+                        <LinearGradientBrush>
+                            <GradientStop Color="#fd6244" Offset="0.1" />
+                            <GradientStop Color="#e73d60" Offset="1.0" />
+                        </LinearGradientBrush>
+                    </Button.Background>
+                    <Button.Shadow>
+                        <Shadow Brush="Black" Offset="5,10" Radius="20" Opacity="0.5" />
+                    </Button.Shadow>
+                </Button>
+            </VerticalStackLayout>
+            <Image
+                HorizontalOptions="End"
+                Source="city.png"
+                Aspect="AspectFill"
+                SemanticProperties.Description="dot net bot in a race car number eight" />
+        </FlexLayout>
+    </ScrollView>
+</ContentPage>

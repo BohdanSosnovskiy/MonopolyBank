@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HelloApp.PopUpInfoUser"
+             BackgroundColor="Transparent"
+             Title="PopUpInfoUser">
+    <Grid>
+        <Grid.GestureRecognizers>
+            <TapGestureRecognizer Tapped="TapGestureRecognizer_OnTapped" />
+        </Grid.GestureRecognizers>
+
+        <Border
+            VerticalOptions="End"
+            HorizontalOptions="Fill"
+            Background="White"
+            StrokeShape="{RoundRectangle CornerRadius=20}">   
+            <ScrollView MaximumHeightRequest="400">
+                <VerticalStackLayout Padding="10" HorizontalOptions="Fill">
+                    <Grid BackgroundColor="Azure" x:Name="BaseInfo">
+                        <BoxView HeightRequest="200" CornerRadius="20" Margin="20">
+                            <BoxView.Background>
+                                <LinearGradientBrush>
+                                    <GradientStop Color="#fd6244" Offset="0.1" />
+                                    <GradientStop Color="#e73d60" Offset="1.0" />
+                                </LinearGradientBrush>
+                            </BoxView.Background>
+                            <BoxView.Shadow>
+                                <Shadow Brush="Black" Offset="5,10" Radius="30" Opacity="0.6" />
+                            </BoxView.Shadow>
+                        </BoxView>
+                        <Image Source="logo_monopoly.png" Margin="0, 0, 0, 60" Opacity="0.7" WidthRequest="185" Aspect="AspectFit" SemanticProperties.Description="dot net bot in a race car number eight" />
+                        <Image Source="nfc_logo.png" Margin="0, 30, 30, 0" HeightRequest="50" Aspect="AspectFit" HorizontalOptions="End" VerticalOptions="Start" SemanticProperties.Description="dot net bot in a race car number eight" />
+                        <Image Source="mastercard_logo.png" Margin="0, 0, 35, 35" HeightRequest="40"  HorizontalOptions="End" VerticalOptions="End" Aspect="AspectFit" SemanticProperties.Description="dot net bot in a race car number eight" />
+                        <Grid Margin="20, 40, 0, 0" HeightRequest="40" VerticalOptions="Start" HorizontalOptions="Start">
+                            <BoxView  VerticalOptions="Fill" HorizontalOptions="Fill" CornerRadius="0, 10, 0, 10">
+                                <BoxView.Background>
+                                    <LinearGradientBrush>
+                                        <GradientStop Color="#151618" Offset="0.1" />
+                                        <GradientStop Color="#44474b" Offset="1.0" />
+                                    </LinearGradientBrush>
+                                </BoxView.Background>
+                                <BoxView.Shadow>
+                                    <Shadow Brush="Black" Offset="5,10" Radius="30" Opacity="0.6" />
+                                </BoxView.Shadow>
+                            </BoxView>
+                            <Grid VerticalOptions="Fill" HorizontalOptions="Fill">
+                                <Label
+                                    Text="{Binding Name}"
+                                    TextColor="White"
+                                    Margin="10, 0, 15, 0"
+                                    FontSize="25"
+                                    VerticalOptions="Start" 
+                                    HorizontalOptions="Start" />
+                            </Grid>
+                        </Grid>
+
+                        <Label 
+                            Text="Сумма на баллансе"
+                            Margin="30, 130, 0, 0"
+                            TextColor="White"
+                            FontSize="20"
+                            VerticalOptions="Start" 
+                            HorizontalOptions="Start" />
+                        <Label 
+                            
+                            Text="{Binding Cash, StringFormat={}{0} $}"
+                            Margin="30, 160, 0, 0"
+                            TextColor="White"
+                            FontSize="35"
+                            VerticalOptions="Start" 
+                            HorizontalOptions="Start" />
+
+
+                    </Grid>
+
+                </VerticalStackLayout>
+            </ScrollView>
+        </Border>
+    </Grid>
+</ContentPage>

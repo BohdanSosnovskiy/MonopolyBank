@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HelloApp.PopUpCompanyBAN"
+             BackgroundColor="Transparent"
+             Title="PopUpCompanyBAN">
+    <Grid>
+        <Grid.GestureRecognizers>
+            <TapGestureRecognizer Tapped="TapGestureRecognizer_OnTapped" />
+        </Grid.GestureRecognizers>
+
+        <Frame
+            VerticalOptions="End"
+            HorizontalOptions="Fill"
+            Background="White"
+            CornerRadius="20"
+
+            Padding="30">
+            <ScrollView MaximumHeightRequest="400">
+                <VerticalStackLayout Padding="10">
+                    <Label Text="Доставка (заложена)" FontSize="20" HorizontalOptions="Center"/>
+                    <Grid>
+                        <Grid HeightRequest="200" WidthRequest="125" Margin="0, 10, 0, 0" VerticalOptions="Start" HorizontalOptions="Center">
+                            <BoxView HorizontalOptions="Fill" VerticalOptions="Fill" CornerRadius="20" >
+                                <BoxView.Shadow>
+                                    <Shadow Brush="Black" Offset="5,10" Radius="30" Opacity="0.6" />
+                                </BoxView.Shadow>
+                            </BoxView>
+                            <Grid VerticalOptions="Fill" HorizontalOptions="Fill">
+                                <Image Source="company_1.png"  HorizontalOptions="Fill" VerticalOptions="Fill" Aspect="Fill" />
+                            </Grid>
+                        </Grid>
+                        <Image Source="ban.png" WidthRequest="160" Margin="80, 20, 0, 0"  HorizontalOptions="Start" VerticalOptions="Start" Aspect="Fill" />
+                        
+                    </Grid>
+                    <Button Text="Выкупить 50$" HorizontalOptions="Fill" Margin="0, 20, 0, 0">
+                        <Button.Background>
+                            <LinearGradientBrush>
+                                <GradientStop Color="#55b155" Offset="0.1" />
+                                <GradientStop Color="#3b7d3b" Offset="1.0" />
+                            </LinearGradientBrush>
+                        </Button.Background>
+                        <Button.Shadow>
+                            <Shadow Brush="Black" Offset="5,10" Radius="20" Opacity="0.5" />
+                        </Button.Shadow>
+                    </Button>
+
+                    <Button Text="Продать компанию (+50$)" HorizontalOptions="Fill" Margin="0, 20, 0, 0">
+                        <Button.Background>
+                            <LinearGradientBrush>
+                                <GradientStop Color="#fd6244" Offset="0.1" />
+                                <GradientStop Color="#e73d60" Offset="1.0" />
+                            </LinearGradientBrush>
+                        </Button.Background>
+                        <Button.Shadow>
+                            <Shadow Brush="Black" Offset="5,10" Radius="20" Opacity="0.5" />
+                        </Button.Shadow>
+                    </Button>
+
+
+                </VerticalStackLayout>
+            </ScrollView>
+        </Frame>
+    </Grid>
+</ContentPage>
