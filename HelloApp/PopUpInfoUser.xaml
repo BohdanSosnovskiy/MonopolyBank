@@ -14,7 +14,7 @@
             HorizontalOptions="Fill"
             Background="White"
             StrokeShape="{RoundRectangle CornerRadius=20}">   
-            <ScrollView MaximumHeightRequest="400">
+            <ScrollView MaximumHeightRequest="600">
                 <VerticalStackLayout Padding="10" HorizontalOptions="Fill">
                     <Grid x:Name="BaseInfo">
                         <BoxView HeightRequest="200" CornerRadius="20" Margin="20">
@@ -367,6 +367,7 @@
                     <Button
                         Text="Заключить сделку"
                         SemanticProperties.Hint="Counts the number of times you click"
+                        Clicked="OnStartObmen"
                         HorizontalOptions="Fill"
                         Padding="50,0,50,0"
                         Margin="0, 20, 0, 0">

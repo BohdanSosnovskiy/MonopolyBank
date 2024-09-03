@@ -348,7 +348,7 @@
                                 <BoxView BackgroundColor="White" VerticalOptions="Start" HorizontalOptions="Fill" HeightRequest="1" Margin="0, 205, 0, 0"/>
                                 <Label 
                                     IsVisible="{Binding IsCompany}"
-                                    Text="Залоговая стоимость                            одной фирмы:"
+                                    Text="Залоговая стоимость                                    одной фирмы:"
                                     TextColor="White"
                                     FontAttributes="Bold"
                                     Margin="10, 210, 0, 0"
@@ -357,7 +357,7 @@
                                     HorizontalOptions="Start" />
                                 <Label 
                                     IsVisible="{Binding IsCorp}"
-                                    Text="Залоговая стоимость                            одного предприятия:"
+                                    Text="Залоговая стоимость                                    одного предприятия:"
                                     TextColor="White"
                                     FontAttributes="Bold"
                                     Margin="10, 210, 0, 0"

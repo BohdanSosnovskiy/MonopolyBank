@@ -98,6 +98,8 @@
 	  <None Remove="Resources\Images\monopolyhouse_red.png" />
 	  <None Remove="Resources\Images\nfc_logo.png" />
 	  <None Remove="Resources\Images\plus.png" />
+	  <None Remove="Resources\Images\sdelka_logo.png" />
+	  <None Remove="Resources\Images\torg_money.png" />
 	  <None Remove="Resources\Images\user.png" />
 	  <None Remove="Resources\Raw\buld.mp3" />
 	  <None Remove="Resources\Raw\coindrop.mp3" />
@@ -126,6 +128,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="NewGamePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="PageObmenCompanyUser.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="PopUpAlert.xaml">

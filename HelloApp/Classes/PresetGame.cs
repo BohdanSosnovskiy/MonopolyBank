@@ -14,6 +14,7 @@ namespace HelloApp.Classes
         public static int CountCahsStart = 200;
 
         public static GameMainPage link_GameMainPage {  get; set; }
+        public static PageObmenCompanyUser link_PageObmen { get; set; }
 
         public static ObservableCollection<User> Users = new ObservableCollection<User>();
 

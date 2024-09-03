@@ -18,7 +18,19 @@ namespace HelloApp.Classes
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
-
+        private bool _isSdelka;
+        public bool Sdelka
+        {
+            get
+            {
+                return _isSdelka;
+            }
+            set
+            {
+                _isSdelka = value;
+                OnPropertyChanged();
+            }
+        }
         public bool IsNoEmty { get; set; } = true;
         public string Name { get; set; } = "";
         public string nfc_marker { get; set; } = "";
@@ -72,10 +84,41 @@ namespace HelloApp.Classes
         }
 
         public ICommand SelectCompany { get; set; }
-
+        public ICommand SelectCompanyMySdelka { get; set; }
+        public ICommand SelectCompanyUserSdelka { get; set; }
         public Company()
         {
-            
+            SelectCompanyMySdelka = new Command(async p =>
+            {
+                Company company = PresetGame.link_PageObmen.getCurrentMyCompany();
+                if (company.Name != "")
+                {
+                    if(Sdelka)
+                    {
+                        Sdelka = false;
+                    }
+                    else
+                    {
+                        Sdelka = true;
+                    }
+                }
+            });
+            SelectCompanyUserSdelka = new Command(async p =>
+            {
+                Company company = PresetGame.link_PageObmen.getCurrentUserCompany();
+                if (company.Name != "")
+                {
+                    if (Sdelka)
+                    {
+                        Sdelka = false;
+                    }
+                    else
+                    {
+                        Sdelka = true;
+                    }
+                }
+            });
+
             SelectCompany = new Command(async p =>
             {
                 Company company = PresetGame.link_GameMainPage.getCurrentCompany();

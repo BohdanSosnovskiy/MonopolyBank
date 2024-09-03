@@ -31,7 +31,7 @@ public partial class PopUpInfoUser : ContentPage
 
     public void PoppingIn()
     {
-        var contentHeight = 600;
+        var contentHeight = 900;
 
         // Начните с перевода контента под экраном или за его пределами.
         this.Content.TranslationY = contentHeight;
@@ -91,6 +91,12 @@ public partial class PopUpInfoUser : ContentPage
 
         // We return the task so we can wait for the animation to finish
         return done.Task;
+    }
+
+    private async void OnStartObmen(object sender, EventArgs e)
+    {
+        PresetGame.link_PageObmen = new PageObmenCompanyUser(User);
+        await Navigation.PushModalAsync(PresetGame.link_PageObmen, true);
     }
 
     private async void TapGestureRecognizer_OnTapped(object sender, TappedEventArgs e)

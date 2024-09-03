@@ -48,6 +48,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = HelloApp.NewGamePage.xaml
 build_metadata.AdditionalFiles.TargetPath = NewGamePage.xaml
 build_metadata.AdditionalFiles.RelativePath = NewGamePage.xaml
 
+[C:/GitProject/MonopolyBank/HelloApp/PageObmenCompanyUser.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HelloApp.PageObmenCompanyUser.xaml
+build_metadata.AdditionalFiles.TargetPath = PageObmenCompanyUser.xaml
+build_metadata.AdditionalFiles.RelativePath = PageObmenCompanyUser.xaml
+
 [C:/GitProject/MonopolyBank/HelloApp/PopUpAlert.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = HelloApp.PopUpAlert.xaml

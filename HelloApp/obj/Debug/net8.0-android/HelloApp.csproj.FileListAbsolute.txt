@@ -2302,3 +2302,5 @@ C:\GitProject\MonopolyBank\HelloApp\obj\Debug\net8.0-android\stamp\_ConvertResou
 C:\GitProject\MonopolyBank\HelloApp\obj\Debug\net8.0-android\stamp\_GenerateJavaStubs.stamp
 C:\GitProject\MonopolyBank\HelloApp\obj\Debug\net8.0-android\stamp\_GeneratePackageManagerJava.stamp
 C:\GitProject\MonopolyBank\HelloApp\obj\Debug\net8.0-android\stamp\_ResolveLibraryProjectImports.stamp
+C:\GitProject\MonopolyBank\HelloApp\obj\Debug\net8.0-android\resizetizer\r\drawable\sdelka_logo.png
+C:\GitProject\MonopolyBank\HelloApp\obj\Debug\net8.0-android\resizetizer\r\drawable\torg_money.png
