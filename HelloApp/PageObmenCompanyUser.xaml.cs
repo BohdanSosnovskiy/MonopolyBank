@@ -4,7 +4,7 @@ namespace HelloApp;
 
 public partial class PageObmenCompanyUser : ContentPage
 {
-	private User user_obmen { get; set; }
+	public User user_obmen { get; set; }
 	public PageObmenCompanyUser(User user)
 	{
 		InitializeComponent();
@@ -21,6 +21,18 @@ public partial class PageObmenCompanyUser : ContentPage
         this.Loaded -= Page_Loaded;
         Carusel_CompanyObmenUser.ItemsSource = user_obmen.Companys;
         Carusel_MyCompanys.ItemsSource = PresetGame.link_GameMainPage.CurrentUser.Companys;
+    }
+
+    protected override bool OnBackButtonPressed()
+    {
+        Close();
+        return true;
+    }
+
+    public async void Close()
+    {
+        await PresetGame.link_GameMainPage.SendMessageAsync(PresetGame.link_GameMainPage.Writer, $"CloseObmen|{user_obmen.Name}");
+        await Navigation.PopModalAsync();
     }
 
     public Company getCurrentMyCompany()

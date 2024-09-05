@@ -96,7 +96,9 @@ public partial class PopUpInfoUser : ContentPage
     private async void OnStartObmen(object sender, EventArgs e)
     {
         PresetGame.link_PageObmen = new PageObmenCompanyUser(User);
+        await PresetGame.link_GameMainPage.SendMessageAsync(PresetGame.link_GameMainPage.Writer, $"OpenObmen|{User.Name}");
         await Navigation.PushModalAsync(PresetGame.link_PageObmen, true);
+        
     }
 
     private async void TapGestureRecognizer_OnTapped(object sender, TappedEventArgs e)

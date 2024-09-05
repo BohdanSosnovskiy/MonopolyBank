@@ -142,26 +142,58 @@ public partial class GameMainPage : ContentPage
                         if(message == "start_mon")
                         {
                             PlaySound("coindrop");
+
+                            CurrentUser.Cash += PresetGame.CountStartSum;
+                            UpdateGUIData();
+                            await SendMessageAsync(Writer, $"UpdateBallans|{CurrentUser.Cash}");
                         }
                         else if(message == "pobori")
                         {
                             PlaySound("gopstop");
+
+                            CurrentUser.Cash -= 200;
+                            UpdateGUIData();
+                            await SendMessageAsync(Writer, $"UpdateBallans|{CurrentUser.Cash}");
                         }
                         else if(message == "taska")
                         {
                             PlaySound("policay");
+
+                            CurrentUser.Cash -= 100;
+                            UpdateGUIData();
+                            await SendMessageAsync(Writer, $"UpdateBallans|{CurrentUser.Cash}");
                         }
                         else if(message == "turma")
                         {
                             PlaySound("turma");
+
+                            CurrentUser.Cash -= 50;
+                            UpdateGUIData();
+                            await SendMessageAsync(Writer, $"UpdateBallans|{CurrentUser.Cash}");
                         }
                         else if(message.IndexOf("Card_k") > -1)
                         {
-
+                            int index = Convert.ToInt32(message.Substring(message.LastIndexOf("_") + 1));
+                            Card_kazna card = PresetGame.Сard_k[index - 1];
+                            var alert_pop = new PopUpAlert("Карта казны", card.Description, "Заплатить");
+                            alert_pop.Notify += async e => {
+                                CurrentUser.Cash -= card.Sum;
+                                UpdateGUIData();
+                                await SendMessageAsync(Writer, $"UpdateBallans|{CurrentUser.Cash}");
+                            };
+                            await Navigation.PushModalAsync(alert_pop, false);
                         }
                         else if (message.IndexOf("Card_shans") > -1)
                         {
-
+                            int index = Convert.ToInt32(message.Substring(message.LastIndexOf("_") + 1));
+                            Card_Shans card = PresetGame.Cards_Shans[index - 1];
+                            var alert_pop = new PopUpAlert("Карта шанс", card.Description, "Спасибо");
+                            alert_pop.Notify += async e => {
+                                CurrentUser.Cash += card.Sum;
+                                UpdateGUIData();
+                                await SendMessageAsync(Writer, $"UpdateBallans|{CurrentUser.Cash}");
+                            };
+                            await Navigation.PushModalAsync(alert_pop, false);
                         }
                         else
                         {
@@ -171,9 +203,28 @@ public partial class GameMainPage : ContentPage
                             {
                                 if(message == PresetGame.Companys[i].nfc_marker)
                                 {
-                                    await Navigation.PushModalAsync(new PopUpCompany(this, PresetGame.Companys[i]), false);
-                                    isFind = true;
-                                    break;
+                                    if(PresetGame.Companys[i].UserName == null)
+                                    {
+                                        //Если компания ничья
+                                        await Navigation.PushModalAsync(new PopUpCompany(this, PresetGame.Companys[i]), false);
+                                        isFind = true;
+                                        break;
+                                    }
+                                    else
+                                    {
+                                        if(PresetGame.Companys[i].UserName == CurrentUser.Name)
+                                        {
+                                            //Если она моя
+                                            await Navigation.PushModalAsync(new PopUpCompanyInfo(PresetGame.Companys[i]), false);
+                                            PresetGame.Companys[i].CompanyBuldVisibleChange();
+                                            isFind = true;
+                                            break;
+                                        }
+                                        else
+                                        {
+                                            //Если она другого пользователя
+                                        }
+                                    }
                                 }
                             }
 
@@ -220,7 +271,7 @@ public partial class GameMainPage : ContentPage
                 IsNoEmty = false,
             }
         };
-        CurrentUser.Companys.Add(PresetGame.Companys[0]);
+        
         Carusel_Company.ItemsSource = CurrentUser.Companys;
             
 
@@ -351,6 +402,96 @@ public partial class GameMainPage : ContentPage
                                 {
                                     PresetGame.Users[i].Cash = NewBallans;
                                     break;
+                                }
+                            }
+                        }
+                        else if (Action_str.IndexOf("CloseObmen") > -1)
+                        {
+                            if(CurrentUser.Name.IndexOf(Data) > -1)
+                            {
+                                var alert_pop = new PopUpAlert("Сделка отменена", $"Пользователь {nick_name} вышел из сделки", "");
+                                MainThread.BeginInvokeOnMainThread(async () =>
+                                {
+                                    await Navigation.PushModalAsync(alert_pop, false);
+                                });
+                                PresetGame.link_PageObmen.Close();
+                            }
+                        }
+                        else if (Action_str.IndexOf("OpenObmen") > -1)
+                        {
+                            string UserName = Data;
+                            User targetUser = null;
+
+                            if(CurrentUser.Name.IndexOf(UserName) > -1)
+                            {
+                                for (int i = 0; i < PresetGame.Users.Count; i++)
+                                {
+                                    if (PresetGame.Users[i].Name.IndexOf(nick_name) > -1)
+                                    {
+                                        targetUser = PresetGame.Users[i];
+                                        break;
+                                    }
+                                }
+
+                                if (targetUser != null)
+                                {
+                                    PresetGame.link_PageObmen = new PageObmenCompanyUser(targetUser);
+                                    MainThread.BeginInvokeOnMainThread(async () =>
+                                    {
+                                        await Navigation.PushModalAsync(PresetGame.link_PageObmen, true);
+                                    });
+                                }
+                            }
+                        }
+                        else if (Action_str.IndexOf("SelectCompanyObmen") > -1)
+                        {
+                            var data_select = Data.Split(",");
+                            string UserName = data_select[0];
+                            string CompanyName = data_select[1];
+                            bool value = Convert.ToBoolean(data_select[2]);
+
+                            if(CurrentUser.Name.IndexOf(UserName) > -1)
+                            {
+                                //Если выбрали мою компанию
+                                for(int i = 0; i < CurrentUser.Companys.Count; i++)
+                                {
+                                    if (CurrentUser.Companys[i].Name.IndexOf(CompanyName) > -1)
+                                    {
+                                        CurrentUser.Companys[i].Sdelka = value;
+                                        break;
+                                    }
+                                }
+                            }
+                            else
+                            {
+
+                                for (int i = 0; i < PresetGame.link_PageObmen.user_obmen.Companys.Count; i++)
+                                {
+                                    if (PresetGame.link_PageObmen.user_obmen.Companys[i].Name.IndexOf(CompanyName) > -1)
+                                    {
+                                        PresetGame.link_PageObmen.user_obmen.Companys[i].Sdelka = value;
+                                        break;
+                                    }
+                                }
+                            }
+                        }
+                        else if (Action_str.IndexOf("BuyCompany") > -1)
+                        {
+                            var Data_company = Data.Split(",");
+                            string UserName = Data_company[0];
+                            string CompanyName = Data_company[1];
+                            for (int i = 0; i < PresetGame.Users.Count; i++)
+                            {
+                                if (PresetGame.Users[i].Name.IndexOf(UserName) > -1)
+                                {
+                                    for(int j = 0; j < PresetGame.Companys.Count; j++)
+                                    {
+                                        if (PresetGame.Companys[j].Name.IndexOf(CompanyName) > -1)
+                                        {
+                                            PresetGame.Users[i].Companys.Add(PresetGame.Companys[j]);
+                                            break;
+                                        }
+                                    }
                                 }
                             }
                         }

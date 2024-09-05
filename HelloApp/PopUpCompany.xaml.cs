@@ -38,12 +38,16 @@ public partial class PopUpCompany : ContentPage
         if(_GameMainPage.CurrentUser.Cash >= Company.Price)
         {
             _GameMainPage.CurrentUser.Cash -= Company.Price;
+            Company.UserName = _GameMainPage.CurrentUser.Name;
             _GameMainPage.CurrentUser.Companys.Add(Company);
 
             _GameMainPage.UpdateGUIData();
 
             await _GameMainPage.SendMessageAsync(_GameMainPage.Writer, $"UpdateBallans|{_GameMainPage.CurrentUser.Cash}");
-            
+
+            await _GameMainPage.SendMessageAsync(_GameMainPage.Writer, $"BuyCompany|{_GameMainPage.CurrentUser.Name},{Company.Name}");
+
+
             await Close();
         }
         else

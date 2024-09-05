@@ -8,95 +8,95 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = HelloApp
-build_property.ProjectDir = C:\GitProject\MonopolyBank\HelloApp\
+build_property.ProjectDir = F:\Projects\MAUI\MonopolyBank\HelloApp\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 
-[C:/GitProject/MonopolyBank/HelloApp/App.xaml]
+[F:/Projects/MAUI/MonopolyBank/HelloApp/App.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = HelloApp.App.xaml
 build_metadata.AdditionalFiles.TargetPath = App.xaml
 build_metadata.AdditionalFiles.RelativePath = App.xaml
 
-[C:/GitProject/MonopolyBank/HelloApp/AppShell.xaml]
+[F:/Projects/MAUI/MonopolyBank/HelloApp/AppShell.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = HelloApp.AppShell.xaml
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
 
-[C:/GitProject/MonopolyBank/HelloApp/GameMainPage.xaml]
+[F:/Projects/MAUI/MonopolyBank/HelloApp/GameMainPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = HelloApp.GameMainPage.xaml
 build_metadata.AdditionalFiles.TargetPath = GameMainPage.xaml
 build_metadata.AdditionalFiles.RelativePath = GameMainPage.xaml
 
-[C:/GitProject/MonopolyBank/HelloApp/JoinGamePage.xaml]
+[F:/Projects/MAUI/MonopolyBank/HelloApp/JoinGamePage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = HelloApp.JoinGamePage.xaml
 build_metadata.AdditionalFiles.TargetPath = JoinGamePage.xaml
 build_metadata.AdditionalFiles.RelativePath = JoinGamePage.xaml
 
-[C:/GitProject/MonopolyBank/HelloApp/MainPage.xaml]
+[F:/Projects/MAUI/MonopolyBank/HelloApp/MainPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = HelloApp.MainPage.xaml
 build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
 build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
 
-[C:/GitProject/MonopolyBank/HelloApp/NewGamePage.xaml]
+[F:/Projects/MAUI/MonopolyBank/HelloApp/NewGamePage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = HelloApp.NewGamePage.xaml
 build_metadata.AdditionalFiles.TargetPath = NewGamePage.xaml
 build_metadata.AdditionalFiles.RelativePath = NewGamePage.xaml
 
-[C:/GitProject/MonopolyBank/HelloApp/PageObmenCompanyUser.xaml]
+[F:/Projects/MAUI/MonopolyBank/HelloApp/PageObmenCompanyUser.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = HelloApp.PageObmenCompanyUser.xaml
 build_metadata.AdditionalFiles.TargetPath = PageObmenCompanyUser.xaml
 build_metadata.AdditionalFiles.RelativePath = PageObmenCompanyUser.xaml
 
-[C:/GitProject/MonopolyBank/HelloApp/PopUpAlert.xaml]
+[F:/Projects/MAUI/MonopolyBank/HelloApp/PopUpAlert.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = HelloApp.PopUpAlert.xaml
 build_metadata.AdditionalFiles.TargetPath = PopUpAlert.xaml
 build_metadata.AdditionalFiles.RelativePath = PopUpAlert.xaml
 
-[C:/GitProject/MonopolyBank/HelloApp/PopUpCompany.xaml]
+[F:/Projects/MAUI/MonopolyBank/HelloApp/PopUpCompany.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = HelloApp.PopUpCompany.xaml
 build_metadata.AdditionalFiles.TargetPath = PopUpCompany.xaml
 build_metadata.AdditionalFiles.RelativePath = PopUpCompany.xaml
 
-[C:/GitProject/MonopolyBank/HelloApp/PopUpCompanyBAN.xaml]
+[F:/Projects/MAUI/MonopolyBank/HelloApp/PopUpCompanyBAN.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = HelloApp.PopUpCompanyBAN.xaml
 build_metadata.AdditionalFiles.TargetPath = PopUpCompanyBAN.xaml
 build_metadata.AdditionalFiles.RelativePath = PopUpCompanyBAN.xaml
 
-[C:/GitProject/MonopolyBank/HelloApp/PopUpCompanyInfo.xaml]
+[F:/Projects/MAUI/MonopolyBank/HelloApp/PopUpCompanyInfo.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = HelloApp.PopUpCompanyInfo.xaml
 build_metadata.AdditionalFiles.TargetPath = PopUpCompanyInfo.xaml
 build_metadata.AdditionalFiles.RelativePath = PopUpCompanyInfo.xaml
 
-[C:/GitProject/MonopolyBank/HelloApp/PopUpCompanyPlayer.xaml]
+[F:/Projects/MAUI/MonopolyBank/HelloApp/PopUpCompanyPlayer.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = HelloApp.PopUpCompanyPlayer.xaml
 build_metadata.AdditionalFiles.TargetPath = PopUpCompanyPlayer.xaml
 build_metadata.AdditionalFiles.RelativePath = PopUpCompanyPlayer.xaml
 
-[C:/GitProject/MonopolyBank/HelloApp/PopUpInfoUser.xaml]
+[F:/Projects/MAUI/MonopolyBank/HelloApp/PopUpInfoUser.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = HelloApp.PopUpInfoUser.xaml
 build_metadata.AdditionalFiles.TargetPath = PopUpInfoUser.xaml
 build_metadata.AdditionalFiles.RelativePath = PopUpInfoUser.xaml
 
-[C:/GitProject/MonopolyBank/HelloApp/Resources/Styles/Colors.xaml]
+[F:/Projects/MAUI/MonopolyBank/HelloApp/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = HelloApp.Resources.Styles.Colors.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
 
-[C:/GitProject/MonopolyBank/HelloApp/Resources/Styles/Styles.xaml]
+[F:/Projects/MAUI/MonopolyBank/HelloApp/Resources/Styles/Styles.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = HelloApp.Resources.Styles.Styles.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml

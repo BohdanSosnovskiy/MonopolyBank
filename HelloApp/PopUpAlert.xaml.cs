@@ -128,4 +128,14 @@ public partial class PopUpAlert : ContentPage
         // Navigate away without the default animation
         await Navigation.PopModalAsync(animated: false);
     }
+
+    private async void But_2_Clicked(object sender, EventArgs e)
+    {
+        await Close();
+    }
+
+    private async void But_1_Clicked(object sender, EventArgs e)
+    {
+        await Close();
+    }
 }

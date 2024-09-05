@@ -1,1 +1,1 @@
-C:\Users\Админ\MonopolyBank\HelloApp\HelloApp.csproj;x64
+F:\Projects\MAUI\MonopolyBank\HelloApp\HelloApp.csproj;x64

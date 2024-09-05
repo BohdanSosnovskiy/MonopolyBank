@@ -38,7 +38,7 @@ namespace HelloApp.Classes
         public int PriceFilial { get; set; }
         public int PriceCorp { get; set; }
         public int CountColorGroup { get; set; }
-
+        public string UserName {  get; set; }
         public bool IsCompany { get; set; } = true;
         public bool IsCorp { get; set; } = false;
         private ObservableCollection<bool> _companyBuldVisible;
@@ -101,6 +101,8 @@ namespace HelloApp.Classes
                     {
                         Sdelka = true;
                     }
+                    var main = PresetGame.link_GameMainPage;
+                    await main.SendMessageAsync(main.Writer, $"SelectCompanyObmen|{main.CurrentUser.Name},{company.Name},{Sdelka}");
                 }
             });
             SelectCompanyUserSdelka = new Command(async p =>
@@ -116,6 +118,9 @@ namespace HelloApp.Classes
                     {
                         Sdelka = true;
                     }
+
+                    var main = PresetGame.link_GameMainPage;
+                    await main.SendMessageAsync(main.Writer, $"SelectCompanyObmen|{PresetGame.link_PageObmen.user_obmen.Name},{company.Name},{Sdelka}");
                 }
             });
 
@@ -129,6 +134,11 @@ namespace HelloApp.Classes
                     CompanyBuldVisible.CollectionChanged += CompanyBuldVisible_CollectionChanged;
                 }
             });
+        }
+
+        public void CompanyBuldVisibleChange()
+        {
+            CompanyBuldVisible.CollectionChanged += CompanyBuldVisible_CollectionChanged;
         }
 
         private void CompanyBuldVisible_CollectionChanged(object? sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
