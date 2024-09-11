@@ -434,7 +434,7 @@
                                     VerticalOptions="Start" 
                                     HorizontalOptions="Center" />
                                 <Label 
-                                    Text="{Binding Cash}"
+                                    Text="{Binding Cash, StringFormat='{}{0} $'}"
                                     TextColor="Black"
                                     Margin="0, 130, 0, 0"
                                     FontSize="25"

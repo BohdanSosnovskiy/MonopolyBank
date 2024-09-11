@@ -84,6 +84,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = HelloApp.PopUpCompanyPlaye
 build_metadata.AdditionalFiles.TargetPath = PopUpCompanyPlayer.xaml
 build_metadata.AdditionalFiles.RelativePath = PopUpCompanyPlayer.xaml
 
+[F:/Projects/MAUI/MonopolyBank/HelloApp/PopUpConfirmSdelka.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HelloApp.PopUpConfirmSdelka.xaml
+build_metadata.AdditionalFiles.TargetPath = PopUpConfirmSdelka.xaml
+build_metadata.AdditionalFiles.RelativePath = PopUpConfirmSdelka.xaml
+
 [F:/Projects/MAUI/MonopolyBank/HelloApp/PopUpInfoUser.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = HelloApp.PopUpInfoUser.xaml

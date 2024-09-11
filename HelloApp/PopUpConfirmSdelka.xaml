@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HelloApp.PopUpConfirmSdelka"
+             BackgroundColor="Transparent"
+             Title="PopUpConfirmSdelka">
+    <Grid>
+        <Grid.GestureRecognizers>
+            <TapGestureRecognizer Tapped="TapGestureRecognizer_OnTapped" />
+        </Grid.GestureRecognizers>
+        <Border
+        VerticalOptions="Center"
+        HorizontalOptions="Fill"
+        Margin="20"
+        Background="White"
+        StrokeShape="{RoundRectangle CornerRadius=20}">
+            <Grid x:Name="Grid_Alert" MinimumHeightRequest="300">
+                <BoxView HorizontalOptions="Fill" VerticalOptions="Start" CornerRadius="20,0,0,0" HeightRequest="40" >
+                    <BoxView.Background>
+                        <LinearGradientBrush>
+                            <GradientStop Color="#27283d" Offset="0.1" />
+                            <GradientStop Color="#575a89" Offset="1.0" />
+                        </LinearGradientBrush>
+                    </BoxView.Background>
+                </BoxView>
+                <Label x:Name="text_title" Text="Сделака с Богдан" FontSize="20" Margin="5" VerticalOptions="Start" TextColor="White" HorizontalOptions="Center"/>
+                <Grid Margin="0,35,0,0" BackgroundColor="Azure">
+                    <Image Source="conform_sdelka.png" WidthRequest="160" Margin="0, 40, 0, 0"  HorizontalOptions="Center" VerticalOptions="Start" Aspect="Fill" />
+                    <Label 
+                        Text="Успех"
+                        Margin="0, 10, 20, 0"
+                        FontSize="26"
+                        VerticalOptions="Start" 
+                        HorizontalOptions="Center" />
+                    <Button
+                        Text="Завершить"
+                        SemanticProperties.Hint="Counts the number of times you click"
+                        Margin="10,0,10,10"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="End"
+                        Padding="50,0,50,0"
+                        >
+                        <Button.Background>
+                            <LinearGradientBrush>
+                                <GradientStop Color="#55b155" Offset="0.1" />
+                                <GradientStop Color="#3b7d3b" Offset="1.0" />
+                            </LinearGradientBrush>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+            </Grid>
+        </Border>
+    </Grid>
+</ContentPage>

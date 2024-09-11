@@ -41,6 +41,9 @@
     <MauiXaml Update="PopUpCompanyPlayer.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
+    <MauiXaml Update="PopUpConfirmSdelka.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
     <MauiXaml Update="PopUpInfoUser.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>

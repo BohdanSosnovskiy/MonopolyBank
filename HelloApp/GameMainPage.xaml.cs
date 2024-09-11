@@ -414,7 +414,52 @@ public partial class GameMainPage : ContentPage
                                 {
                                     await Navigation.PushModalAsync(alert_pop, false);
                                 });
-                                PresetGame.link_PageObmen.Close();
+                                PresetGame.link_PageObmen.LocalClose();
+                            }
+                        }
+                        else if(Action_str.IndexOf("UpdateCSM") > -1)
+                        {
+                            var Data_update = Data.Split(",");
+                            string UserName = Data_update[0];
+                            int value = Convert.ToInt32(Data_update[1]);
+                            if (CurrentUser.Name.IndexOf(UserName) > -1)
+                            {
+                                PresetGame.link_PageObmen.sdelka.SetTargetSendingMoney(value);
+                            }
+                        }
+                        else if (Action_str.IndexOf("UpdateTSM") > -1)
+                        {
+                            var Data_update = Data.Split(",");
+                            string UserName = Data_update[0];
+                            int value = Convert.ToInt32(Data_update[1]);
+                            if (CurrentUser.Name.IndexOf(UserName) > -1)
+                            {
+                                PresetGame.link_PageObmen.sdelka.SetCurrentSendingMoney(value);
+                            }
+                        }
+                        else if(Action_str.IndexOf("SuccessObmen") > -1)
+                        {
+                            if (CurrentUser.Name.IndexOf(Data) > -1)
+                            {
+                                MainThread.BeginInvokeOnMainThread(async () =>
+                                {
+                                    await Navigation.PushModalAsync(new PopUpConfirmSdelka(), false);
+                                });
+                            }
+                        }
+                        else if(Action_str.IndexOf("ReadyConfirmObmen") > -1)
+                        {
+                            if (CurrentUser.Name.IndexOf(Data) > -1)
+                            {
+                                PresetGame.link_PageObmen.sdelka._isReadyTarget = true;
+                            }
+                        }
+                        else if (Action_str.IndexOf("CancelConfirmObmen") > -1)
+                        {
+                            if (CurrentUser.Name.IndexOf(Data) > -1)
+                            {
+                                PresetGame.link_PageObmen.sdelka._isReadyTarget = false;
+                                PresetGame.link_PageObmen.sdelka._isReadyCurrent = false;
                             }
                         }
                         else if (Action_str.IndexOf("OpenObmen") > -1)
@@ -474,6 +519,8 @@ public partial class GameMainPage : ContentPage
                                     }
                                 }
                             }
+
+                            PresetGame.link_PageObmen.sdelka.UpdateUser_Info();
                         }
                         else if (Action_str.IndexOf("BuyCompany") > -1)
                         {
@@ -534,7 +581,7 @@ public partial class GameMainPage : ContentPage
             catch(Exception ex)
             {
                 Console.WriteLine(ex.Message);
-                break;
+                
             }
         }
     }

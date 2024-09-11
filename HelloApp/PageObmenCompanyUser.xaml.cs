@@ -5,6 +5,9 @@ namespace HelloApp;
 public partial class PageObmenCompanyUser : ContentPage
 {
 	public User user_obmen { get; set; }
+
+    public Sdelka sdelka { get; set; }
+
 	public PageObmenCompanyUser(User user)
 	{
 		InitializeComponent();
@@ -13,6 +16,11 @@ public partial class PageObmenCompanyUser : ContentPage
         Carusel_CompanyObmenUser.BindingContext = user_obmen.Companys;
         Carusel_MyCompanys.BindingContext = PresetGame.link_GameMainPage.CurrentUser.Companys;
         Loaded += Page_Loaded;
+
+        sdelka = new Sdelka(user_obmen);
+        Grid_sdelka.BindingContext = sdelka;
+        Grid_NumCurrentSum.BindingContext = sdelka;
+        Grid_NumTargetSum.BindingContext = sdelka;
     }
 
     void Page_Loaded(object sender, EventArgs e)
@@ -35,6 +43,11 @@ public partial class PageObmenCompanyUser : ContentPage
         await Navigation.PopModalAsync();
     }
 
+    public async void LocalClose()
+    {
+        await Navigation.PopModalAsync();
+    }
+
     public Company getCurrentMyCompany()
     {
         return (Company)Carusel_MyCompanys.CurrentItem;
@@ -43,5 +56,24 @@ public partial class PageObmenCompanyUser : ContentPage
     public Company getCurrentUserCompany()
     {
         return (Company)Carusel_CompanyObmenUser.CurrentItem;
+    }
+
+    private async void ButtonConfirm_Clicked(object sender, EventArgs e)
+    {
+        sdelka._isReadyCurrent = true;
+        if(sdelka._isReadyCurrent && sdelka._isReadyTarget)
+        {
+            sdelka.textButton = "Готово";
+            await Navigation.PushModalAsync(new PopUpConfirmSdelka(), false);
+            await PresetGame.link_GameMainPage.SendMessageAsync(PresetGame.link_GameMainPage.Writer, $"SuccessObmen|{sdelka.targetUserName}");
+        }
+        else
+        {
+            if(sdelka._isReadyCurrent == true && sdelka._isReadyTarget == false)
+            {
+                await PresetGame.link_GameMainPage.SendMessageAsync(PresetGame.link_GameMainPage.Writer, $"ReadyConfirmObmen|{sdelka.targetUserName}");
+                sdelka.textButton = "Ожидаем: " + sdelka.targetUserName;
+            }
+        }
     }
 }

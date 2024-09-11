@@ -92,6 +92,7 @@
 	  <None Remove="Resources\Images\company_1.png" />
 	  <None Remove="Resources\Images\company_2.png" />
 	  <None Remove="Resources\Images\company_3.png" />
+	  <None Remove="Resources\Images\conform_sdelka.png" />
 	  <None Remove="Resources\Images\Logo_monopoly.png" />
 	  <None Remove="Resources\Images\mastercard_logo.png" />
 	  <None Remove="Resources\Images\monopolyhouse_green.png" />
@@ -146,6 +147,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="PopUpCompanyPlayer.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="PopUpConfirmSdelka.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="PopUpInfoUser.xaml">

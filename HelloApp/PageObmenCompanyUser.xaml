@@ -18,19 +18,105 @@
                     </LinearGradientBrush>
                 </Button.Background>
             </Button>
-            <Button
-                Text="Заключить сделку"
-                SemanticProperties.Hint="Counts the number of times you click"
-                HorizontalOptions="Fill"
-                Padding="50,0,50,0"
-                Margin="10, 20, 10, 0">
-                <Button.Background>
-                    <LinearGradientBrush>
-                        <GradientStop Color="#55b155" Offset="0.1" />
-                        <GradientStop Color="#3b7d3b" Offset="1.0" />
-                    </LinearGradientBrush>
-                </Button.Background>
-            </Button>
+            <Grid x:Name="Grid_sdelka" Margin="10, 20, 10, 0" HorizontalOptions="Fill" BackgroundColor="Beige">
+                <Grid HorizontalOptions="Fill" VerticalOptions="Start" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <BoxView Grid.Column="0"  VerticalOptions="Fill" HeightRequest="100" HorizontalOptions="Fill" CornerRadius="10, 0, 10, 0">
+                        <BoxView.Background>
+                            <LinearGradientBrush>
+                                <GradientStop Color="#019dce" Offset="0.1" />
+                                <GradientStop Color="#0daaa3" Offset="1.0" />
+                            </LinearGradientBrush>
+                        </BoxView.Background>
+                    </BoxView>
+                    <Label 
+                        Grid.Column="0" 
+                        Text="{Binding currentUserName}"
+                        TextColor="White"
+                        Margin="20, 5, 0, 0"
+                        FontSize="15"
+                        VerticalOptions="Start" 
+                        HorizontalOptions="Start" />
+                    <Label 
+                        Grid.Column="0" 
+                        Text="{Binding isReadyCurrent}"
+                        TextColor="White"
+                        Margin="0, 5, 20, 0"
+                        FontSize="15"
+                        VerticalOptions="Start" 
+                        HorizontalOptions="End" />
+                    <Label 
+                        Grid.Column="0" 
+                        Text="{Binding currentUser_Sum, StringFormat='Сумма сделки: {0} $'}"
+                        TextColor="White"
+                        Margin="20, 0, 0, 5"
+                        FontSize="14"
+                        VerticalOptions="End" 
+                        HorizontalOptions="Start" />
+
+                    <BoxView Grid.Column="1" VerticalOptions="Fill" HeightRequest="100" HorizontalOptions="Fill" CornerRadius="0, 10, 0, 10">
+                        <BoxView.Background>
+                            <LinearGradientBrush>
+                                <GradientStop Color="#fd6244" Offset="0.1" />
+                                <GradientStop Color="#e73d60" Offset="1.0" />
+                            </LinearGradientBrush>
+                        </BoxView.Background>
+                    </BoxView>
+
+                    <Label 
+                        Grid.Column="1" 
+                        Text="{Binding targetUserName}"
+                        TextColor="White"
+                        Margin="0, 5, 20, 0"
+                        FontSize="15"
+                        VerticalOptions="Start" 
+                        HorizontalOptions="End" />
+                    <Label 
+                        Grid.Column="1" 
+                        Text="{Binding isReadyTarget}"
+                        TextColor="White"
+                        Margin="20, 5, 0, 0"
+                        FontSize="15"
+                        VerticalOptions="Start" 
+                        HorizontalOptions="Start" />
+                    <Label 
+                        Grid.Column="1" 
+                        Text="{Binding targetUser_Sum, StringFormat='Сумма сделки: {0} $'}"
+                        TextColor="White"
+                        Margin="0, 0, 20, 5"
+                        FontSize="14"
+                        VerticalOptions="End" 
+                        HorizontalOptions="End" />
+                </Grid>
+                <BoxView  VerticalOptions="Fill" HeightRequest="70" WidthRequest="0.5" HorizontalOptions="Start" CornerRadius="10, 0, 10, 0">
+                    <BoxView.Background>
+                        <LinearGradientBrush>
+                            <GradientStop Color="#019dce" Offset="0.1" />
+                            <GradientStop Color="#0daaa3" Offset="1.0" />
+                        </LinearGradientBrush>
+                    </BoxView.Background>
+                </BoxView>
+                <Button
+                    Text="{Binding textButton}"
+                    SemanticProperties.Hint="Counts the number of times you click"
+                    Margin="10,0,10,0"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="Center"
+                    Padding="50,0,50,0"
+                    Clicked="ButtonConfirm_Clicked"
+                    >
+                    <Button.Background>
+                        <LinearGradientBrush>
+                            <GradientStop Color="#55b155" Offset="0.1" />
+                            <GradientStop Color="#3b7d3b" Offset="1.0" />
+                        </LinearGradientBrush>
+                    </Button.Background>
+                </Button>
+            </Grid>
+            
             <Grid HeightRequest="40" VerticalOptions="Start" Margin="0,20,0,0" HorizontalOptions="Fill">
                 <BoxView  VerticalOptions="Fill" HorizontalOptions="Fill" CornerRadius="10, 10, 0, 0">
                     <BoxView.Background>
@@ -362,7 +448,7 @@
                     </BoxView.Background>
 
                 </BoxView>
-                <Grid VerticalOptions="Fill" HorizontalOptions="Fill">
+                <Grid x:Name="Grid_NumCurrentSum" VerticalOptions="Fill" HorizontalOptions="Fill">
                     <Label 
                         Text="Сумма"
                         TextColor="White"
@@ -371,7 +457,7 @@
                         VerticalOptions="Start" 
                         HorizontalOptions="Start" />
                     <Frame HorizontalOptions="Fill" BackgroundColor="#cfd9e5" HeightRequest="50" Padding="5" Margin="125,0,20,20" BorderColor="Transparent">
-                        <Entry x:Name="SendSumUser" HorizontalOptions="Fill" Keyboard="Numeric" Placeholder="100" PlaceholderColor="#44474b"/>
+                        <Entry x:Name="SendSumUser" HorizontalOptions="Fill" Keyboard="Numeric" Text="{Binding currentSendingMoney, Mode=TwoWay}" Placeholder="100" PlaceholderColor="#44474b"/>
                     </Frame>
                 </Grid>
             </Grid>
@@ -706,7 +792,7 @@
                     </BoxView.Background>
 
                 </BoxView>
-                <Grid VerticalOptions="Fill" HorizontalOptions="Fill">
+                <Grid x:Name="Grid_NumTargetSum" VerticalOptions="Fill" HorizontalOptions="Fill">
                     <Label 
                         Text="Сумма"
                         TextColor="White"
@@ -715,7 +801,7 @@
                         VerticalOptions="Start" 
                         HorizontalOptions="Start" />
                     <Frame HorizontalOptions="Fill" BackgroundColor="#cfd9e5" HeightRequest="50" Padding="5" Margin="125,0,20,20" BorderColor="Transparent">
-                        <Entry x:Name="GetSumUser" HorizontalOptions="Fill" Keyboard="Numeric" Placeholder="100" PlaceholderColor="#44474b"/>
+                        <Entry x:Name="GetSumUser" HorizontalOptions="Fill" Keyboard="Numeric" Text="{Binding targetSendingMoney, Mode=TwoWay}" Placeholder="100" PlaceholderColor="#44474b"/>
                     </Frame>
                 </Grid>
             </Grid>

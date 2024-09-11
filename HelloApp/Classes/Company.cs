@@ -103,6 +103,11 @@ namespace HelloApp.Classes
                     }
                     var main = PresetGame.link_GameMainPage;
                     await main.SendMessageAsync(main.Writer, $"SelectCompanyObmen|{main.CurrentUser.Name},{company.Name},{Sdelka}");
+
+                    await PresetGame.link_GameMainPage.SendMessageAsync(PresetGame.link_GameMainPage.Writer, $"CancelConfirmObmen|{PresetGame.link_PageObmen.user_obmen.Name}");
+                    PresetGame.link_PageObmen.sdelka.UpdateUser_Info();
+                    PresetGame.link_PageObmen.sdelka._isReadyTarget = false;
+                    PresetGame.link_PageObmen.sdelka._isReadyCurrent = false;
                 }
             });
             SelectCompanyUserSdelka = new Command(async p =>
@@ -121,6 +126,10 @@ namespace HelloApp.Classes
 
                     var main = PresetGame.link_GameMainPage;
                     await main.SendMessageAsync(main.Writer, $"SelectCompanyObmen|{PresetGame.link_PageObmen.user_obmen.Name},{company.Name},{Sdelka}");
+                    await PresetGame.link_GameMainPage.SendMessageAsync(PresetGame.link_GameMainPage.Writer, $"CancelConfirmObmen|{PresetGame.link_PageObmen.user_obmen.Name}");
+                    PresetGame.link_PageObmen.sdelka.UpdateUser_Info();
+                    PresetGame.link_PageObmen.sdelka._isReadyTarget = false;
+                    PresetGame.link_PageObmen.sdelka._isReadyCurrent = false;
                 }
             });
 

@@ -1,3 +1,5 @@
+OpenSans-Regular.ttf
+OpenSans-Semibold.ttf
 appicon.ico
 appiconLargeTile.scale-100.png
 appiconLargeTile.scale-125.png
@@ -49,6 +51,7 @@ city.scale-100.png
 company_1.scale-100.png
 company_2.scale-100.png
 company_3.scale-100.png
+conform_sdelka.scale-100.png
 dotnet_bot.scale-100.png
 dotnet_bot.scale-125.png
 dotnet_bot.scale-150.png
@@ -63,6 +66,11 @@ plus.scale-100.png
 sdelka_logo.scale-100.png
 torg_money.scale-100.png
 user.scale-100.png
+splashSplashScreen.scale-100.png
+splashSplashScreen.scale-125.png
+splashSplashScreen.scale-150.png
+splashSplashScreen.scale-200.png
+splashSplashScreen.scale-400.png
 AboutAssets.txt
 buld.mp3
 coindrop.mp3
