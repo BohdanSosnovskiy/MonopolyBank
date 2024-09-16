@@ -29,6 +29,8 @@ public partial class PopUpConfirmSdelka : ContentPage
                     break;
                 }
             }
+            sdelka.currentUserCompany[l].UserName = PresetGame.link_PageObmen.user_obmen.Name;
+            PresetGame.Companys[sdelka.currentUserCompany[l].index].UserName = PresetGame.link_PageObmen.user_obmen.Name;
             companysTarget.Add(sdelka.currentUserCompany[l]);
         }
 
@@ -42,6 +44,8 @@ public partial class PopUpConfirmSdelka : ContentPage
                     break;
                 }
             }
+            sdelka.targetUserCompany[l].UserName = PresetGame.link_GameMainPage.CurrentUser.Name;
+            PresetGame.Companys[sdelka.targetUserCompany[l].index].UserName = PresetGame.link_GameMainPage.CurrentUser.Name;
             companysCurrent.Add(sdelka.targetUserCompany[l]);
         }
 
@@ -50,6 +54,17 @@ public partial class PopUpConfirmSdelka : ContentPage
 
         PresetGame.link_PageObmen.user_obmen.Cash += sdelka.currentSendingMoney;
         PresetGame.link_GameMainPage.CurrentUser.Cash += sdelka.targetSendingMoney;
+
+        string name_img = "conform_sdelka.png";
+        string text = $"Игрок {PresetGame.link_GameMainPage.CurrentUser.Name} совершает сделку с {PresetGame.link_PageObmen.user_obmen.Name}";
+        PresetGame.Historys.Add(new History()
+        {
+            name_img = name_img,
+            Text = text,
+            isVisibleCash = false,
+        });
+
+        PresetGame.link_GameMainPage.SendMessageAsync(PresetGame.link_GameMainPage.Writer, $"AddHistory|{name_img},{text},false");
 
         PresetGame.link_GameMainPage.UpdateGUIData();
     }
@@ -148,4 +163,8 @@ public partial class PopUpConfirmSdelka : ContentPage
         await Navigation.PopModalAsync(animated: false);
     }
 
+    private async  void Button_Clicked(object sender, EventArgs e)
+    {
+        await Close();
+    }
 }

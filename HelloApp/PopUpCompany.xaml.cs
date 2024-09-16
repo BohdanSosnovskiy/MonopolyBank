@@ -43,10 +43,22 @@ public partial class PopUpCompany : ContentPage
 
             _GameMainPage.UpdateGUIData();
 
+            PresetGame.Companys[Company.index].UserName = _GameMainPage.CurrentUser.Name;
+
             await _GameMainPage.SendMessageAsync(_GameMainPage.Writer, $"UpdateBallans|{_GameMainPage.CurrentUser.Cash}");
 
             await _GameMainPage.SendMessageAsync(_GameMainPage.Writer, $"BuyCompany|{_GameMainPage.CurrentUser.Name},{Company.Name}");
 
+            string name_img = "pay_bank.png";
+            string text = $"Игрок {_GameMainPage.CurrentUser.Name} покупает фирму {Company.Name}";
+            PresetGame.Historys.Add(new History()
+            {
+                name_img = name_img,
+                Text = text,
+                isVisibleCash = true,
+                Cash = Company.Price
+            });
+            await PresetGame.link_GameMainPage.SendMessageAsync(PresetGame.link_GameMainPage.Writer, $"AddHistory|{name_img},{text},true,{Company.Price}");
 
             await Close();
         }

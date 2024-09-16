@@ -19,7 +19,7 @@
   <uses-permission android:name="android.permission.NFC" />
   <uses-permission android:name="android.permission.NFC_PREFERRED_PAYMENT_INFO" />
   <uses-permission android:name="android.permission.NFC_TRANSACTION_EVENT" />
-  <application android:allowBackup="true" android:icon="@mipmap/appicon" android:supportsRtl="true" android:label="TestApplication" android:name="crc6435f736177fb1d4ab.MainApplication" android:debuggable="true" android:extractNativeLibs="true">
+  <application android:allowBackup="true" android:icon="@mipmap/appicon" android:supportsRtl="true" android:label="Monopoly Bank" android:name="crc6435f736177fb1d4ab.MainApplication" android:debuggable="true" android:extractNativeLibs="true">
     <service android:name="CommunityToolkit.Maui.Media.Services" android:exported="false" android:enabled="true" android:foregroundServiceType="mediaPlayback">
       <intent-filter>
         <action android:name="android.intent.action.MEDIA_BUTTON" />

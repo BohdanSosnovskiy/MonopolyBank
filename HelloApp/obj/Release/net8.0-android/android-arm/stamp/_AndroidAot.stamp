@@ -1,5 +1,6 @@
 obj\Release\net8.0-android\android-arm\aot\_Microsoft.Android.Resource.Designer.dll.so
 obj\Release\net8.0-android\android-arm\aot\HelloApp.dll.so
+obj\Release\net8.0-android\android-arm\aot\CommunityToolkit.Maui.MediaElement.dll.so
 obj\Release\net8.0-android\android-arm\aot\Microsoft.Extensions.Configuration.dll.so
 obj\Release\net8.0-android\android-arm\aot\Microsoft.Extensions.Configuration.Abstractions.dll.so
 obj\Release\net8.0-android\android-arm\aot\Microsoft.Extensions.DependencyInjection.dll.so
@@ -13,6 +14,12 @@ obj\Release\net8.0-android\android-arm\aot\Microsoft.Maui.dll.so
 obj\Release\net8.0-android\android-arm\aot\Microsoft.Maui.Essentials.dll.so
 obj\Release\net8.0-android\android-arm\aot\Microsoft.Maui.Graphics.dll.so
 obj\Release\net8.0-android\android-arm\aot\Plugin.NFC.dll.so
+obj\Release\net8.0-android\android-arm\aot\ExoPlayer.Common.dll.so
+obj\Release\net8.0-android\android-arm\aot\ExoPlayer.Core.dll.so
+obj\Release\net8.0-android\android-arm\aot\ExoPlayer.DataSource.dll.so
+obj\Release\net8.0-android\android-arm\aot\ExoPlayer.Decoder.dll.so
+obj\Release\net8.0-android\android-arm\aot\ExoPlayer.Ext.MediaSession.dll.so
+obj\Release\net8.0-android\android-arm\aot\ExoPlayer.UI.dll.so
 obj\Release\net8.0-android\android-arm\aot\Xamarin.AndroidX.Activity.dll.so
 obj\Release\net8.0-android\android-arm\aot\Xamarin.AndroidX.AppCompat.dll.so
 obj\Release\net8.0-android\android-arm\aot\Xamarin.AndroidX.AppCompat.AppCompatResources.dll.so
@@ -29,6 +36,8 @@ obj\Release\net8.0-android\android-arm\aot\Xamarin.AndroidX.Lifecycle.LiveData.C
 obj\Release\net8.0-android\android-arm\aot\Xamarin.AndroidX.Lifecycle.ViewModel.dll.so
 obj\Release\net8.0-android\android-arm\aot\Xamarin.AndroidX.Lifecycle.ViewModelSavedState.dll.so
 obj\Release\net8.0-android\android-arm\aot\Xamarin.AndroidX.Loader.dll.so
+obj\Release\net8.0-android\android-arm\aot\Xamarin.AndroidX.LocalBroadcastManager.dll.so
+obj\Release\net8.0-android\android-arm\aot\Xamarin.AndroidX.Media.dll.so
 obj\Release\net8.0-android\android-arm\aot\Xamarin.AndroidX.Navigation.Common.dll.so
 obj\Release\net8.0-android\android-arm\aot\Xamarin.AndroidX.Navigation.Fragment.dll.so
 obj\Release\net8.0-android\android-arm\aot\Xamarin.AndroidX.Navigation.Runtime.dll.so
@@ -36,6 +45,7 @@ obj\Release\net8.0-android\android-arm\aot\Xamarin.AndroidX.Navigation.UI.dll.so
 obj\Release\net8.0-android\android-arm\aot\Xamarin.AndroidX.RecyclerView.dll.so
 obj\Release\net8.0-android\android-arm\aot\Xamarin.AndroidX.SavedState.dll.so
 obj\Release\net8.0-android\android-arm\aot\Xamarin.AndroidX.SwipeRefreshLayout.dll.so
+obj\Release\net8.0-android\android-arm\aot\Xamarin.AndroidX.VersionedParcelable.dll.so
 obj\Release\net8.0-android\android-arm\aot\Xamarin.AndroidX.ViewPager.dll.so
 obj\Release\net8.0-android\android-arm\aot\Xamarin.AndroidX.ViewPager2.dll.so
 obj\Release\net8.0-android\android-arm\aot\Xamarin.Google.Android.Material.dll.so
@@ -49,6 +59,7 @@ obj\Release\net8.0-android\android-arm\aot\System.ComponentModel.TypeConverter.d
 obj\Release\net8.0-android\android-arm\aot\System.ComponentModel.dll.so
 obj\Release\net8.0-android\android-arm\aot\System.Console.dll.so
 obj\Release\net8.0-android\android-arm\aot\System.Diagnostics.DiagnosticSource.dll.so
+obj\Release\net8.0-android\android-arm\aot\System.Diagnostics.TraceSource.dll.so
 obj\Release\net8.0-android\android-arm\aot\System.IO.Compression.Brotli.dll.so
 obj\Release\net8.0-android\android-arm\aot\System.IO.Compression.dll.so
 obj\Release\net8.0-android\android-arm\aot\System.Linq.Expressions.dll.so
@@ -65,6 +76,8 @@ obj\Release\net8.0-android\android-arm\aot\System.Runtime.InteropServices.dll.so
 obj\Release\net8.0-android\android-arm\aot\System.Runtime.dll.so
 obj\Release\net8.0-android\android-arm\aot\System.Security.Cryptography.dll.so
 obj\Release\net8.0-android\android-arm\aot\System.Text.RegularExpressions.dll.so
+obj\Release\net8.0-android\android-arm\aot\System.Threading.Thread.dll.so
+obj\Release\net8.0-android\android-arm\aot\System.Threading.dll.so
 obj\Release\net8.0-android\android-arm\aot\System.Xml.ReaderWriter.dll.so
 obj\Release\net8.0-android\android-arm\aot\System.dll.so
 obj\Release\net8.0-android\android-arm\aot\Java.Interop.dll.so

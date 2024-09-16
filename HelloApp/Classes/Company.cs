@@ -31,6 +31,7 @@ namespace HelloApp.Classes
                 OnPropertyChanged();
             }
         }
+        public int index { get; set; }
         public bool IsNoEmty { get; set; } = true;
         public string Name { get; set; } = "";
         public string nfc_marker { get; set; } = "";

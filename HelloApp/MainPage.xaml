@@ -12,7 +12,7 @@
             AlignItems="Center"
             JustifyContent="SpaceEvenly">
             <VerticalStackLayout Padding="30,0" Spacing="25" FlexLayout.Grow="1">
-                <Image Source="logo_monopoly.png" HeightRequest="185" Aspect="AspectFit" SemanticProperties.Description="dot net bot in a race car number eight" />
+                <Image Source="bank_monopoly_logo.png" HeightRequest="185" Aspect="AspectFit" SemanticProperties.Description="dot net bot in a race car number eight" />
 
                 <Label Text="Добро пожаловать" Style="{StaticResource Headline}" FontSize="25" SemanticProperties.HeadingLevel="Level1" />
 

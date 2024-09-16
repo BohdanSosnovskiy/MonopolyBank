@@ -36,6 +36,7 @@
                         Text="Завершить"
                         SemanticProperties.Hint="Counts the number of times you click"
                         Margin="10,0,10,10"
+                        Clicked="Button_Clicked"
                         HorizontalOptions="Fill"
                         VerticalOptions="End"
                         Padding="50,0,50,0"

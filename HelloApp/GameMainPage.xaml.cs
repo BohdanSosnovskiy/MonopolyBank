@@ -141,27 +141,97 @@ public partial class GameMainPage : ContentPage
                     {
                         if(message == "start_mon")
                         {
-                            PlaySound("coindrop");
+                            if(!CurrentUser.isGameOver)
+                            {
+                                PlaySound("coindrop");
 
-                            CurrentUser.Cash += PresetGame.CountStartSum;
-                            UpdateGUIData();
-                            await SendMessageAsync(Writer, $"UpdateBallans|{CurrentUser.Cash}");
+                                CurrentUser.Cash += PresetGame.CountStartSum;
+                                UpdateGUIData();
+                                await SendMessageAsync(Writer, $"UpdateBallans|{CurrentUser.Cash}");
+
+                                string name_img = "payment.png";
+                                string text = $"Игрок {CurrentUser.Name} получает зарплату {PresetGame.CountStartSum}$";
+                                PresetGame.Historys.Add(new History()
+                                {
+                                    name_img = name_img,
+                                    Text = text,
+                                    isVisibleCash = true,
+                                    Cash = PresetGame.CountStartSum
+                                });
+                                await PresetGame.link_GameMainPage.SendMessageAsync(PresetGame.link_GameMainPage.Writer, $"AddHistory|{name_img},{text},true,{PresetGame.CountStartSum}");
+                            }
+                            else
+                            {
+                                var alert_pop = new PopUpAlert("Уведомление", "Вы уже проиграли и банкрот", "Хорошо");
+                                await Navigation.PushModalAsync(alert_pop, false);
+                            }
                         }
                         else if(message == "pobori")
                         {
                             PlaySound("gopstop");
+                            if (200 > CurrentUser.Cash)
+                            {
+                                if (CurrentUser.Companys.Count < 2)
+                                {
+                                    await Navigation.PushModalAsync(new PopUpGameOver(), false);
+                                }
+                                else
+                                {
+                                    var alert_pop = new PopUpAlert("Уведомление", "Продайте акции или совершите сделку и повторите попытку", "Хорошо");
+                                    await Navigation.PushModalAsync(alert_pop, false);
+                                }
+                            }
+                            else
+                            {
+                                CurrentUser.Cash -= 200;
+                                UpdateGUIData();
+                                await SendMessageAsync(Writer, $"UpdateBallans|{CurrentUser.Cash}");
 
-                            CurrentUser.Cash -= 200;
-                            UpdateGUIData();
-                            await SendMessageAsync(Writer, $"UpdateBallans|{CurrentUser.Cash}");
+                                string name_img = "payment.png";
+                                string text = $"Игрок {CurrentUser.Name} встечает гопников и отдает 200$";
+                                PresetGame.Historys.Add(new History()
+                                {
+                                    name_img = name_img,
+                                    Text = text,
+                                    isVisibleCash = true,
+                                    Cash = 200
+                                });
+                                await PresetGame.link_GameMainPage.SendMessageAsync(PresetGame.link_GameMainPage.Writer, $"AddHistory|{name_img},{text},true,200");
+                            }
                         }
                         else if(message == "taska")
                         {
                             PlaySound("policay");
 
-                            CurrentUser.Cash -= 100;
-                            UpdateGUIData();
-                            await SendMessageAsync(Writer, $"UpdateBallans|{CurrentUser.Cash}");
+                            if (100 > CurrentUser.Cash)
+                            {
+                                if (CurrentUser.Companys.Count < 2)
+                                {
+                                    await Navigation.PushModalAsync(new PopUpGameOver(), false);
+                                }
+                                else
+                                {
+                                    var alert_pop = new PopUpAlert("Уведомление", "Продайте акции или совершите сделку и повторите попытку", "Хорошо");
+                                    await Navigation.PushModalAsync(alert_pop, false);
+                                }
+                            }
+                            else
+                            {
+                                CurrentUser.Cash -= 100;
+                                UpdateGUIData();
+                                await SendMessageAsync(Writer, $"UpdateBallans|{CurrentUser.Cash}");
+
+                                string name_img = "pay_bank.png";
+                                string text = $"Игрок {CurrentUser.Name} нарывается на ментов 100$";
+                                PresetGame.Historys.Add(new History()
+                                {
+                                    name_img = name_img,
+                                    Text = text,
+                                    isVisibleCash = true,
+                                    Cash = 100
+                                });
+                                await PresetGame.link_GameMainPage.SendMessageAsync(PresetGame.link_GameMainPage.Writer, $"AddHistory|{name_img},{text},true,100");
+                            }
                         }
                         else if(message == "turma")
                         {
@@ -170,30 +240,87 @@ public partial class GameMainPage : ContentPage
                             CurrentUser.Cash -= 50;
                             UpdateGUIData();
                             await SendMessageAsync(Writer, $"UpdateBallans|{CurrentUser.Cash}");
+
+                            string name_img = "payment.png";
+                            string text = $"Игрок {CurrentUser.Name} выходит из тюрьмы заплатив 50$";
+                            PresetGame.Historys.Add(new History()
+                            {
+                                name_img = name_img,
+                                Text = text,
+                                isVisibleCash = true,
+                                Cash = 50
+                            });
+                            await PresetGame.link_GameMainPage.SendMessageAsync(PresetGame.link_GameMainPage.Writer, $"AddHistory|{name_img},{text},true,50");
                         }
                         else if(message.IndexOf("Card_k") > -1)
                         {
                             int index = Convert.ToInt32(message.Substring(message.LastIndexOf("_") + 1));
                             Card_kazna card = PresetGame.Сard_k[index - 1];
-                            var alert_pop = new PopUpAlert("Карта казны", card.Description, "Заплатить");
-                            alert_pop.Notify += async e => {
-                                CurrentUser.Cash -= card.Sum;
-                                UpdateGUIData();
-                                await SendMessageAsync(Writer, $"UpdateBallans|{CurrentUser.Cash}");
-                            };
-                            await Navigation.PushModalAsync(alert_pop, false);
+                            if(card.Sum > CurrentUser.Cash)
+                            {
+                                if(CurrentUser.Companys.Count < 2)
+                                {
+                                    await Navigation.PushModalAsync(new PopUpGameOver(), false);
+                                }
+                                else
+                                {
+                                    var alert_pop = new PopUpAlert("Уведомление", "Продайте акции или совершите сделку и повторите попытку с казной", "Хорошо");
+                                    await Navigation.PushModalAsync(alert_pop, false);
+                                }
+                            }
+                            else
+                            {
+                                var alert_pop = new PopUpAlert("Карта казны", card.Description, "Заплатить");
+                                alert_pop.Notify += async e => {
+                                    CurrentUser.Cash -= card.Sum;
+                                    UpdateGUIData();
+                                    await SendMessageAsync(Writer, $"UpdateBallans|{CurrentUser.Cash}");
+                                };
+                                await Navigation.PushModalAsync(alert_pop, false);
+
+                                string name_img = "kazna.png";
+                                string text = $"Игрок {CurrentUser.Name} достает карту казны {card.Sum}$";
+                                PresetGame.Historys.Add(new History()
+                                {
+                                    name_img = name_img,
+                                    Text = text,
+                                    isVisibleCash = true,
+                                    Cash = card.Sum
+                                });
+                                await PresetGame.link_GameMainPage.SendMessageAsync(PresetGame.link_GameMainPage.Writer, $"AddHistory|{name_img},{text},true,{card.Sum}");
+                            }
+                            
                         }
                         else if (message.IndexOf("Card_shans") > -1)
                         {
-                            int index = Convert.ToInt32(message.Substring(message.LastIndexOf("_") + 1));
-                            Card_Shans card = PresetGame.Cards_Shans[index - 1];
-                            var alert_pop = new PopUpAlert("Карта шанс", card.Description, "Спасибо");
-                            alert_pop.Notify += async e => {
-                                CurrentUser.Cash += card.Sum;
-                                UpdateGUIData();
-                                await SendMessageAsync(Writer, $"UpdateBallans|{CurrentUser.Cash}");
-                            };
-                            await Navigation.PushModalAsync(alert_pop, false);
+                            if(!CurrentUser.isGameOver)
+                            {
+                                int index = Convert.ToInt32(message.Substring(message.LastIndexOf("_") + 1));
+                                Card_Shans card = PresetGame.Cards_Shans[index - 1];
+                                var alert_pop = new PopUpAlert("Карта шанс", card.Description, "Спасибо");
+                                alert_pop.Notify += async e => {
+                                    CurrentUser.Cash += card.Sum;
+                                    UpdateGUIData();
+                                    await SendMessageAsync(Writer, $"UpdateBallans|{CurrentUser.Cash}");
+                                };
+                                await Navigation.PushModalAsync(alert_pop, false);
+
+                                string name_img = "shans.png";
+                                string text = $"Игрок {CurrentUser.Name} достает карту шанса {card.Sum}$";
+                                PresetGame.Historys.Add(new History()
+                                {
+                                    name_img = name_img,
+                                    Text = text,
+                                    isVisibleCash = true,
+                                    Cash = card.Sum
+                                });
+                                await PresetGame.link_GameMainPage.SendMessageAsync(PresetGame.link_GameMainPage.Writer, $"AddHistory|{name_img},{text},true,{card.Sum}");
+                            }
+                            else
+                            {
+                                var alert_pop = new PopUpAlert("Уведомление", "Вы уже проиграли и банкрот", "Хорошо");
+                                await Navigation.PushModalAsync(alert_pop, false);
+                            }
                         }
                         else
                         {
@@ -223,6 +350,10 @@ public partial class GameMainPage : ContentPage
                                         else
                                         {
                                             //Если она другого пользователя
+                                            await Navigation.PushModalAsync(new PopUpCompanyPlayer(PresetGame.Companys[i]), false);
+                                            PresetGame.Companys[i].CompanyBuldVisibleChange();
+                                            isFind = true;
+                                            break;
                                         }
                                     }
                                 }
@@ -256,7 +387,7 @@ public partial class GameMainPage : ContentPage
     private async void GameMainPage_Loaded(object? sender, EventArgs e)
     {
         UserList = PresetGame.Users;
-
+        
         Carusel_Users.ItemsSource = UserList;
         //Carusel_Users.SetBinding(ItemsView.ItemsSourceProperty, "UserList");
         //Carusel_Users.BindingContext = UserList;
@@ -273,7 +404,17 @@ public partial class GameMainPage : ContentPage
         };
         
         Carusel_Company.ItemsSource = CurrentUser.Companys;
-            
+
+        Carusel_History.BindingContext = PresetGame.Historys;
+        PresetGame.Historys.Add(new History()
+        {
+            name_img = "",
+            Text = "Начало новой игры",
+            isVisibleCash = false
+
+        });
+        Carusel_History.ItemsSource = PresetGame.Historys;
+
 
         Lable_username.Text = CurrentUser.Name;
         SetBallans();
@@ -393,6 +534,36 @@ public partial class GameMainPage : ContentPage
                             UpdateGUIData();
                             Console.WriteLine($"Установлена новая стартовая сумма: {PresetGame.CountCahsStart}");
                         }
+                        else if(Action_str.IndexOf("GameOverPlayer") > -1)
+                        {
+                            string UserName = Data;
+                            for(int i = 0; i < PresetGame.Users.Count; i++)
+                            {
+                                if (PresetGame.Users[i].Name.IndexOf(UserName) > -1)
+                                {
+                                    PresetGame.Users[i].isGameOver = true;
+                                    break;
+                                }
+                            }
+                            if(!CurrentUser.isGameOver)
+                            {
+                                int count_gameover = 0;
+                                for (int i = 0; i < PresetGame.Users.Count; i++)
+                                {
+                                    if (PresetGame.Users[i].isGameOver)
+                                    {
+                                        count_gameover++;
+                                    }
+                                }
+                                if(count_gameover == PresetGame.Users.Count - 1)
+                                {
+                                    MainThread.BeginInvokeOnMainThread(async () =>
+                                    {
+                                        await Navigation.PushModalAsync(new WinnerUser(), false);
+                                    });
+                                }
+                            }
+                        }
                         else if (Action_str.IndexOf("UpdateBallans") > -1)
                         {
                             int NewBallans = Convert.ToInt32(Data);
@@ -404,6 +575,40 @@ public partial class GameMainPage : ContentPage
                                     break;
                                 }
                             }
+                        }
+                        else if(Action_str.IndexOf("SetBallans") > -1)
+                        {
+                            var parce = Data.Split(",");
+                            string Username = parce[0];
+                            int NewBallans = Convert.ToInt32(parce[1]);
+                            for (int i = 0; i < PresetGame.Users.Count; i++)
+                            {
+                                if (PresetGame.Users[i].Name.IndexOf(Username) > -1)
+                                {
+                                    PresetGame.Users[i].Cash = NewBallans;
+                                    break;
+                                }
+                            }
+                            UpdateGUIData();
+                        }
+                        else if (Action_str.IndexOf("AddHistory") > -1)
+                        {
+                            var parce_data = Data.Split(",");
+                            string name_img = parce_data[0];
+                            string text = parce_data[1];
+                            bool isVisibleCash = Convert.ToBoolean(parce_data[2]);
+                            int cash = 0;
+                            if (isVisibleCash)
+                            {
+                                cash = Convert.ToInt32(parce_data[3]);
+                            }
+
+                            PresetGame.Historys.Add(new History() {
+                                name_img = name_img,
+                                Text = text,
+                                isVisibleCash = isVisibleCash,
+                                Cash = cash
+                            });
                         }
                         else if (Action_str.IndexOf("CloseObmen") > -1)
                         {
@@ -535,8 +740,45 @@ public partial class GameMainPage : ContentPage
                                     {
                                         if (PresetGame.Companys[j].Name.IndexOf(CompanyName) > -1)
                                         {
+                                            PresetGame.Companys[j].UserName = UserName;
                                             PresetGame.Users[i].Companys.Add(PresetGame.Companys[j]);
                                             break;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        else if (Action_str.IndexOf("UpdateBanCompany") > -1)
+                        {
+                            var Data_company = Data.Split(",");
+                            string CompanyName = Data_company[0];
+                            bool value = Convert.ToBoolean(Data_company[1]);
+                            
+                            for (int j = 0; j < PresetGame.Companys.Count; j++)
+                            {
+                                if (PresetGame.Companys[j].Name.IndexOf(CompanyName) > -1)
+                                {
+                                    PresetGame.Companys[j].IsBan = value;
+                                }
+                            }
+                        }
+                        else if (Action_str.IndexOf("SellCompany") > -1)
+                        {
+                            var Data_company = Data.Split(",");
+                            string UserName = Data_company[0];
+                            string CompanyName = Data_company[1];
+
+                            for(int i = 0; i < PresetGame.Users.Count; i++)
+                            {
+                                if (PresetGame.Users[i].Name.IndexOf(UserName) > -1)
+                                {
+                                    var User = PresetGame.Users[i];
+                                    for(int k = 0; k < User.Companys.Count; k++)
+                                    {
+                                        if (User.Companys[k].Name.IndexOf(CompanyName) > -1)
+                                        {
+                                            PresetGame.Companys[User.Companys[k].index].UserName = "";
+                                            User.Companys.RemoveAt(k);
                                         }
                                     }
                                 }
@@ -554,8 +796,8 @@ public partial class GameMainPage : ContentPage
                                     {
                                         if (data_UpdateBuldFilial[0].IndexOf(user_UBF.Companys[j].Name) > -1)
                                         {
-                                            PresetGame.Users[i].Companys[j].CountBulds = Convert.ToInt32(data_UpdateBuldFilial[1]);
                                             PresetGame.Users[i].Companys[j].CompanyBuldVisible[PresetGame.Users[i].Companys[j].CountBulds-1] = Convert.ToBoolean(data_UpdateBuldFilial[2]);
+                                            PresetGame.Users[i].Companys[j].CountBulds = Convert.ToInt32(data_UpdateBuldFilial[1]);
                                             break;
                                         }
                                     }

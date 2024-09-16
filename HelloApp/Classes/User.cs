@@ -24,6 +24,18 @@ namespace HelloApp.Classes
                 OnPropertyChanged();
             } 
         }
+
+        private bool _isGameOver;
+        public bool isGameOver
+        {
+            get { return _isGameOver; }
+            set
+            {
+                _isGameOver = value;
+                OnPropertyChanged();
+            }
+        }
+
         public ObservableCollection<Company> Companys { get; set; }
         public string ImgPath {  get; set; } = "user.png";
 
@@ -42,7 +54,7 @@ namespace HelloApp.Classes
             Name = username;
             Cash = PresetGame.CountCahsStart;
             Companys = new ObservableCollection<Company>();
-
+            isGameOver = false;
             SelectUser = new Command(async p =>
             {
                 User user = PresetGame.link_GameMainPage.getCurrentUser();

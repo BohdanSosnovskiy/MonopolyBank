@@ -28,7 +28,7 @@
                                 <Shadow Brush="Black" Offset="5,10" Radius="30" Opacity="0.6" />
                             </BoxView.Shadow>
                         </BoxView>
-                        <Image Source="logo_monopoly.png" Margin="0, 0, 0, 60" Opacity="0.7" WidthRequest="185" Aspect="AspectFit" SemanticProperties.Description="dot net bot in a race car number eight" />
+                        <Image Source="bank_monopoly_logo.png" Margin="0, 0, 0, 60" Opacity="0.7" WidthRequest="185" Aspect="AspectFit" SemanticProperties.Description="dot net bot in a race car number eight" />
                         <Image Source="nfc_logo.png" Margin="0, 30, 30, 0" HeightRequest="50" Aspect="AspectFit" HorizontalOptions="End" VerticalOptions="Start" SemanticProperties.Description="dot net bot in a race car number eight" />
                         <Image Source="mastercard_logo.png" Margin="0, 0, 35, 35" HeightRequest="40"  HorizontalOptions="End" VerticalOptions="End" Aspect="AspectFit" SemanticProperties.Description="dot net bot in a race car number eight" />
                         <Grid Margin="20, 40, 0, 0" HeightRequest="40" VerticalOptions="Start" HorizontalOptions="Start">

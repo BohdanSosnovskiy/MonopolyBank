@@ -28,10 +28,23 @@ public partial class PopUpCompanyInfo : ContentPage
 
         if(CheckCountGroup())
         {
-            But_BuldCorp.IsVisible = true ;
+            But_BuldFilial.IsVisible = true;
+
+            var isVisibleCorp = true;
+            var currentUser = PresetGame.link_GameMainPage.CurrentUser;
+            for (int i = 0; i < currentUser.Companys.Count; i++)
+            {
+                if (currentUser.Companys[i].CountBulds < 3)
+                {
+                    isVisibleCorp = false;
+                    break;
+                }
+            }
+            But_BuldCorp.IsVisible = isVisibleCorp;
         }
         else
         {
+            But_BuldFilial.IsVisible = false;
             But_BuldCorp.IsVisible = false;
         }
 
@@ -90,6 +103,18 @@ public partial class PopUpCompanyInfo : ContentPage
 
                         await PresetGame.link_GameMainPage.SendMessageAsync(PresetGame.link_GameMainPage.Writer, $"UpdateBuldFilial|{company.Name},{company.CountBulds},{true}");
                         PresetGame.link_GameMainPage.UpdateGUIData();
+
+                        string name_img = "ipoteka.png";
+                        string text = $"Игрок {currentUser.Name} строит филиал для {company.Name}";
+                        PresetGame.Historys.Add(new History()
+                        {
+                            name_img = name_img,
+                            Text = text,
+                            isVisibleCash = true,
+                            Cash = company.PriceFilial
+                        });
+                        await PresetGame.link_GameMainPage.SendMessageAsync(PresetGame.link_GameMainPage.Writer, $"AddHistory|{name_img},{text},true,{company.PriceFilial}");
+
                         break;
                     }
                     else
@@ -105,7 +130,7 @@ public partial class PopUpCompanyInfo : ContentPage
         await Close();
     }
 
-    public void ReDeposit_Click(object sender, EventArgs e)
+    public async void ReDeposit_Click(object sender, EventArgs e)
     {
         var currentUser = PresetGame.link_GameMainPage.CurrentUser;
         if (company_info.CountBulds == 0)
@@ -116,6 +141,25 @@ public partial class PopUpCompanyInfo : ContentPage
                 if (company.Name == company_info.Name)
                 {
                     company.IsBan = false;
+
+                    await PresetGame.link_GameMainPage.SendMessageAsync(PresetGame.link_GameMainPage.Writer, $"UpdateBanCompany|{company.Name},{company.IsBan}");
+
+                    currentUser.Cash -= company.Deposit;
+                    await PresetGame.link_GameMainPage.SendMessageAsync(PresetGame.link_GameMainPage.Writer, $"UpdateBallans|{currentUser.Cash}");
+
+
+
+                    string name_img = "buy_buld.png";
+                    string text = $"Игрок {currentUser.Name} выкупает собственность {company.Name}";
+                    PresetGame.Historys.Add(new History()
+                    {
+                        name_img = name_img,
+                        Text = text,
+                        isVisibleCash = true,
+                        Cash = company.Deposit
+                    });
+
+                    await PresetGame.link_GameMainPage.SendMessageAsync(PresetGame.link_GameMainPage.Writer, $"AddHistory|{name_img},{text},true,{company.Deposit}");
                     break;
                 }
             }
@@ -135,6 +179,26 @@ public partial class PopUpCompanyInfo : ContentPage
                 if (company.Name == company_info.Name)
                 {
                     company.IsBan = true;
+
+                    await PresetGame.link_GameMainPage.SendMessageAsync(PresetGame.link_GameMainPage.Writer, $"UpdateBanCompany|{company.Name},{company.IsBan}");
+
+                    currentUser.Cash += company.Deposit;
+                    await PresetGame.link_GameMainPage.SendMessageAsync(PresetGame.link_GameMainPage.Writer, $"UpdateBallans|{currentUser.Cash}");
+
+
+
+                    string name_img = "buy_buld.png";
+                    string text = $"Игрок {currentUser.Name} заложил собственность {company.Name}";
+                    PresetGame.Historys.Add(new History()
+                    {
+                        name_img = name_img,
+                        Text = text,
+                        isVisibleCash = true,
+                        Cash = company.Deposit
+                    });
+
+                    await PresetGame.link_GameMainPage.SendMessageAsync(PresetGame.link_GameMainPage.Writer, $"AddHistory|{name_img},{text},true,{company.Deposit}");
+
                     break;
                 }
             }
@@ -165,6 +229,19 @@ public partial class PopUpCompanyInfo : ContentPage
 
                     await PresetGame.link_GameMainPage.SendMessageAsync(PresetGame.link_GameMainPage.Writer, $"UpdateBuldFilial|{company.Name},{company.CountBulds},{false}");
                     PresetGame.link_GameMainPage.UpdateGUIData();
+
+                    string name_img = "ippoteka_sell.png";
+                    string text = $"Игрок {currentUser.Name} продал строение на {company.Name}";
+                    PresetGame.Historys.Add(new History()
+                    {
+                        name_img = name_img,
+                        Text = text,
+                        isVisibleCash = true,
+                        Cash = company.PriceFilial
+                    });
+
+                    await PresetGame.link_GameMainPage.SendMessageAsync(PresetGame.link_GameMainPage.Writer, $"AddHistory|{name_img},{text},true,{company.PriceFilial}");
+
                     break;
                 }
                 else
@@ -182,7 +259,60 @@ public partial class PopUpCompanyInfo : ContentPage
 
     public async void SellCompany_Click(object sender, EventArgs e)
     {
+        var currentUser = PresetGame.link_GameMainPage.CurrentUser;
+        
 
+        for (int i = 0; i < currentUser.Companys.Count; i++)
+        {
+            var company = currentUser.Companys[i];
+            if (company.Name == company_info.Name)
+            {
+                if(company.IsBan)
+                {
+                    currentUser.Cash += company_info.Deposit;
+                    await PresetGame.link_GameMainPage.SendMessageAsync(PresetGame.link_GameMainPage.Writer, $"UpdateBallans|{currentUser.Cash}");
+
+                    string name_img = "ippoteka_sell.png";
+                    string text = $"Игрок {currentUser.Name} продал компанию {company.Name}";
+                    PresetGame.Historys.Add(new History()
+                    {
+                        name_img = name_img,
+                        Text = text,
+                        isVisibleCash = true,
+                        Cash = company.Deposit
+                    });
+
+                    await PresetGame.link_GameMainPage.SendMessageAsync(PresetGame.link_GameMainPage.Writer, $"AddHistory|{name_img},{text},true,{company.Deposit}");
+
+                    await PresetGame.link_GameMainPage.SendMessageAsync(PresetGame.link_GameMainPage.Writer, $"SellCompany|{currentUser.Name},{company.Name}");
+                    PresetGame.Companys[company.index].UserName = "";
+                    currentUser.Companys.RemoveAt(i);
+
+                    
+                }
+                else
+                {
+                    currentUser.Cash += company_info.Price;
+                    await PresetGame.link_GameMainPage.SendMessageAsync(PresetGame.link_GameMainPage.Writer, $"UpdateBallans|{currentUser.Cash}");
+
+                    string name_img = "ippoteka_sell.png";
+                    string text = $"Игрок {currentUser.Name} продал компанию {company.Name}";
+                    PresetGame.Historys.Add(new History()
+                    {
+                        name_img = name_img,
+                        Text = text,
+                        isVisibleCash = true,
+                        Cash = company.Price
+                    });
+
+                    await PresetGame.link_GameMainPage.SendMessageAsync(PresetGame.link_GameMainPage.Writer, $"AddHistory|{name_img},{text},true,{company.Price}");
+
+                    await PresetGame.link_GameMainPage.SendMessageAsync(PresetGame.link_GameMainPage.Writer, $"SellCompany|{currentUser.Name},{company.Name}");
+                    PresetGame.Companys[company.index].UserName = "";
+                    currentUser.Companys.RemoveAt(i);
+                }
+            }
+        }    
     }
 
     public async void BuldCorp(object sender, EventArgs e)
@@ -205,6 +335,18 @@ public partial class PopUpCompanyInfo : ContentPage
 
                         await PresetGame.link_GameMainPage.SendMessageAsync(PresetGame.link_GameMainPage.Writer, $"UpdateBuldFilial|{company.Name},{company.CountBulds},{true}");
                         PresetGame.link_GameMainPage.UpdateGUIData();
+
+                        string name_img = "buy_buld.png";
+                        string text = $"Игрок {currentUser.Name} строит корпорацию на {company.Name}";
+                        PresetGame.Historys.Add(new History()
+                        {
+                            name_img = name_img,
+                            Text = text,
+                            isVisibleCash = true,
+                            Cash = company.PriceCorp
+                        });
+
+                        await PresetGame.link_GameMainPage.SendMessageAsync(PresetGame.link_GameMainPage.Writer, $"AddHistory|{name_img},{text},true,{company.PriceCorp}");
                         break;
                     }
                 }
@@ -228,10 +370,6 @@ public partial class PopUpCompanyInfo : ContentPage
             if (currentUser.Companys[i].color == color)
             {
                 count_now++;
-                if(currentUser.Companys[i].CountBulds < 3)
-                {
-                    return false;
-                }
             }
         }
 

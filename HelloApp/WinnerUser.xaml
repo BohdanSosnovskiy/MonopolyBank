@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HelloApp.WinnerUser"
+             BackgroundColor="Transparent"
+             Title="WinnerUser">
+    <Grid>
+        <Grid.GestureRecognizers>
+            <TapGestureRecognizer Tapped="TapGestureRecognizer_OnTapped" />
+        </Grid.GestureRecognizers>
+        <Border
+        VerticalOptions="Center"
+        HorizontalOptions="Fill"
+        Margin="20"
+        Background="White"
+        StrokeShape="{RoundRectangle CornerRadius=20}">
+            <Grid x:Name="Grid_Alert" MinimumHeightRequest="300">
+                <BoxView HorizontalOptions="Fill" VerticalOptions="Start" CornerRadius="20,0,0,0" HeightRequest="40" >
+                    <BoxView.Background>
+                        <LinearGradientBrush>
+                            <GradientStop Color="#27283d" Offset="0.1" />
+                            <GradientStop Color="#575a89" Offset="1.0" />
+                        </LinearGradientBrush>
+                    </BoxView.Background>
+                </BoxView>
+                <Label x:Name="text_title" FontSize="20" Margin="5" Text="Победа" VerticalOptions="Start" TextColor="White" HorizontalOptions="Center"/>
+
+
+                <Image Source="win.png" Margin="0, 90, 0, 0" WidthRequest="195" Aspect="AspectFit" />
+
+            </Grid>
+        </Border>
+    </Grid>
+</ContentPage>

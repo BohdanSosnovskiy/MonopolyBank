@@ -36,6 +36,13 @@
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
 		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
+		<GenerateAppInstallerFile>False</GenerateAppInstallerFile>
+		<AppxPackageSigningEnabled>False</AppxPackageSigningEnabled>
+		<AppxPackageSigningTimestampDigestAlgorithm>SHA256</AppxPackageSigningTimestampDigestAlgorithm>
+		<AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
+		<AppxSymbolPackageEnabled>True</AppxSymbolPackageEnabled>
+		<GenerateTestArtifacts>True</GenerateTestArtifacts>
+		<HoursBetweenUpdateChecks>0</HoursBetweenUpdateChecks>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net8.0-android|AnyCPU'">
@@ -58,10 +65,10 @@
 
 	<ItemGroup>
 		<!-- App Icon -->
-		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
+		<MauiIcon Include="Resources\AppIcon\appicon.png" ForegroundFile="Resources\AppIcon\appicon.png" Color="White" />
 
 		<!-- Splash Screen -->
-		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#512BD4" BaseSize="128,128" />
+		<MauiSplashScreen Include="Resources\Splash\splash.png" Color="White"/>
 
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
@@ -88,20 +95,32 @@
 
 	<ItemGroup>
 	  <None Remove="Resources\Images\ban.png" />
+	  <None Remove="Resources\Images\bankrot.png" />
+	  <None Remove="Resources\Images\bank_monopoly_logo.png" />
+	  <None Remove="Resources\Images\buy_buld.png" />
 	  <None Remove="Resources\Images\city.png" />
 	  <None Remove="Resources\Images\company_1.png" />
 	  <None Remove="Resources\Images\company_2.png" />
 	  <None Remove="Resources\Images\company_3.png" />
 	  <None Remove="Resources\Images\conform_sdelka.png" />
+	  <None Remove="Resources\Images\gameOver.png" />
+	  <None Remove="Resources\Images\ipoteka.png" />
+	  <None Remove="Resources\Images\ippoteka_sell.png" />
+	  <None Remove="Resources\Images\kazna.png" />
 	  <None Remove="Resources\Images\Logo_monopoly.png" />
 	  <None Remove="Resources\Images\mastercard_logo.png" />
 	  <None Remove="Resources\Images\monopolyhouse_green.png" />
 	  <None Remove="Resources\Images\monopolyhouse_red.png" />
+	  <None Remove="Resources\Images\monopoly_man.png" />
 	  <None Remove="Resources\Images\nfc_logo.png" />
+	  <None Remove="Resources\Images\payment.png" />
+	  <None Remove="Resources\Images\pay_bank.png" />
 	  <None Remove="Resources\Images\plus.png" />
 	  <None Remove="Resources\Images\sdelka_logo.png" />
+	  <None Remove="Resources\Images\shans.png" />
 	  <None Remove="Resources\Images\torg_money.png" />
 	  <None Remove="Resources\Images\user.png" />
+	  <None Remove="Resources\Images\win.png" />
 	  <None Remove="Resources\Raw\buld.mp3" />
 	  <None Remove="Resources\Raw\coindrop.mp3" />
 	  <None Remove="Resources\Raw\destroy_buld.mp3" />
@@ -152,7 +171,13 @@
 	  <MauiXaml Update="PopUpConfirmSdelka.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="PopUpGameOver.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="PopUpInfoUser.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="WinnerUser.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

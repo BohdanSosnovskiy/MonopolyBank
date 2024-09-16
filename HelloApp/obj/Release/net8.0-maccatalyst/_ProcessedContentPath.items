@@ -1,6 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Content Include="Resources\Raw\AboutAssets.txt" />
+    <Content Include="Resources\Raw\buld.mp3" />
+    <Content Include="Resources\Raw\coindrop.mp3" />
+    <Content Include="Resources\Raw\destroy_buld.mp3" />
+    <Content Include="Resources\Raw\GameOver.mp3" />
+    <Content Include="Resources\Raw\gopstop.mp3" />
+    <Content Include="Resources\Raw\kassa.mp3" />
+    <Content Include="Resources\Raw\policay.mp3" />
+    <Content Include="Resources\Raw\turma.mp3" />
+    <Content Include="Resources\Raw\Win.mp3" />
   </ItemGroup>
 </Project>

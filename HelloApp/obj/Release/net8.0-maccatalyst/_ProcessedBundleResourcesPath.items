@@ -1,20 +1,34 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <BundleResource Include="C:\Users\Alex_\source\repos\HelloApp\HelloApp\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\ban.png" />
-    <BundleResource Include="C:\Users\Alex_\source\repos\HelloApp\HelloApp\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\plus.png" />
-    <BundleResource Include="C:\Users\Alex_\source\repos\HelloApp\HelloApp\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\city.png" />
-    <BundleResource Include="C:\Users\Alex_\source\repos\HelloApp\HelloApp\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\monopolyhouse_green.png" />
-    <BundleResource Include="C:\Users\Alex_\source\repos\HelloApp\HelloApp\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\logo_monopoly.png" />
-    <BundleResource Include="C:\Users\Alex_\source\repos\HelloApp\HelloApp\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\company_1.png" />
-    <BundleResource Include="C:\Users\Alex_\source\repos\HelloApp\HelloApp\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\nfc_logo.png" />
-    <BundleResource Include="C:\Users\Alex_\source\repos\HelloApp\HelloApp\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\company_2.png" />
-    <BundleResource Include="C:\Users\Alex_\source\repos\HelloApp\HelloApp\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\monopolyhouse_red.png" />
-    <BundleResource Include="C:\Users\Alex_\source\repos\HelloApp\HelloApp\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\company_3.png" />
-    <BundleResource Include="C:\Users\Alex_\source\repos\HelloApp\HelloApp\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\user.png" />
-    <BundleResource Include="C:\Users\Alex_\source\repos\HelloApp\HelloApp\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\mastercard_logo.png" />
-    <BundleResource Include="C:\Users\Alex_\source\repos\HelloApp\HelloApp\obj\Release\net8.0-maccatalyst\resizetizer\r\dotnet_bot@3x.png" />
-    <BundleResource Include="C:\Users\Alex_\source\repos\HelloApp\HelloApp\obj\Release\net8.0-maccatalyst\resizetizer\r\dotnet_bot@2x.png" />
-    <BundleResource Include="C:\Users\Alex_\source\repos\HelloApp\HelloApp\obj\Release\net8.0-maccatalyst\resizetizer\r\dotnet_bot.png" />
+    <BundleResource Include="F:\Projects\MAUI\MonopolyBank\HelloApp\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\pay_bank.png" />
+    <BundleResource Include="F:\Projects\MAUI\MonopolyBank\HelloApp\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\logo_monopoly.png" />
+    <BundleResource Include="F:\Projects\MAUI\MonopolyBank\HelloApp\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\ippoteka_sell.png" />
+    <BundleResource Include="F:\Projects\MAUI\MonopolyBank\HelloApp\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\kazna.png" />
+    <BundleResource Include="F:\Projects\MAUI\MonopolyBank\HelloApp\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\bankrot.png" />
+    <BundleResource Include="F:\Projects\MAUI\MonopolyBank\HelloApp\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\mastercard_logo.png" />
+    <BundleResource Include="F:\Projects\MAUI\MonopolyBank\HelloApp\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\company_2.png" />
+    <BundleResource Include="F:\Projects\MAUI\MonopolyBank\HelloApp\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\plus.png" />
+    <BundleResource Include="F:\Projects\MAUI\MonopolyBank\HelloApp\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\monopolyhouse_green.png" />
+    <BundleResource Include="F:\Projects\MAUI\MonopolyBank\HelloApp\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\city.png" />
+    <BundleResource Include="F:\Projects\MAUI\MonopolyBank\HelloApp\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\sdelka_logo.png" />
+    <BundleResource Include="F:\Projects\MAUI\MonopolyBank\HelloApp\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\monopolyhouse_red.png" />
+    <BundleResource Include="F:\Projects\MAUI\MonopolyBank\HelloApp\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\ban.png" />
+    <BundleResource Include="F:\Projects\MAUI\MonopolyBank\HelloApp\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\user.png" />
+    <BundleResource Include="F:\Projects\MAUI\MonopolyBank\HelloApp\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\monopoly_man.png" />
+    <BundleResource Include="F:\Projects\MAUI\MonopolyBank\HelloApp\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\gameover.png" />
+    <BundleResource Include="F:\Projects\MAUI\MonopolyBank\HelloApp\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\win.png" />
+    <BundleResource Include="F:\Projects\MAUI\MonopolyBank\HelloApp\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\nfc_logo.png" />
+    <BundleResource Include="F:\Projects\MAUI\MonopolyBank\HelloApp\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\conform_sdelka.png" />
+    <BundleResource Include="F:\Projects\MAUI\MonopolyBank\HelloApp\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\payment.png" />
+    <BundleResource Include="F:\Projects\MAUI\MonopolyBank\HelloApp\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\company_1.png" />
+    <BundleResource Include="F:\Projects\MAUI\MonopolyBank\HelloApp\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\shans.png" />
+    <BundleResource Include="F:\Projects\MAUI\MonopolyBank\HelloApp\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\buy_buld.png" />
+    <BundleResource Include="F:\Projects\MAUI\MonopolyBank\HelloApp\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\torg_money.png" />
+    <BundleResource Include="F:\Projects\MAUI\MonopolyBank\HelloApp\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\company_3.png" />
+    <BundleResource Include="F:\Projects\MAUI\MonopolyBank\HelloApp\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\ipoteka.png" />
+    <BundleResource Include="F:\Projects\MAUI\MonopolyBank\HelloApp\obj\Release\net8.0-maccatalyst\resizetizer\r\dotnet_bot@3x.png" />
+    <BundleResource Include="F:\Projects\MAUI\MonopolyBank\HelloApp\obj\Release\net8.0-maccatalyst\resizetizer\r\dotnet_bot@2x.png" />
+    <BundleResource Include="F:\Projects\MAUI\MonopolyBank\HelloApp\obj\Release\net8.0-maccatalyst\resizetizer\r\dotnet_bot.png" />
   </ItemGroup>
 </Project>

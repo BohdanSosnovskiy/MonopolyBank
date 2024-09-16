@@ -21,7 +21,7 @@
                         <Shadow Brush="Black" Offset="5,10" Radius="30" Opacity="0.6" />
                     </BoxView.Shadow>
                 </BoxView>
-                <Image Source="logo_monopoly.png" Margin="0, 0, 0, 60" Opacity="0.7" WidthRequest="185" Aspect="AspectFit" SemanticProperties.Description="dot net bot in a race car number eight" />
+                <Image Source="bank_monopoly_logo.png" Margin="0, 0, 0, 60" Opacity="0.7" WidthRequest="185" Aspect="AspectFit" SemanticProperties.Description="dot net bot in a race car number eight" />
                 <Image Source="nfc_logo.png" Margin="0, 30, 30, 0" HeightRequest="50" Aspect="AspectFit" HorizontalOptions="End" VerticalOptions="Start" SemanticProperties.Description="dot net bot in a race car number eight" />
                 <Image Source="mastercard_logo.png" Margin="0, 0, 35, 35" HeightRequest="40"  HorizontalOptions="End" VerticalOptions="End" Aspect="AspectFit" SemanticProperties.Description="dot net bot in a race car number eight" />
                 <Grid Margin="20, 40, 0, 0" HeightRequest="40" VerticalOptions="Start" HorizontalOptions="Start">
@@ -440,6 +440,7 @@
                                     FontSize="25"
                                     VerticalOptions="Start" 
                                     HorizontalOptions="Center" />
+                                <Image Source="bankrot.png" WidthRequest="160" Margin="0, 40, 0, 0" IsVisible="{Binding isGameOver}"  HorizontalOptions="Center" VerticalOptions="Start" Aspect="Fill" />
                             </Grid>
                             <BoxView HorizontalOptions="Fill" VerticalOptions="Fill" CornerRadius="20" BackgroundColor="Transparent">
                                 <BoxView.GestureRecognizers>
@@ -472,89 +473,59 @@
                         HorizontalOptions="Start" />
                 </Grid>
             </Grid>
-            <VerticalStackLayout HorizontalOptions="Fill" VerticalOptions="Start">
-                <VerticalStackLayout.Background>
+
+
+
+            <CarouselView x:Name="Carusel_History" HeightRequest="400" PeekAreaInsets="140"  Loop="False" HorizontalOptions="Fill" VerticalOptions="Start">
+                <CarouselView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical" SnapPointsType="None" SnapPointsAlignment="Start" />
+                </CarouselView.ItemsLayout>
+                <CarouselView.Background>
                     <LinearGradientBrush>
                         <GradientStop Color="#ffd131" Offset="0.1" />
                         <GradientStop Color="#f2ad2f" Offset="1.0" />
                     </LinearGradientBrush>
-                </VerticalStackLayout.Background>
-                
-                
-                <Grid Margin="10,10,10,20" VerticalOptions="Start" HorizontalOptions="Fill">
-                    <BoxView  VerticalOptions="Fill" HorizontalOptions="Fill" CornerRadius="10">
-                        <BoxView.Background>
-                            <LinearGradientBrush>
-                                <GradientStop Color="#fd6244" Offset="0.1" />
-                                <GradientStop Color="#e73d60" Offset="1.0" />
-                            </LinearGradientBrush>
-                        </BoxView.Background>
-                    </BoxView>
-                    <Grid VerticalOptions="Fill" HorizontalOptions="Fill">
-                        <BoxView WidthRequest="80" HeightRequest="80"  Margin="5"  VerticalOptions="Start" BackgroundColor="White" HorizontalOptions="Start" CornerRadius="5"/>
-
-
-                        <Image Source="user.png" HeightRequest="70" Margin="10,10,0,0"  HorizontalOptions="Start" VerticalOptions="Start" Aspect="Fill" SemanticProperties.Description="dot net bot in a race car number eight" />
-                        <Label 
-                            Text="Оплата оренды"
-                            TextColor="White"
-                            Margin="90, 15, 0, 0"
-                            FontSize="18"
-                            VerticalOptions="Start" 
-                            HorizontalOptions="Start" />
-                        <Label 
-                            Text="Игроку Kolian007"
-                            TextColor="White"
-                            Margin="90, 45, 0, 0"
-                            FontSize="18"
-                            VerticalOptions="Start" 
-                            HorizontalOptions="Start" />
-                        <Label 
-                            Text="100 $"
-                            TextColor="White"
-                            Margin="0, 0, 15, 0"
-                            FontSize="28"
-                            VerticalOptions="Center" 
-                            HorizontalOptions="End" />
-                    </Grid>
-                </Grid>
-
-                <Grid Margin="10,10,10,20" VerticalOptions="Start" HorizontalOptions="Fill">
-                    <BoxView  VerticalOptions="Fill" HorizontalOptions="Fill" CornerRadius="10">
-                        <BoxView.Background>
-                            <LinearGradientBrush>
-                                <GradientStop Color="#55b155" Offset="0.1" />
-                                <GradientStop Color="#3b7d3b" Offset="1.0" />
-                            </LinearGradientBrush>
-                        </BoxView.Background>
-                    </BoxView>
-                    <Grid VerticalOptions="Fill" HorizontalOptions="Fill">
-                        <BoxView WidthRequest="80" HeightRequest="80"  Margin="5"  VerticalOptions="Start" BackgroundColor="White" HorizontalOptions="Start" CornerRadius="5"/>
-                        <Image Source="user.png" HeightRequest="70" Margin="10,10,0,0"  HorizontalOptions="Start" VerticalOptions="Start" Aspect="Fill" SemanticProperties.Description="dot net bot in a race car number eight" />
-                        <Label 
-                            Text="Прибыль оренды"
-                            TextColor="White"
-                            Margin="90, 15, 0, 0"
-                            FontSize="18"
-                            VerticalOptions="Start" 
-                            HorizontalOptions="Start" />
-                                        <Label 
-                            Text="От игрока Kolian007"
-                            TextColor="White"
-                            Margin="90, 45, 0, 0"
-                            FontSize="18"
-                            VerticalOptions="Start" 
-                            HorizontalOptions="Start" />
-                                        <Label 
-                            Text="100 $"
-                            TextColor="White"
-                            Margin="0, 0, 15, 0"
-                            FontSize="28"
-                            VerticalOptions="Center" 
-                            HorizontalOptions="End" />
-                    </Grid>
-                </Grid>
-            </VerticalStackLayout>
+                </CarouselView.Background>
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Margin="10,10,10,20" VerticalOptions="Start" HorizontalOptions="Fill">
+                            <BoxView  VerticalOptions="Fill" HorizontalOptions="Fill" CornerRadius="10">
+                                <BoxView.Background>
+                                    <LinearGradientBrush>
+                                        <GradientStop Color="#fd6244" Offset="0.1" />
+                                        <GradientStop Color="#e73d60" Offset="1.0" />
+                                    </LinearGradientBrush>
+                                </BoxView.Background>
+                            </BoxView>
+                            <Grid VerticalOptions="Fill" HorizontalOptions="Fill">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width=".3*"/>
+                                    <ColumnDefinition Width=".6*"/>
+                                    <ColumnDefinition Width=".3*"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Grid.Column="0" Source="{Binding name_img}" HeightRequest="70" Margin="10,10,0,10"  HorizontalOptions="Start" VerticalOptions="Start" Aspect="Fill" SemanticProperties.Description="dot net bot in a race car number eight" />
+                                <Label 
+                                    Grid.Column="1"
+                                    Text="{Binding Text}"
+                                    TextColor="White"
+                                    Margin="0"
+                                    FontSize="15"
+                                    VerticalOptions="Center" 
+                                    HorizontalOptions="Fill" />
+                                <Label 
+                                    Grid.Column="2"
+                                    Text="{Binding Cash, StringFormat='{0} $'}"
+                                    IsVisible="{Binding isVisibleCash}"
+                                    TextColor="White"
+                                    Margin="0, 0, 15, 0"
+                                    FontSize="19"
+                                    VerticalOptions="Center" 
+                                    HorizontalOptions="End" />
+                            </Grid>
+                        </Grid>
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+            </CarouselView>
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

@@ -21,7 +21,7 @@
   <uses-permission android:name="android.permission.NFC_TRANSACTION_EVENT" />
   <permission android:name="com.companyname.helloapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" android:protectionLevel="signature" />
   <uses-permission android:name="com.companyname.helloapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-  <application android:name="crc6435f736177fb1d4ab.MainApplication" android:allowBackup="true" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:debuggable="true" android:extractNativeLibs="true" android:icon="@mipmap/appicon" android:label="TestApplication" android:supportsRtl="true">
+  <application android:name="crc6435f736177fb1d4ab.MainApplication" android:allowBackup="true" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:debuggable="true" android:extractNativeLibs="true" android:icon="@mipmap/appicon" android:label="Monopoly Bank" android:supportsRtl="true">
     <service android:name="CommunityToolkit.Maui.Media.Services" android:enabled="true" android:exported="false" android:foregroundServiceType="mediaPlayback">
       <intent-filter>
         <action android:name="android.intent.action.MEDIA_BUTTON" />

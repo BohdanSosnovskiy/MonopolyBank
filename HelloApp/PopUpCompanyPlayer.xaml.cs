@@ -1,11 +1,47 @@
+using HelloApp.Classes;
+
 namespace HelloApp;
 
 public partial class PopUpCompanyPlayer : ContentPage
 {
-	public PopUpCompanyPlayer()
+    public Company company_info { get; set; }
+
+    public int rend {  get; set; }
+
+    public PopUpCompanyPlayer(Company company)
 	{
 		InitializeComponent();
         Loaded += Page_Loaded;
+        company_info = company;
+        Grid_InfoCompany.BindingContext = company_info;
+
+        if(company_info.IsCompany)
+        {
+            rend = company_info.Orend[company_info.CountBulds];
+        }
+        else if(company_info.IsCorp)
+        {
+            var color = company_info.color;
+            int count_now = 0;
+            for (int k = 0; k < PresetGame.Users.Count; k++) 
+            {
+                if(PresetGame.Users[k].Name.IndexOf(company_info.UserName) > -1)
+                {
+                    var targetUser = PresetGame.Users[k];
+                    for (int i = 0; i < targetUser.Companys.Count; i++)
+                    {
+                        if (targetUser.Companys[i].color == color)
+                        {
+                            count_now++;
+                        }
+                    }
+                }
+            }
+
+            rend = company_info.Orend[count_now - 1];
+        }
+        But_Orend.BindingContext = this;
+        
     }
 
     protected override bool OnBackButtonPressed()
@@ -18,6 +54,19 @@ public partial class PopUpCompanyPlayer : ContentPage
     {
         // We only need this to fire once, so clean things up!
         this.Loaded -= Page_Loaded;
+
+        if (rend > PresetGame.link_GameMainPage.CurrentUser.Cash)
+        {
+            if (PresetGame.link_GameMainPage.CurrentUser.Companys.Count < 2)
+            {
+                Navigation.PushModalAsync(new PopUpGameOver(), false);
+            }
+            else
+            {
+                var alert_pop = new PopUpAlert("Уведомление", "Продайте акции или совершите сделку и повторите попытку", "Хорошо");
+                Navigation.PushModalAsync(alert_pop, false);
+            }
+        }
 
         // Call the animation
         PoppingIn();
@@ -98,5 +147,45 @@ public partial class PopUpCompanyPlayer : ContentPage
         await PoppingOut();
         // Navigate away without the default animation
         await Navigation.PopModalAsync(animated: false);
+    }
+
+    private async void But_Orend_Clicked(object sender, EventArgs e)
+    {
+        var main = PresetGame.link_GameMainPage;
+        if (main.CurrentUser.Cash >= rend)
+        {
+            main.CurrentUser.Cash -= rend;
+            await main.SendMessageAsync(main.Writer, $"SetBallans|{main.CurrentUser.Name},{main.CurrentUser.Cash}");
+
+            var users = PresetGame.Users;
+            for(int i = 0; i < users.Count; i ++)
+            {
+                if(users[i].Name == company_info.UserName)
+                {
+                    users[i].Cash += rend;
+                    await main.SendMessageAsync(main.Writer, $"SetBallans|{users[i].Name},{users[i].Cash}");
+
+                    main.UpdateGUIData();
+
+                    string name_img = "ippoteka_sell.png";
+                    string text = $"Игрок {main.CurrentUser.Name} платит налог игроку {users[i].Name}";
+                    PresetGame.Historys.Add(new History()
+                    {
+                        name_img = name_img,
+                        Text = text,
+                        isVisibleCash = true,
+                        Cash = rend
+                    });
+                    await PresetGame.link_GameMainPage.SendMessageAsync(PresetGame.link_GameMainPage.Writer, $"AddHistory|{name_img},{text},true,{rend}");
+                    break;
+                }
+            }
+
+            await Close();
+        }
+        else
+        {
+
+        }
     }
 }

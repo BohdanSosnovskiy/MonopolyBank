@@ -18,11 +18,14 @@ namespace HelloApp.Classes
 
         public static ObservableCollection<User> Users = new ObservableCollection<User>();
 
+        public static ObservableCollection<History> Historys = new ObservableCollection<History>();
+
         //Список всех компаний в игре
         public static ObservableCollection<Company> Companys = new ObservableCollection<Company>
         {
             new Company
             {
+                index = 0,
                 Name = "ДЕЛЬФИНАРИЙ",
                 nfc_marker = "delfinariy",
                 Price = 450,
@@ -41,6 +44,7 @@ namespace HelloApp.Classes
             },
             new Company
             {
+                index = 1,
                 Name = "ПАРК ГОРЬКОГО",
                 nfc_marker = "parkgorkogo",
                 Price = 500,
@@ -59,6 +63,7 @@ namespace HelloApp.Classes
             },
             new Company
             {
+                index = 2,
                 Name = "ГОРНОЛЫЖНЫЙ КУРОРТ",
                 nfc_marker = "gornolg",
                 Price = 450,
@@ -77,6 +82,7 @@ namespace HelloApp.Classes
             },
             new Company
             {
+                index = 3,
                 Name = "ЦЕНТРАЛЬНЫЙ АВТОВОКЗАЛ",
                 nfc_marker = "centrautovokzal",
                 Price = 550,
@@ -95,6 +101,7 @@ namespace HelloApp.Classes
             },
             new Company
             {
+                index = 4,
                 Name = "ЮЖД",
                 nfc_marker = "ugd",
                 Price = 550,
@@ -113,6 +120,7 @@ namespace HelloApp.Classes
             },
             new Company
             {
+                index = 5,
                 Name = "МЕТРОПОЛИТЕН",
                 nfc_marker =  "metro",
                 Price = 600,
@@ -131,6 +139,7 @@ namespace HelloApp.Classes
             },
             new Company
             {
+                index = 6,
                 Name = "РЫНОК",
                 nfc_marker = "rinok",
                 Price = 400,
@@ -149,6 +158,7 @@ namespace HelloApp.Classes
             },
             new Company
             {
+                index = 7,
                 Name = "ТОРГОВЫЙ ЦЕНТР",
                 nfc_marker = "centrtorg",
                 Price = 450,
@@ -167,6 +177,7 @@ namespace HelloApp.Classes
             },
             new Company
             {
+                index = 8,
                 Name = "СУПЕРМАРКЕТ",
                 nfc_marker = "supermarket",
                 Price = 400,
@@ -185,6 +196,7 @@ namespace HelloApp.Classes
             },
             new Company
             {
+                index = 9,
                 Name = "ПЕКАРНЯ",
                 nfc_marker = "pecarnia",
                 Price = 250,
@@ -203,6 +215,7 @@ namespace HelloApp.Classes
             },
             new Company
             {
+                index = 10,
                 Name = "БУРГЕНРНАЯ",
                 nfc_marker = "burger",
                 Price = 300,
@@ -221,6 +234,7 @@ namespace HelloApp.Classes
             },
             new Company
             {
+                index = 11,
                 Name = "АВИАЦИОННЫЙ ЗАВОД",
                 nfc_marker = "airzavod",
                 Price = 800,
@@ -239,6 +253,7 @@ namespace HelloApp.Classes
             },
             new Company
             {
+                index = 12,
                 Name = "ЗАВОД им.МАЛЫШЕВА",
                 nfc_marker = "zovodmalishova",
                 Price = 700,
@@ -257,6 +272,7 @@ namespace HelloApp.Classes
             },
             new Company
             {
+                index = 13,
                 Name = "АРТ-ЗАВОД",
                 nfc_marker = "artzavod",
                 Price = 400,
@@ -275,6 +291,7 @@ namespace HelloApp.Classes
             },
             new Company
             {
+                index = 14,
                 Name = "НОЧНОЙ КЛУБ",
                 nfc_marker = "nightclub",
                 Price = 350,
@@ -293,6 +310,7 @@ namespace HelloApp.Classes
             },
             new Company
             {
+                index = 15,
                 Name = "РЕСТОРАН",
                 nfc_marker = "restoran",
                 Price = 350,
@@ -311,6 +329,7 @@ namespace HelloApp.Classes
             },
             new Company
             {
+                index = 16,
                 Name = "ФИТНЕС КЛУБ",
                 nfc_marker = "fitnesclub",
                 Price = 500,
@@ -328,7 +347,8 @@ namespace HelloApp.Classes
                 CompanyBuldVisible = [false, false, false, false]
             },
             new Company
-            {
+            {  
+                index = 17,
                 Name = "СТАДИОН МЕТАЛИСТ",
                 nfc_marker = "stadionmetalist",
                 Price = 550,
@@ -347,6 +367,7 @@ namespace HelloApp.Classes
             },
             new Company
             {
+                index = 18,
                 Name = "ЛЕДОВАЯ АРЕНА",
                 nfc_marker = "icearena",
                 Price = 500,
@@ -365,6 +386,7 @@ namespace HelloApp.Classes
             },
             new Company
             {
+                index = 19,
                 Name = "ХТЗ",
                 nfc_marker = "HTZ",
                 Price = 600,
@@ -383,6 +405,7 @@ namespace HelloApp.Classes
             },
             new Company
             {
+                index = 20,
                 Name = "ПИВЗАВОД",
                 nfc_marker = "bearzavod",
                 Price = 600,
@@ -401,6 +424,7 @@ namespace HelloApp.Classes
             },
             new Company
             {
+                index = 21,
                 Name = "ТУРБИННЫЙ ЗАВОД",
                 nfc_marker = "turbozavod",
                 Price = 650,
@@ -419,6 +443,7 @@ namespace HelloApp.Classes
             },
             new Company
             {
+                index = 22,
                 Name = "ВОДОКАНАЛ",
                 nfc_marker = "vodocanal",
                 Price = 250,
@@ -437,6 +462,7 @@ namespace HelloApp.Classes
             },
             new Company
             {
+                index = 23,
                 Name = "ОБЛЭНЕРГО",
                 nfc_marker = "oblenergo",
                 Price = 250,
@@ -455,6 +481,7 @@ namespace HelloApp.Classes
             },
             new Company
             {
+                index = 24,
                 Name = "ТЕПЛОСЕТИ",
                 nfc_marker = "teploseti",
                 Price = 250,
@@ -473,6 +500,7 @@ namespace HelloApp.Classes
             },
             new Company
             {
+                index = 25,
                 Name = "ДОРРЕМСТРОЙ",
                 nfc_marker = "doremstroy",
                 Price = 250,
@@ -491,6 +519,7 @@ namespace HelloApp.Classes
             },
             new Company
             {
+                index = 26,
                 Name = "4-я НЕОТЛОЖКА",
                 nfc_marker = "neotlogka",
                 Price = 250,
@@ -509,6 +538,7 @@ namespace HelloApp.Classes
             },
             new Company
             {
+                index = 27,
                 Name = "ТРАМВАЙНОЕ ДЕПО",
                 nfc_marker = "tramvaydepo",
                 Price = 250,

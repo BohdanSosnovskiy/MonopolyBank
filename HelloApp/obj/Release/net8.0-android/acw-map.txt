@@ -1,3 +1,18 @@
+CommunityToolkit.Maui.Media.Services.MediaControlsService, CommunityToolkit.Maui.MediaElement;CommunityToolkit.Maui.Media.Services
+CommunityToolkit.Maui.Media.Services.MediaControlsService;CommunityToolkit.Maui.Media.Services
+CommunityToolkit.Maui.Media.Services;CommunityToolkit.Maui.Media.Services
+CommunityToolkit.Maui.Media.Services.ReceiveUpdates, CommunityToolkit.Maui.MediaElement;crc64945cd749a3cf0abd.ReceiveUpdates
+CommunityToolkit.Maui.Media.Services.ReceiveUpdates;crc64945cd749a3cf0abd.ReceiveUpdates
+communitytoolkit.maui.media.services.ReceiveUpdates;crc64945cd749a3cf0abd.ReceiveUpdates
+CommunityToolkit.Maui.Core.Views.MauiMediaElement, CommunityToolkit.Maui.MediaElement;crc64ceb75e76f4b66147.MauiMediaElement
+CommunityToolkit.Maui.Core.Views.MauiMediaElement;crc64ceb75e76f4b66147.MauiMediaElement
+communitytoolkit.maui.core.views.MauiMediaElement;crc64ceb75e76f4b66147.MauiMediaElement
+CommunityToolkit.Maui.Core.Views.MediaManager, CommunityToolkit.Maui.MediaElement;crc64ceb75e76f4b66147.MediaManager
+CommunityToolkit.Maui.Core.Views.MediaManager;crc64ceb75e76f4b66147.MediaManager
+communitytoolkit.maui.core.views.MediaManager;crc64ceb75e76f4b66147.MediaManager
+CommunityToolkit.Maui.Core.Views.MediaManager+UIUpdateReceiver, CommunityToolkit.Maui.MediaElement;crc64ceb75e76f4b66147.MediaManager_UIUpdateReceiver
+CommunityToolkit.Maui.Core.Views.MediaManager.UIUpdateReceiver;crc64ceb75e76f4b66147.MediaManager_UIUpdateReceiver
+communitytoolkit.maui.core.views.MediaManager_UIUpdateReceiver;crc64ceb75e76f4b66147.MediaManager_UIUpdateReceiver
 Microsoft.Maui.Controls.Compatibility.Platform.Android.Platform+DefaultRenderer, Microsoft.Maui.Controls.Compatibility;crc6477f0d89a9cfd64b1.Platform_DefaultRenderer
 Microsoft.Maui.Controls.Compatibility.Platform.Android.Platform.DefaultRenderer;crc6477f0d89a9cfd64b1.Platform_DefaultRenderer
 microsoft.maui.controls.compatibility.platform.android.Platform_DefaultRenderer;crc6477f0d89a9cfd64b1.Platform_DefaultRenderer
@@ -505,6 +520,261 @@ plugin.nfc.ActivityLifecycleContextListener;crc6464b151ab0c8e99f1.ActivityLifecy
 Plugin.NFC.NFCImplementation+NfcBroadcastReceiver, Plugin.NFC;crc6464b151ab0c8e99f1.NFCImplementation_NfcBroadcastReceiver
 Plugin.NFC.NFCImplementation.NfcBroadcastReceiver;crc6464b151ab0c8e99f1.NFCImplementation_NfcBroadcastReceiver
 plugin.nfc.NFCImplementation_NfcBroadcastReceiver;crc6464b151ab0c8e99f1.NFCImplementation_NfcBroadcastReceiver
+Com.Google.Android.Exoplayer2.IBundleable, ExoPlayer.Common;com.google.android.exoplayer2.Bundleable
+Com.Google.Android.Exoplayer2.IBundleable;com.google.android.exoplayer2.Bundleable
+com.google.android.exoplayer2.Bundleable;com.google.android.exoplayer2.Bundleable
+Com.Google.Android.Exoplayer2.IBundleable+ICreator, ExoPlayer.Common;com.google.android.exoplayer2.Bundleable$Creator
+Com.Google.Android.Exoplayer2.IBundleable.ICreator;com.google.android.exoplayer2.Bundleable$Creator
+com.google.android.exoplayer2.Bundleable$Creator;com.google.android.exoplayer2.Bundleable$Creator
+Com.Google.Android.Exoplayer2.IPlayer, ExoPlayer.Common;com.google.android.exoplayer2.Player
+Com.Google.Android.Exoplayer2.IPlayer;com.google.android.exoplayer2.Player
+com.google.android.exoplayer2.Player;com.google.android.exoplayer2.Player
+Com.Google.Android.Exoplayer2.IPlayer+IListener, ExoPlayer.Common;com.google.android.exoplayer2.Player$Listener
+Com.Google.Android.Exoplayer2.IPlayer.IListener;com.google.android.exoplayer2.Player$Listener
+com.google.android.exoplayer2.Player$Listener;com.google.android.exoplayer2.Player$Listener
+Com.Google.Android.Exoplayer2.Util.IClock, ExoPlayer.Common;com.google.android.exoplayer2.util.Clock
+Com.Google.Android.Exoplayer2.Util.IClock;com.google.android.exoplayer2.util.Clock
+com.google.android.exoplayer2.util.Clock;com.google.android.exoplayer2.util.Clock
+Com.Google.Android.Exoplayer2.Util.IEffect, ExoPlayer.Common;com.google.android.exoplayer2.util.Effect
+Com.Google.Android.Exoplayer2.Util.IEffect;com.google.android.exoplayer2.util.Effect
+com.google.android.exoplayer2.util.Effect;com.google.android.exoplayer2.util.Effect
+Com.Google.Android.Exoplayer2.Util.IErrorMessageProvider, ExoPlayer.Common;com.google.android.exoplayer2.util.ErrorMessageProvider
+Com.Google.Android.Exoplayer2.Util.IErrorMessageProvider;com.google.android.exoplayer2.util.ErrorMessageProvider
+com.google.android.exoplayer2.util.ErrorMessageProvider;com.google.android.exoplayer2.util.ErrorMessageProvider
+Com.Google.Android.Exoplayer2.Util.IHandlerWrapper, ExoPlayer.Common;com.google.android.exoplayer2.util.HandlerWrapper
+Com.Google.Android.Exoplayer2.Util.IHandlerWrapper;com.google.android.exoplayer2.util.HandlerWrapper
+com.google.android.exoplayer2.util.HandlerWrapper;com.google.android.exoplayer2.util.HandlerWrapper
+Com.Google.Android.Exoplayer2.Util.IHandlerWrapper+IMessage, ExoPlayer.Common;com.google.android.exoplayer2.util.HandlerWrapper$Message
+Com.Google.Android.Exoplayer2.Util.IHandlerWrapper.IMessage;com.google.android.exoplayer2.util.HandlerWrapper$Message
+com.google.android.exoplayer2.util.HandlerWrapper$Message;com.google.android.exoplayer2.util.HandlerWrapper$Message
+Com.Google.Android.Exoplayer2.Upstream.IDataReader, ExoPlayer.Common;com.google.android.exoplayer2.upstream.DataReader
+Com.Google.Android.Exoplayer2.Upstream.IDataReader;com.google.android.exoplayer2.upstream.DataReader
+com.google.android.exoplayer2.upstream.DataReader;com.google.android.exoplayer2.upstream.DataReader
+Com.Google.Android.Exoplayer2.Metadata.Metadata+IEntry, ExoPlayer.Common;com.google.android.exoplayer2.metadata.Metadata$Entry
+Com.Google.Android.Exoplayer2.Metadata.Metadata.IEntry;com.google.android.exoplayer2.metadata.Metadata$Entry
+com.google.android.exoplayer2.metadata.Metadata$Entry;com.google.android.exoplayer2.metadata.Metadata$Entry
+Com.Google.Android.Exoplayer2.IExoPlayer, ExoPlayer.Core;com.google.android.exoplayer2.ExoPlayer
+Com.Google.Android.Exoplayer2.IExoPlayer;com.google.android.exoplayer2.ExoPlayer
+com.google.android.exoplayer2.ExoPlayer;com.google.android.exoplayer2.ExoPlayer
+Com.Google.Android.Exoplayer2.IExoPlayer+IAudioComponent, ExoPlayer.Core;com.google.android.exoplayer2.ExoPlayer$AudioComponent
+Com.Google.Android.Exoplayer2.IExoPlayer.IAudioComponent;com.google.android.exoplayer2.ExoPlayer$AudioComponent
+com.google.android.exoplayer2.ExoPlayer$AudioComponent;com.google.android.exoplayer2.ExoPlayer$AudioComponent
+Com.Google.Android.Exoplayer2.IExoPlayer+IAudioOffloadListener, ExoPlayer.Core;com.google.android.exoplayer2.ExoPlayer$AudioOffloadListener
+Com.Google.Android.Exoplayer2.IExoPlayer.IAudioOffloadListener;com.google.android.exoplayer2.ExoPlayer$AudioOffloadListener
+com.google.android.exoplayer2.ExoPlayer$AudioOffloadListener;com.google.android.exoplayer2.ExoPlayer$AudioOffloadListener
+Com.Google.Android.Exoplayer2.IExoPlayer+IDeviceComponent, ExoPlayer.Core;com.google.android.exoplayer2.ExoPlayer$DeviceComponent
+Com.Google.Android.Exoplayer2.IExoPlayer.IDeviceComponent;com.google.android.exoplayer2.ExoPlayer$DeviceComponent
+com.google.android.exoplayer2.ExoPlayer$DeviceComponent;com.google.android.exoplayer2.ExoPlayer$DeviceComponent
+Com.Google.Android.Exoplayer2.IExoPlayer+ITextComponent, ExoPlayer.Core;com.google.android.exoplayer2.ExoPlayer$TextComponent
+Com.Google.Android.Exoplayer2.IExoPlayer.ITextComponent;com.google.android.exoplayer2.ExoPlayer$TextComponent
+com.google.android.exoplayer2.ExoPlayer$TextComponent;com.google.android.exoplayer2.ExoPlayer$TextComponent
+Com.Google.Android.Exoplayer2.IExoPlayer+IVideoComponent, ExoPlayer.Core;com.google.android.exoplayer2.ExoPlayer$VideoComponent
+Com.Google.Android.Exoplayer2.IExoPlayer.IVideoComponent;com.google.android.exoplayer2.ExoPlayer$VideoComponent
+com.google.android.exoplayer2.ExoPlayer$VideoComponent;com.google.android.exoplayer2.ExoPlayer$VideoComponent
+Com.Google.Android.Exoplayer2.ILivePlaybackSpeedControl, ExoPlayer.Core;com.google.android.exoplayer2.LivePlaybackSpeedControl
+Com.Google.Android.Exoplayer2.ILivePlaybackSpeedControl;com.google.android.exoplayer2.LivePlaybackSpeedControl
+com.google.android.exoplayer2.LivePlaybackSpeedControl;com.google.android.exoplayer2.LivePlaybackSpeedControl
+Com.Google.Android.Exoplayer2.ILoadControl, ExoPlayer.Core;com.google.android.exoplayer2.LoadControl
+Com.Google.Android.Exoplayer2.ILoadControl;com.google.android.exoplayer2.LoadControl
+com.google.android.exoplayer2.LoadControl;com.google.android.exoplayer2.LoadControl
+Com.Google.Android.Exoplayer2.IRenderer, ExoPlayer.Core;com.google.android.exoplayer2.Renderer
+Com.Google.Android.Exoplayer2.IRenderer;com.google.android.exoplayer2.Renderer
+com.google.android.exoplayer2.Renderer;com.google.android.exoplayer2.Renderer
+Com.Google.Android.Exoplayer2.IRendererCapabilities, ExoPlayer.Core;com.google.android.exoplayer2.RendererCapabilities
+Com.Google.Android.Exoplayer2.IRendererCapabilities;com.google.android.exoplayer2.RendererCapabilities
+com.google.android.exoplayer2.RendererCapabilities;com.google.android.exoplayer2.RendererCapabilities
+Com.Google.Android.Exoplayer2.IRendererCapabilities+IListener, ExoPlayer.Core;com.google.android.exoplayer2.RendererCapabilities$Listener
+Com.Google.Android.Exoplayer2.IRendererCapabilities.IListener;com.google.android.exoplayer2.RendererCapabilities$Listener
+com.google.android.exoplayer2.RendererCapabilities$Listener;com.google.android.exoplayer2.RendererCapabilities$Listener
+Com.Google.Android.Exoplayer2.IRenderersFactory, ExoPlayer.Core;com.google.android.exoplayer2.RenderersFactory
+Com.Google.Android.Exoplayer2.IRenderersFactory;com.google.android.exoplayer2.RenderersFactory
+com.google.android.exoplayer2.RenderersFactory;com.google.android.exoplayer2.RenderersFactory
+Com.Google.Android.Exoplayer2.PlayerMessage+ISender, ExoPlayer.Core;com.google.android.exoplayer2.PlayerMessage$Sender
+Com.Google.Android.Exoplayer2.PlayerMessage.ISender;com.google.android.exoplayer2.PlayerMessage$Sender
+com.google.android.exoplayer2.PlayerMessage$Sender;com.google.android.exoplayer2.PlayerMessage$Sender
+Com.Google.Android.Exoplayer2.PlayerMessage+ITarget, ExoPlayer.Core;com.google.android.exoplayer2.PlayerMessage$Target
+Com.Google.Android.Exoplayer2.PlayerMessage.ITarget;com.google.android.exoplayer2.PlayerMessage$Target
+com.google.android.exoplayer2.PlayerMessage$Target;com.google.android.exoplayer2.PlayerMessage$Target
+Com.Google.Android.Exoplayer2.Video.IVideoFrameMetadataListener, ExoPlayer.Core;com.google.android.exoplayer2.video.VideoFrameMetadataListener
+Com.Google.Android.Exoplayer2.Video.IVideoFrameMetadataListener;com.google.android.exoplayer2.video.VideoFrameMetadataListener
+com.google.android.exoplayer2.video.VideoFrameMetadataListener;com.google.android.exoplayer2.video.VideoFrameMetadataListener
+Com.Google.Android.Exoplayer2.Video.IVideoRendererEventListener, ExoPlayer.Core;com.google.android.exoplayer2.video.VideoRendererEventListener
+Com.Google.Android.Exoplayer2.Video.IVideoRendererEventListener;com.google.android.exoplayer2.video.VideoRendererEventListener
+com.google.android.exoplayer2.video.VideoRendererEventListener;com.google.android.exoplayer2.video.VideoRendererEventListener
+Com.Google.Android.Exoplayer2.Video.Spherical.ICameraMotionListener, ExoPlayer.Core;com.google.android.exoplayer2.video.spherical.CameraMotionListener
+Com.Google.Android.Exoplayer2.Video.Spherical.ICameraMotionListener;com.google.android.exoplayer2.video.spherical.CameraMotionListener
+com.google.android.exoplayer2.video.spherical.CameraMotionListener;com.google.android.exoplayer2.video.spherical.CameraMotionListener
+Com.Google.Android.Exoplayer2.Util.IMediaClock, ExoPlayer.Core;com.google.android.exoplayer2.util.MediaClock
+Com.Google.Android.Exoplayer2.Util.IMediaClock;com.google.android.exoplayer2.util.MediaClock
+com.google.android.exoplayer2.util.MediaClock;com.google.android.exoplayer2.util.MediaClock
+Com.Google.Android.Exoplayer2.Upstream.CmcdConfiguration+IFactory, ExoPlayer.Core;com.google.android.exoplayer2.upstream.CmcdConfiguration$Factory
+Com.Google.Android.Exoplayer2.Upstream.CmcdConfiguration.IFactory;com.google.android.exoplayer2.upstream.CmcdConfiguration$Factory
+com.google.android.exoplayer2.upstream.CmcdConfiguration$Factory;com.google.android.exoplayer2.upstream.CmcdConfiguration$Factory
+Com.Google.Android.Exoplayer2.Upstream.CmcdConfiguration+IRequestConfig, ExoPlayer.Core;com.google.android.exoplayer2.upstream.CmcdConfiguration$RequestConfig
+Com.Google.Android.Exoplayer2.Upstream.CmcdConfiguration.IRequestConfig;com.google.android.exoplayer2.upstream.CmcdConfiguration$RequestConfig
+com.google.android.exoplayer2.upstream.CmcdConfiguration$RequestConfig;com.google.android.exoplayer2.upstream.CmcdConfiguration$RequestConfig
+Com.Google.Android.Exoplayer2.Upstream.IAllocator, ExoPlayer.Core;com.google.android.exoplayer2.upstream.Allocator
+Com.Google.Android.Exoplayer2.Upstream.IAllocator;com.google.android.exoplayer2.upstream.Allocator
+com.google.android.exoplayer2.upstream.Allocator;com.google.android.exoplayer2.upstream.Allocator
+Com.Google.Android.Exoplayer2.Upstream.IAllocator+IAllocationNode, ExoPlayer.Core;com.google.android.exoplayer2.upstream.Allocator$AllocationNode
+Com.Google.Android.Exoplayer2.Upstream.IAllocator.IAllocationNode;com.google.android.exoplayer2.upstream.Allocator$AllocationNode
+com.google.android.exoplayer2.upstream.Allocator$AllocationNode;com.google.android.exoplayer2.upstream.Allocator$AllocationNode
+Com.Google.Android.Exoplayer2.Upstream.IBandwidthMeter, ExoPlayer.Core;com.google.android.exoplayer2.upstream.BandwidthMeter
+Com.Google.Android.Exoplayer2.Upstream.IBandwidthMeter;com.google.android.exoplayer2.upstream.BandwidthMeter
+com.google.android.exoplayer2.upstream.BandwidthMeter;com.google.android.exoplayer2.upstream.BandwidthMeter
+Com.Google.Android.Exoplayer2.Upstream.IBandwidthMeter+IEventListener, ExoPlayer.Core;com.google.android.exoplayer2.upstream.BandwidthMeter$EventListener
+Com.Google.Android.Exoplayer2.Upstream.IBandwidthMeter.IEventListener;com.google.android.exoplayer2.upstream.BandwidthMeter$EventListener
+com.google.android.exoplayer2.upstream.BandwidthMeter$EventListener;com.google.android.exoplayer2.upstream.BandwidthMeter$EventListener
+Com.Google.Android.Exoplayer2.Upstream.ILoadErrorHandlingPolicy, ExoPlayer.Core;com.google.android.exoplayer2.upstream.LoadErrorHandlingPolicy
+Com.Google.Android.Exoplayer2.Upstream.ILoadErrorHandlingPolicy;com.google.android.exoplayer2.upstream.LoadErrorHandlingPolicy
+com.google.android.exoplayer2.upstream.LoadErrorHandlingPolicy;com.google.android.exoplayer2.upstream.LoadErrorHandlingPolicy
+Com.Google.Android.Exoplayer2.Trackselection.IExoTrackSelection, ExoPlayer.Core;com.google.android.exoplayer2.trackselection.ExoTrackSelection
+Com.Google.Android.Exoplayer2.Trackselection.IExoTrackSelection;com.google.android.exoplayer2.trackselection.ExoTrackSelection
+com.google.android.exoplayer2.trackselection.ExoTrackSelection;com.google.android.exoplayer2.trackselection.ExoTrackSelection
+Com.Google.Android.Exoplayer2.Trackselection.ITrackSelection, ExoPlayer.Core;com.google.android.exoplayer2.trackselection.TrackSelection
+Com.Google.Android.Exoplayer2.Trackselection.ITrackSelection;com.google.android.exoplayer2.trackselection.TrackSelection
+com.google.android.exoplayer2.trackselection.TrackSelection;com.google.android.exoplayer2.trackselection.TrackSelection
+Com.Google.Android.Exoplayer2.Trackselection.TrackSelector+IInvalidationListener, ExoPlayer.Core;com.google.android.exoplayer2.trackselection.TrackSelector$InvalidationListener
+Com.Google.Android.Exoplayer2.Trackselection.TrackSelector.IInvalidationListener;com.google.android.exoplayer2.trackselection.TrackSelector$InvalidationListener
+com.google.android.exoplayer2.trackselection.TrackSelector$InvalidationListener;com.google.android.exoplayer2.trackselection.TrackSelector$InvalidationListener
+Com.Google.Android.Exoplayer2.Text.ITextOutput, ExoPlayer.Core;com.google.android.exoplayer2.text.TextOutput
+Com.Google.Android.Exoplayer2.Text.ITextOutput;com.google.android.exoplayer2.text.TextOutput
+com.google.android.exoplayer2.text.TextOutput;com.google.android.exoplayer2.text.TextOutput
+Com.Google.Android.Exoplayer2.Metadata.IMetadataOutput, ExoPlayer.Core;com.google.android.exoplayer2.metadata.MetadataOutput
+Com.Google.Android.Exoplayer2.Metadata.IMetadataOutput;com.google.android.exoplayer2.metadata.MetadataOutput
+com.google.android.exoplayer2.metadata.MetadataOutput;com.google.android.exoplayer2.metadata.MetadataOutput
+Com.Google.Android.Exoplayer2.Drm.IDrmSession, ExoPlayer.Core;com.google.android.exoplayer2.drm.DrmSession
+Com.Google.Android.Exoplayer2.Drm.IDrmSession;com.google.android.exoplayer2.drm.DrmSession
+com.google.android.exoplayer2.drm.DrmSession;com.google.android.exoplayer2.drm.DrmSession
+Com.Google.Android.Exoplayer2.Drm.IDrmSessionEventListener, ExoPlayer.Core;com.google.android.exoplayer2.drm.DrmSessionEventListener
+Com.Google.Android.Exoplayer2.Drm.IDrmSessionEventListener;com.google.android.exoplayer2.drm.DrmSessionEventListener
+com.google.android.exoplayer2.drm.DrmSessionEventListener;com.google.android.exoplayer2.drm.DrmSessionEventListener
+Com.Google.Android.Exoplayer2.Drm.IDrmSessionManager, ExoPlayer.Core;com.google.android.exoplayer2.drm.DrmSessionManager
+Com.Google.Android.Exoplayer2.Drm.IDrmSessionManager;com.google.android.exoplayer2.drm.DrmSessionManager
+com.google.android.exoplayer2.drm.DrmSessionManager;com.google.android.exoplayer2.drm.DrmSessionManager
+Com.Google.Android.Exoplayer2.Drm.IDrmSessionManager+IDrmSessionReference, ExoPlayer.Core;com.google.android.exoplayer2.drm.DrmSessionManager$DrmSessionReference
+Com.Google.Android.Exoplayer2.Drm.IDrmSessionManager.IDrmSessionReference;com.google.android.exoplayer2.drm.DrmSessionManager$DrmSessionReference
+com.google.android.exoplayer2.drm.DrmSessionManager$DrmSessionReference;com.google.android.exoplayer2.drm.DrmSessionManager$DrmSessionReference
+Com.Google.Android.Exoplayer2.Drm.IDrmSessionManagerProvider, ExoPlayer.Core;com.google.android.exoplayer2.drm.DrmSessionManagerProvider
+Com.Google.Android.Exoplayer2.Drm.IDrmSessionManagerProvider;com.google.android.exoplayer2.drm.DrmSessionManagerProvider
+com.google.android.exoplayer2.drm.DrmSessionManagerProvider;com.google.android.exoplayer2.drm.DrmSessionManagerProvider
+Com.Google.Android.Exoplayer2.Audio.IAudioRendererEventListener, ExoPlayer.Core;com.google.android.exoplayer2.audio.AudioRendererEventListener
+Com.Google.Android.Exoplayer2.Audio.IAudioRendererEventListener;com.google.android.exoplayer2.audio.AudioRendererEventListener
+com.google.android.exoplayer2.audio.AudioRendererEventListener;com.google.android.exoplayer2.audio.AudioRendererEventListener
+Com.Google.Android.Exoplayer2.Analytics.IAnalyticsCollector, ExoPlayer.Core;com.google.android.exoplayer2.analytics.AnalyticsCollector
+Com.Google.Android.Exoplayer2.Analytics.IAnalyticsCollector;com.google.android.exoplayer2.analytics.AnalyticsCollector
+com.google.android.exoplayer2.analytics.AnalyticsCollector;com.google.android.exoplayer2.analytics.AnalyticsCollector
+Com.Google.Android.Exoplayer2.Analytics.IAnalyticsListener, ExoPlayer.Core;com.google.android.exoplayer2.analytics.AnalyticsListener
+Com.Google.Android.Exoplayer2.Analytics.IAnalyticsListener;com.google.android.exoplayer2.analytics.AnalyticsListener
+com.google.android.exoplayer2.analytics.AnalyticsListener;com.google.android.exoplayer2.analytics.AnalyticsListener
+Com.Google.Android.Exoplayer2.Source.IMediaPeriod, ExoPlayer.Core;com.google.android.exoplayer2.source.MediaPeriod
+Com.Google.Android.Exoplayer2.Source.IMediaPeriod;com.google.android.exoplayer2.source.MediaPeriod
+com.google.android.exoplayer2.source.MediaPeriod;com.google.android.exoplayer2.source.MediaPeriod
+Com.Google.Android.Exoplayer2.Source.IMediaPeriod+ICallback, ExoPlayer.Core;com.google.android.exoplayer2.source.MediaPeriod$Callback
+Com.Google.Android.Exoplayer2.Source.IMediaPeriod.ICallback;com.google.android.exoplayer2.source.MediaPeriod$Callback
+com.google.android.exoplayer2.source.MediaPeriod$Callback;com.google.android.exoplayer2.source.MediaPeriod$Callback
+Com.Google.Android.Exoplayer2.Source.IMediaSource, ExoPlayer.Core;com.google.android.exoplayer2.source.MediaSource
+Com.Google.Android.Exoplayer2.Source.IMediaSource;com.google.android.exoplayer2.source.MediaSource
+com.google.android.exoplayer2.source.MediaSource;com.google.android.exoplayer2.source.MediaSource
+Com.Google.Android.Exoplayer2.Source.IMediaSource+IFactory, ExoPlayer.Core;com.google.android.exoplayer2.source.MediaSource$Factory
+Com.Google.Android.Exoplayer2.Source.IMediaSource.IFactory;com.google.android.exoplayer2.source.MediaSource$Factory
+com.google.android.exoplayer2.source.MediaSource$Factory;com.google.android.exoplayer2.source.MediaSource$Factory
+Com.Google.Android.Exoplayer2.Source.IMediaSource+IMediaSourceCaller, ExoPlayer.Core;com.google.android.exoplayer2.source.MediaSource$MediaSourceCaller
+Com.Google.Android.Exoplayer2.Source.IMediaSource.IMediaSourceCaller;com.google.android.exoplayer2.source.MediaSource$MediaSourceCaller
+com.google.android.exoplayer2.source.MediaSource$MediaSourceCaller;com.google.android.exoplayer2.source.MediaSource$MediaSourceCaller
+Com.Google.Android.Exoplayer2.Source.IMediaSourceEventListener, ExoPlayer.Core;com.google.android.exoplayer2.source.MediaSourceEventListener
+Com.Google.Android.Exoplayer2.Source.IMediaSourceEventListener;com.google.android.exoplayer2.source.MediaSourceEventListener
+com.google.android.exoplayer2.source.MediaSourceEventListener;com.google.android.exoplayer2.source.MediaSourceEventListener
+Com.Google.Android.Exoplayer2.Source.ISampleStream, ExoPlayer.Core;com.google.android.exoplayer2.source.SampleStream
+Com.Google.Android.Exoplayer2.Source.ISampleStream;com.google.android.exoplayer2.source.SampleStream
+com.google.android.exoplayer2.source.SampleStream;com.google.android.exoplayer2.source.SampleStream
+Com.Google.Android.Exoplayer2.Source.ISequenceableLoader, ExoPlayer.Core;com.google.android.exoplayer2.source.SequenceableLoader
+Com.Google.Android.Exoplayer2.Source.ISequenceableLoader;com.google.android.exoplayer2.source.SequenceableLoader
+com.google.android.exoplayer2.source.SequenceableLoader;com.google.android.exoplayer2.source.SequenceableLoader
+Com.Google.Android.Exoplayer2.Source.ISequenceableLoader+ICallback, ExoPlayer.Core;com.google.android.exoplayer2.source.SequenceableLoader$Callback
+Com.Google.Android.Exoplayer2.Source.ISequenceableLoader.ICallback;com.google.android.exoplayer2.source.SequenceableLoader$Callback
+com.google.android.exoplayer2.source.SequenceableLoader$Callback;com.google.android.exoplayer2.source.SequenceableLoader$Callback
+Com.Google.Android.Exoplayer2.Source.IShuffleOrder, ExoPlayer.Core;com.google.android.exoplayer2.source.ShuffleOrder
+Com.Google.Android.Exoplayer2.Source.IShuffleOrder;com.google.android.exoplayer2.source.ShuffleOrder
+com.google.android.exoplayer2.source.ShuffleOrder;com.google.android.exoplayer2.source.ShuffleOrder
+Com.Google.Android.Exoplayer2.Source.Chunk.IMediaChunkIterator, ExoPlayer.Core;com.google.android.exoplayer2.source.chunk.MediaChunkIterator
+Com.Google.Android.Exoplayer2.Source.Chunk.IMediaChunkIterator;com.google.android.exoplayer2.source.chunk.MediaChunkIterator
+com.google.android.exoplayer2.source.chunk.MediaChunkIterator;com.google.android.exoplayer2.source.chunk.MediaChunkIterator
+Com.Google.Android.Exoplayer2.Upstream.IDataSource, ExoPlayer.DataSource;com.google.android.exoplayer2.upstream.DataSource
+Com.Google.Android.Exoplayer2.Upstream.IDataSource;com.google.android.exoplayer2.upstream.DataSource
+com.google.android.exoplayer2.upstream.DataSource;com.google.android.exoplayer2.upstream.DataSource
+Com.Google.Android.Exoplayer2.Upstream.ITransferListener, ExoPlayer.DataSource;com.google.android.exoplayer2.upstream.TransferListener
+Com.Google.Android.Exoplayer2.Upstream.ITransferListener;com.google.android.exoplayer2.upstream.TransferListener
+com.google.android.exoplayer2.upstream.TransferListener;com.google.android.exoplayer2.upstream.TransferListener
+Com.Google.Android.Exoplayer2.Upstream.ITransferListenerImplementor, ExoPlayer.DataSource;mono.com.google.android.exoplayer2.upstream.TransferListenerImplementor
+Com.Google.Android.Exoplayer2.Upstream.ITransferListenerImplementor;mono.com.google.android.exoplayer2.upstream.TransferListenerImplementor
+mono.com.google.android.exoplayer2.upstream.TransferListenerImplementor;mono.com.google.android.exoplayer2.upstream.TransferListenerImplementor
+Com.Google.Android.Exoplayer2.Decoder.ICryptoConfig, ExoPlayer.Decoder;com.google.android.exoplayer2.decoder.CryptoConfig
+Com.Google.Android.Exoplayer2.Decoder.ICryptoConfig;com.google.android.exoplayer2.decoder.CryptoConfig
+com.google.android.exoplayer2.decoder.CryptoConfig;com.google.android.exoplayer2.decoder.CryptoConfig
+Com.Google.Android.Exoplayer2.Ext.Mediasession.MediaSessionConnector+ICaptionCallback, ExoPlayer.Ext.MediaSession;com.google.android.exoplayer2.ext.mediasession.MediaSessionConnector$CaptionCallback
+Com.Google.Android.Exoplayer2.Ext.Mediasession.MediaSessionConnector.ICaptionCallback;com.google.android.exoplayer2.ext.mediasession.MediaSessionConnector$CaptionCallback
+com.google.android.exoplayer2.ext.mediasession.MediaSessionConnector$CaptionCallback;com.google.android.exoplayer2.ext.mediasession.MediaSessionConnector$CaptionCallback
+Com.Google.Android.Exoplayer2.Ext.Mediasession.MediaSessionConnector+ICommandReceiver, ExoPlayer.Ext.MediaSession;com.google.android.exoplayer2.ext.mediasession.MediaSessionConnector$CommandReceiver
+Com.Google.Android.Exoplayer2.Ext.Mediasession.MediaSessionConnector.ICommandReceiver;com.google.android.exoplayer2.ext.mediasession.MediaSessionConnector$CommandReceiver
+com.google.android.exoplayer2.ext.mediasession.MediaSessionConnector$CommandReceiver;com.google.android.exoplayer2.ext.mediasession.MediaSessionConnector$CommandReceiver
+Com.Google.Android.Exoplayer2.Ext.Mediasession.MediaSessionConnector+ICustomActionProvider, ExoPlayer.Ext.MediaSession;com.google.android.exoplayer2.ext.mediasession.MediaSessionConnector$CustomActionProvider
+Com.Google.Android.Exoplayer2.Ext.Mediasession.MediaSessionConnector.ICustomActionProvider;com.google.android.exoplayer2.ext.mediasession.MediaSessionConnector$CustomActionProvider
+com.google.android.exoplayer2.ext.mediasession.MediaSessionConnector$CustomActionProvider;com.google.android.exoplayer2.ext.mediasession.MediaSessionConnector$CustomActionProvider
+Com.Google.Android.Exoplayer2.Ext.Mediasession.MediaSessionConnector+IMediaButtonEventHandler, ExoPlayer.Ext.MediaSession;com.google.android.exoplayer2.ext.mediasession.MediaSessionConnector$MediaButtonEventHandler
+Com.Google.Android.Exoplayer2.Ext.Mediasession.MediaSessionConnector.IMediaButtonEventHandler;com.google.android.exoplayer2.ext.mediasession.MediaSessionConnector$MediaButtonEventHandler
+com.google.android.exoplayer2.ext.mediasession.MediaSessionConnector$MediaButtonEventHandler;com.google.android.exoplayer2.ext.mediasession.MediaSessionConnector$MediaButtonEventHandler
+Com.Google.Android.Exoplayer2.Ext.Mediasession.MediaSessionConnector+IMediaMetadataProvider, ExoPlayer.Ext.MediaSession;com.google.android.exoplayer2.ext.mediasession.MediaSessionConnector$MediaMetadataProvider
+Com.Google.Android.Exoplayer2.Ext.Mediasession.MediaSessionConnector.IMediaMetadataProvider;com.google.android.exoplayer2.ext.mediasession.MediaSessionConnector$MediaMetadataProvider
+com.google.android.exoplayer2.ext.mediasession.MediaSessionConnector$MediaMetadataProvider;com.google.android.exoplayer2.ext.mediasession.MediaSessionConnector$MediaMetadataProvider
+Com.Google.Android.Exoplayer2.Ext.Mediasession.MediaSessionConnector+IPlaybackPreparer, ExoPlayer.Ext.MediaSession;com.google.android.exoplayer2.ext.mediasession.MediaSessionConnector$PlaybackPreparer
+Com.Google.Android.Exoplayer2.Ext.Mediasession.MediaSessionConnector.IPlaybackPreparer;com.google.android.exoplayer2.ext.mediasession.MediaSessionConnector$PlaybackPreparer
+com.google.android.exoplayer2.ext.mediasession.MediaSessionConnector$PlaybackPreparer;com.google.android.exoplayer2.ext.mediasession.MediaSessionConnector$PlaybackPreparer
+Com.Google.Android.Exoplayer2.Ext.Mediasession.MediaSessionConnector+IQueueEditor, ExoPlayer.Ext.MediaSession;com.google.android.exoplayer2.ext.mediasession.MediaSessionConnector$QueueEditor
+Com.Google.Android.Exoplayer2.Ext.Mediasession.MediaSessionConnector.IQueueEditor;com.google.android.exoplayer2.ext.mediasession.MediaSessionConnector$QueueEditor
+com.google.android.exoplayer2.ext.mediasession.MediaSessionConnector$QueueEditor;com.google.android.exoplayer2.ext.mediasession.MediaSessionConnector$QueueEditor
+Com.Google.Android.Exoplayer2.Ext.Mediasession.MediaSessionConnector+IQueueNavigator, ExoPlayer.Ext.MediaSession;com.google.android.exoplayer2.ext.mediasession.MediaSessionConnector$QueueNavigator
+Com.Google.Android.Exoplayer2.Ext.Mediasession.MediaSessionConnector.IQueueNavigator;com.google.android.exoplayer2.ext.mediasession.MediaSessionConnector$QueueNavigator
+com.google.android.exoplayer2.ext.mediasession.MediaSessionConnector$QueueNavigator;com.google.android.exoplayer2.ext.mediasession.MediaSessionConnector$QueueNavigator
+Com.Google.Android.Exoplayer2.Ext.Mediasession.MediaSessionConnector+IRatingCallback, ExoPlayer.Ext.MediaSession;com.google.android.exoplayer2.ext.mediasession.MediaSessionConnector$RatingCallback
+Com.Google.Android.Exoplayer2.Ext.Mediasession.MediaSessionConnector.IRatingCallback;com.google.android.exoplayer2.ext.mediasession.MediaSessionConnector$RatingCallback
+com.google.android.exoplayer2.ext.mediasession.MediaSessionConnector$RatingCallback;com.google.android.exoplayer2.ext.mediasession.MediaSessionConnector$RatingCallback
+Com.Google.Android.Exoplayer2.UI.AspectRatioFrameLayout+IAspectRatioListener, ExoPlayer.UI;com.google.android.exoplayer2.ui.AspectRatioFrameLayout$AspectRatioListener
+Com.Google.Android.Exoplayer2.UI.AspectRatioFrameLayout.IAspectRatioListener;com.google.android.exoplayer2.ui.AspectRatioFrameLayout$AspectRatioListener
+com.google.android.exoplayer2.ui.AspectRatioFrameLayout$AspectRatioListener;com.google.android.exoplayer2.ui.AspectRatioFrameLayout$AspectRatioListener
+Com.Google.Android.Exoplayer2.UI.AspectRatioFrameLayout+IAspectRatioListenerImplementor, ExoPlayer.UI;mono.com.google.android.exoplayer2.ui.AspectRatioFrameLayout_AspectRatioListenerImplementor
+Com.Google.Android.Exoplayer2.UI.AspectRatioFrameLayout.IAspectRatioListenerImplementor;mono.com.google.android.exoplayer2.ui.AspectRatioFrameLayout_AspectRatioListenerImplementor
+mono.com.google.android.exoplayer2.ui.AspectRatioFrameLayout_AspectRatioListenerImplementor;mono.com.google.android.exoplayer2.ui.AspectRatioFrameLayout_AspectRatioListenerImplementor
+Com.Google.Android.Exoplayer2.UI.StyledPlayerControlView+IOnFullScreenModeChangedListener, ExoPlayer.UI;com.google.android.exoplayer2.ui.StyledPlayerControlView$OnFullScreenModeChangedListener
+Com.Google.Android.Exoplayer2.UI.StyledPlayerControlView.IOnFullScreenModeChangedListener;com.google.android.exoplayer2.ui.StyledPlayerControlView$OnFullScreenModeChangedListener
+com.google.android.exoplayer2.ui.StyledPlayerControlView$OnFullScreenModeChangedListener;com.google.android.exoplayer2.ui.StyledPlayerControlView$OnFullScreenModeChangedListener
+Com.Google.Android.Exoplayer2.UI.StyledPlayerControlView+IOnFullScreenModeChangedListenerImplementor, ExoPlayer.UI;mono.com.google.android.exoplayer2.ui.StyledPlayerControlView_OnFullScreenModeChangedListenerImplementor
+Com.Google.Android.Exoplayer2.UI.StyledPlayerControlView.IOnFullScreenModeChangedListenerImplementor;mono.com.google.android.exoplayer2.ui.StyledPlayerControlView_OnFullScreenModeChangedListenerImplementor
+mono.com.google.android.exoplayer2.ui.StyledPlayerControlView_OnFullScreenModeChangedListenerImplementor;mono.com.google.android.exoplayer2.ui.StyledPlayerControlView_OnFullScreenModeChangedListenerImplementor
+Com.Google.Android.Exoplayer2.UI.StyledPlayerControlView+IProgressUpdateListener, ExoPlayer.UI;com.google.android.exoplayer2.ui.StyledPlayerControlView$ProgressUpdateListener
+Com.Google.Android.Exoplayer2.UI.StyledPlayerControlView.IProgressUpdateListener;com.google.android.exoplayer2.ui.StyledPlayerControlView$ProgressUpdateListener
+com.google.android.exoplayer2.ui.StyledPlayerControlView$ProgressUpdateListener;com.google.android.exoplayer2.ui.StyledPlayerControlView$ProgressUpdateListener
+Com.Google.Android.Exoplayer2.UI.StyledPlayerControlView+IProgressUpdateListenerImplementor, ExoPlayer.UI;mono.com.google.android.exoplayer2.ui.StyledPlayerControlView_ProgressUpdateListenerImplementor
+Com.Google.Android.Exoplayer2.UI.StyledPlayerControlView.IProgressUpdateListenerImplementor;mono.com.google.android.exoplayer2.ui.StyledPlayerControlView_ProgressUpdateListenerImplementor
+mono.com.google.android.exoplayer2.ui.StyledPlayerControlView_ProgressUpdateListenerImplementor;mono.com.google.android.exoplayer2.ui.StyledPlayerControlView_ProgressUpdateListenerImplementor
+Com.Google.Android.Exoplayer2.UI.StyledPlayerControlView+IVisibilityListener, ExoPlayer.UI;com.google.android.exoplayer2.ui.StyledPlayerControlView$VisibilityListener
+Com.Google.Android.Exoplayer2.UI.StyledPlayerControlView.IVisibilityListener;com.google.android.exoplayer2.ui.StyledPlayerControlView$VisibilityListener
+com.google.android.exoplayer2.ui.StyledPlayerControlView$VisibilityListener;com.google.android.exoplayer2.ui.StyledPlayerControlView$VisibilityListener
+Com.Google.Android.Exoplayer2.UI.StyledPlayerControlView+IVisibilityListenerImplementor, ExoPlayer.UI;mono.com.google.android.exoplayer2.ui.StyledPlayerControlView_VisibilityListenerImplementor
+Com.Google.Android.Exoplayer2.UI.StyledPlayerControlView.IVisibilityListenerImplementor;mono.com.google.android.exoplayer2.ui.StyledPlayerControlView_VisibilityListenerImplementor
+mono.com.google.android.exoplayer2.ui.StyledPlayerControlView_VisibilityListenerImplementor;mono.com.google.android.exoplayer2.ui.StyledPlayerControlView_VisibilityListenerImplementor
+Com.Google.Android.Exoplayer2.UI.StyledPlayerView+IControllerVisibilityListener, ExoPlayer.UI;com.google.android.exoplayer2.ui.StyledPlayerView$ControllerVisibilityListener
+Com.Google.Android.Exoplayer2.UI.StyledPlayerView.IControllerVisibilityListener;com.google.android.exoplayer2.ui.StyledPlayerView$ControllerVisibilityListener
+com.google.android.exoplayer2.ui.StyledPlayerView$ControllerVisibilityListener;com.google.android.exoplayer2.ui.StyledPlayerView$ControllerVisibilityListener
+Com.Google.Android.Exoplayer2.UI.StyledPlayerView+IControllerVisibilityListenerImplementor, ExoPlayer.UI;mono.com.google.android.exoplayer2.ui.StyledPlayerView_ControllerVisibilityListenerImplementor
+Com.Google.Android.Exoplayer2.UI.StyledPlayerView.IControllerVisibilityListenerImplementor;mono.com.google.android.exoplayer2.ui.StyledPlayerView_ControllerVisibilityListenerImplementor
+mono.com.google.android.exoplayer2.ui.StyledPlayerView_ControllerVisibilityListenerImplementor;mono.com.google.android.exoplayer2.ui.StyledPlayerView_ControllerVisibilityListenerImplementor
+Com.Google.Android.Exoplayer2.UI.StyledPlayerView+IFullscreenButtonClickListener, ExoPlayer.UI;com.google.android.exoplayer2.ui.StyledPlayerView$FullscreenButtonClickListener
+Com.Google.Android.Exoplayer2.UI.StyledPlayerView.IFullscreenButtonClickListener;com.google.android.exoplayer2.ui.StyledPlayerView$FullscreenButtonClickListener
+com.google.android.exoplayer2.ui.StyledPlayerView$FullscreenButtonClickListener;com.google.android.exoplayer2.ui.StyledPlayerView$FullscreenButtonClickListener
+Com.Google.Android.Exoplayer2.UI.StyledPlayerView+IFullscreenButtonClickListenerImplementor, ExoPlayer.UI;mono.com.google.android.exoplayer2.ui.StyledPlayerView_FullscreenButtonClickListenerImplementor
+Com.Google.Android.Exoplayer2.UI.StyledPlayerView.IFullscreenButtonClickListenerImplementor;mono.com.google.android.exoplayer2.ui.StyledPlayerView_FullscreenButtonClickListenerImplementor
+mono.com.google.android.exoplayer2.ui.StyledPlayerView_FullscreenButtonClickListenerImplementor;mono.com.google.android.exoplayer2.ui.StyledPlayerView_FullscreenButtonClickListenerImplementor
 AndroidX.Activity.ContextAware.IOnContextAvailableListener, Xamarin.AndroidX.Activity;androidx.activity.contextaware.OnContextAvailableListener
 AndroidX.Activity.ContextAware.IOnContextAvailableListener;androidx.activity.contextaware.OnContextAvailableListener
 androidx.activity.contextaware.OnContextAvailableListener;androidx.activity.contextaware.OnContextAvailableListener
@@ -595,6 +865,18 @@ androidx.core.util.Predicate;androidx.core.util.Predicate
 AndroidX.Core.Internal.View.ISupportMenuItem, Xamarin.AndroidX.Core;androidx.core.internal.view.SupportMenuItem
 AndroidX.Core.Internal.View.ISupportMenuItem;androidx.core.internal.view.SupportMenuItem
 androidx.core.internal.view.SupportMenuItem;androidx.core.internal.view.SupportMenuItem
+AndroidX.Core.App.ActivityCompat+IPermissionCompatDelegate, Xamarin.AndroidX.Core;androidx.core.app.ActivityCompat$PermissionCompatDelegate
+AndroidX.Core.App.ActivityCompat.IPermissionCompatDelegate;androidx.core.app.ActivityCompat$PermissionCompatDelegate
+androidx.core.app.ActivityCompat$PermissionCompatDelegate;androidx.core.app.ActivityCompat$PermissionCompatDelegate
+AndroidX.Core.App.INotificationBuilderWithBuilderAccessor, Xamarin.AndroidX.Core;androidx.core.app.NotificationBuilderWithBuilderAccessor
+AndroidX.Core.App.INotificationBuilderWithBuilderAccessor;androidx.core.app.NotificationBuilderWithBuilderAccessor
+androidx.core.app.NotificationBuilderWithBuilderAccessor;androidx.core.app.NotificationBuilderWithBuilderAccessor
+AndroidX.Core.App.NotificationCompat+Action+IExtender, Xamarin.AndroidX.Core;androidx.core.app.NotificationCompat$Action$Extender
+AndroidX.Core.App.NotificationCompat.Action.IExtender;androidx.core.app.NotificationCompat$Action$Extender
+androidx.core.app.NotificationCompat$Action$Extender;androidx.core.app.NotificationCompat$Action$Extender
+AndroidX.Core.App.NotificationCompat+IExtender, Xamarin.AndroidX.Core;androidx.core.app.NotificationCompat$Extender
+AndroidX.Core.App.NotificationCompat.IExtender;androidx.core.app.NotificationCompat$Extender
+androidx.core.app.NotificationCompat$Extender;androidx.core.app.NotificationCompat$Extender
 AndroidX.Core.App.SharedElementCallback+IOnSharedElementsReadyListener, Xamarin.AndroidX.Core;androidx.core.app.SharedElementCallback$OnSharedElementsReadyListener
 AndroidX.Core.App.SharedElementCallback.IOnSharedElementsReadyListener;androidx.core.app.SharedElementCallback$OnSharedElementsReadyListener
 androidx.core.app.SharedElementCallback$OnSharedElementsReadyListener;androidx.core.app.SharedElementCallback$OnSharedElementsReadyListener
@@ -706,6 +988,21 @@ androidx.loader.content.Loader$OnLoadCompleteListener;androidx.loader.content.Lo
 AndroidX.Loader.App.LoaderManager+ILoaderCallbacks, Xamarin.AndroidX.Loader;androidx.loader.app.LoaderManager$LoaderCallbacks
 AndroidX.Loader.App.LoaderManager.ILoaderCallbacks;androidx.loader.app.LoaderManager$LoaderCallbacks
 androidx.loader.app.LoaderManager$LoaderCallbacks;androidx.loader.app.LoaderManager$LoaderCallbacks
+Android.Support.V4.Media.Session.IMediaControllerCallback, Xamarin.AndroidX.Media;android.support.v4.media.session.IMediaControllerCallback
+Android.Support.V4.Media.Session.IMediaControllerCallback;android.support.v4.media.session.IMediaControllerCallback
+android.support.v4.media.session.IMediaControllerCallback;android.support.v4.media.session.IMediaControllerCallback
+Android.Support.V4.Media.Session.IMediaSession, Xamarin.AndroidX.Media;android.support.v4.media.session.IMediaSession
+Android.Support.V4.Media.Session.IMediaSession;android.support.v4.media.session.IMediaSession
+android.support.v4.media.session.IMediaSession;android.support.v4.media.session.IMediaSession
+Android.Support.V4.Media.Session.MediaSessionCompat+IOnActiveChangeListener, Xamarin.AndroidX.Media;android.support.v4.media.session.MediaSessionCompat$OnActiveChangeListener
+Android.Support.V4.Media.Session.MediaSessionCompat.IOnActiveChangeListener;android.support.v4.media.session.MediaSessionCompat$OnActiveChangeListener
+android.support.v4.media.session.MediaSessionCompat$OnActiveChangeListener;android.support.v4.media.session.MediaSessionCompat$OnActiveChangeListener
+Android.Support.V4.Media.Session.MediaSessionCompat+IOnActiveChangeListenerImplementor, Xamarin.AndroidX.Media;mono.android.support.v4.media.session.MediaSessionCompat_OnActiveChangeListenerImplementor
+Android.Support.V4.Media.Session.MediaSessionCompat.IOnActiveChangeListenerImplementor;mono.android.support.v4.media.session.MediaSessionCompat_OnActiveChangeListenerImplementor
+mono.android.support.v4.media.session.MediaSessionCompat_OnActiveChangeListenerImplementor;mono.android.support.v4.media.session.MediaSessionCompat_OnActiveChangeListenerImplementor
+Android.Support.V4.Media.Session.MediaSessionCompat+IRegistrationCallback, Xamarin.AndroidX.Media;android.support.v4.media.session.MediaSessionCompat$RegistrationCallback
+Android.Support.V4.Media.Session.MediaSessionCompat.IRegistrationCallback;android.support.v4.media.session.MediaSessionCompat$RegistrationCallback
+android.support.v4.media.session.MediaSessionCompat$RegistrationCallback;android.support.v4.media.session.MediaSessionCompat$RegistrationCallback
 AndroidX.Navigation.INavDirections, Xamarin.AndroidX.Navigation.Common;androidx.navigation.NavDirections
 AndroidX.Navigation.INavDirections;androidx.navigation.NavDirections
 androidx.navigation.NavDirections;androidx.navigation.NavDirections
@@ -766,6 +1063,9 @@ androidx.swiperefreshlayout.widget.SwipeRefreshLayout$OnRefreshListener;androidx
 AndroidX.SwipeRefreshLayout.Widget.SwipeRefreshLayout+IOnRefreshListenerImplementor, Xamarin.AndroidX.SwipeRefreshLayout;mono.androidx.swiperefreshlayout.widget.SwipeRefreshLayout_OnRefreshListenerImplementor
 AndroidX.SwipeRefreshLayout.Widget.SwipeRefreshLayout.IOnRefreshListenerImplementor;mono.androidx.swiperefreshlayout.widget.SwipeRefreshLayout_OnRefreshListenerImplementor
 mono.androidx.swiperefreshlayout.widget.SwipeRefreshLayout_OnRefreshListenerImplementor;mono.androidx.swiperefreshlayout.widget.SwipeRefreshLayout_OnRefreshListenerImplementor
+AndroidX.VersionedParcelable.IVersionedParcelable, Xamarin.AndroidX.VersionedParcelable;androidx.versionedparcelable.VersionedParcelable
+AndroidX.VersionedParcelable.IVersionedParcelable;androidx.versionedparcelable.VersionedParcelable
+androidx.versionedparcelable.VersionedParcelable;androidx.versionedparcelable.VersionedParcelable
 AndroidX.ViewPager.Widget.ViewPager+IOnAdapterChangeListener, Xamarin.AndroidX.ViewPager;androidx.viewpager.widget.ViewPager$OnAdapterChangeListener
 AndroidX.ViewPager.Widget.ViewPager.IOnAdapterChangeListener;androidx.viewpager.widget.ViewPager$OnAdapterChangeListener
 androidx.viewpager.widget.ViewPager$OnAdapterChangeListener;androidx.viewpager.widget.ViewPager$OnAdapterChangeListener
